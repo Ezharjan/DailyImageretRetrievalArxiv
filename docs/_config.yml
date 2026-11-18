@@ -11,7 +11,7 @@ title: Image Retrieval arXiv Daily
 description: "Daily-updated arXiv papers on image retrieval and visual search, organized by research topic."
 lang: en-US
 author: Ezharjan
-repository: Ezharjan/DailyImageRetrivalArxiv
+repository: Ezharjan/DailyImageretRievalArxiv
 
 # Theme: Just the Docs (https://just-the-docs.com), pinned for reproducible builds.
 remote_theme: just-the-docs/just-the-docs@v0.12.0
@@ -28,13 +28,13 @@ favicon_ico: "/assets/images/favicon.ico"
 
 aux_links:
   "GitHub":
-    - "https://github.com/Ezharjan/DailyImageRetrivalArxiv"
+    - "https://github.com/Ezharjan/DailyImageretRievalArxiv"
 aux_links_new_tab: true
 
 footer_content: >-
   &copy; 2025&ndash;2026 Ezharjan &middot; Paper metadata from
   <a href="https://arxiv.org/">arXiv</a>, updated daily with GitHub Actions &middot;
-  <a href="https://github.com/Ezharjan/DailyImageRetrivalArxiv/blob/HEAD/LICENSE">MIT License</a>
+  <a href="https://github.com/Ezharjan/DailyImageretRievalArxiv/blob/HEAD/LICENSE">MIT License</a>
 
 plugins:
   - jekyll-seo-tag

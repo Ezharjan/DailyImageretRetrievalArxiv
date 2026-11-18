@@ -6,14 +6,14 @@
 
 **Daily-updated arXiv papers on image retrieval and visual search, organized by research topic.**
 
-[![Daily update](https://github.com/Ezharjan/DailyImageRetrivalArxiv/actions/workflows/arxiv-daily.yml/badge.svg)](https://github.com/Ezharjan/DailyImageRetrivalArxiv/actions/workflows/arxiv-daily.yml)
-[![Tests](https://github.com/Ezharjan/DailyImageRetrivalArxiv/actions/workflows/tests.yml/badge.svg)](https://github.com/Ezharjan/DailyImageRetrivalArxiv/actions/workflows/tests.yml)
-[![License: MIT](https://img.shields.io/github/license/Ezharjan/DailyImageRetrivalArxiv)](LICENSE)
+[![Daily update](https://github.com/Ezharjan/DailyImageretRievalArxiv/actions/workflows/arxiv-daily.yml/badge.svg)](https://github.com/Ezharjan/DailyImageretRievalArxiv/actions/workflows/arxiv-daily.yml)
+[![Tests](https://github.com/Ezharjan/DailyImageretRievalArxiv/actions/workflows/tests.yml/badge.svg)](https://github.com/Ezharjan/DailyImageretRievalArxiv/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/github/license/Ezharjan/DailyImageretRievalArxiv)](LICENSE)
 
-[Website](https://ezharjan.github.io/DailyImageRetrivalArxiv/) ·
-[Atom feed](https://ezharjan.github.io/DailyImageRetrivalArxiv/feed.xml) ·
-[JSON data](https://ezharjan.github.io/DailyImageRetrivalArxiv/data/papers.json) ·
-[Setup guide](https://ezharjan.github.io/DailyImageRetrivalArxiv/setup/)
+[Website](https://ezharjan.github.io/DailyImageretRievalArxiv/) ·
+[Atom feed](https://ezharjan.github.io/DailyImageretRievalArxiv/feed.xml) ·
+[JSON data](https://ezharjan.github.io/DailyImageretRievalArxiv/data/papers.json) ·
+[Setup guide](https://ezharjan.github.io/DailyImageretRievalArxiv/setup/)
 
 </div>
 
@@ -83,7 +83,7 @@ publishes a fast, searchable website on GitHub Pages.
 
 The exact search phrases and categories of every topic are listed in
 [`config.yaml`](config.yaml) and on the website's
-[About page](https://ezharjan.github.io/DailyImageRetrivalArxiv/about/).
+[About page](https://ezharjan.github.io/DailyImageretRievalArxiv/about/).
 
 ## How it works
 
@@ -129,8 +129,8 @@ From then on the update runs automatically every day.
 Requires Python 3.10 or newer.
 
 ```bash
-git clone https://github.com/Ezharjan/DailyImageRetrivalArxiv.git
-cd DailyImageRetrivalArxiv
+git clone https://github.com/Ezharjan/DailyImageretRievalArxiv.git
+cd DailyImageretRievalArxiv
 python -m pip install -r requirements.txt
 
 python test_local.py              # offline test suite (about a second, no network)
@@ -275,7 +275,7 @@ Suggestions for topics and search phrases, bug reports and pull requests are wel
    `python daily_arxiv.py --dry_run --topic <id>`.
 3. Open a pull request; the template lists the checks.
 
-Report problems on the [issue tracker](https://github.com/Ezharjan/DailyImageRetrivalArxiv/issues).
+Report problems on the [issue tracker](https://github.com/Ezharjan/DailyImageretRievalArxiv/issues).
 
 ## License and acknowledgments
 

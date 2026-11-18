@@ -27,9 +27,9 @@ site:
   title: "Image Retrieval arXiv Daily"
   description: "Daily-updated arXiv papers on image retrieval and visual search, organized by research topic."
   # Public URL of the GitHub Pages site (used for the Atom feed links).
-  url: "https://ezharjan.github.io/DailyImageRetrivalArxiv/"
+  url: "https://ezharjan.github.io/DailyImageretRievalArxiv/"
   # GitHub repository as "owner/name" (used for links and the API User-Agent).
-  repository: "Ezharjan/DailyImageRetrivalArxiv"
+  repository: "Ezharjan/DailyImageretRievalArxiv"
 
 # Newest papers requested per topic on every run (1-1000). Papers already in
 # the database are merged, so a generous window safely covers missed days.
