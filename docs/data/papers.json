@@ -1,0 +1,20 @@
+{
+"schema":1,
+"generated":"",
+"topics":[
+{"id":"image-retrieval","name":"Image Retrieval & Visual Search","description":"The core topic: every paper that names image retrieval in its title or abstract, plus image search, similarity search, and near-duplicate or copy detection."},
+{"id":"instance-landmark-retrieval","name":"Instance-Level & Landmark Retrieval","description":"Finding the same object or place instance: landmark and particular-object retrieval, local and global descriptors, re-ranking and spatial verification."},
+{"id":"cross-modal-retrieval","name":"Image-Text & Cross-Modal Retrieval","description":"Retrieving images with language and vice versa: image-text matching, text-to-image and image-to-text retrieval, and vision-language retrieval."},
+{"id":"composed-image-retrieval","name":"Composed & Interactive Image Retrieval","description":"Retrieval with multimodal queries such as a reference image plus modification text, including zero-shot CIR, text feedback and dialog-based search."},
+{"id":"sketch-based-image-retrieval","name":"Sketch-Based Image Retrieval","description":"Retrieving photos, videos or 3D shapes from free-hand sketches: category-level, fine-grained and zero-shot SBIR."},
+{"id":"fine-grained-metric-learning","name":"Fine-Grained Retrieval & Metric Learning","description":"Learning discriminative embeddings for retrieval: deep metric learning objectives and fine-grained image retrieval."},
+{"id":"hashing-efficient-retrieval","name":"Hashing & Efficient Retrieval","description":"Compact codes and fast search for large-scale retrieval: deep and cross-modal hashing, quantization and approximate nearest-neighbor search."},
+{"id":"re-identification","name":"Person & Object Re-Identification","description":"Re-identification and person search framed as retrieval: person, vehicle, animal and object re-ID, and text-based person retrieval."},
+{"id":"place-recognition-geo-localization","name":"Visual Place Recognition & Geo-Localization","description":"Image-based localization through retrieval: visual place recognition, cross-view and image geo-localization."},
+{"id":"video-retrieval","name":"Video & Text-Video Retrieval","description":"Searching video collections: text-to-video retrieval, video moment retrieval, content-based video retrieval and video copy detection."},
+{"id":"multimodal-embeddings","name":"Multimodal Embeddings & Universal Retrieval","description":"General-purpose embedding models for search across images and text: universal multimodal retrieval and MLLM-based embedders."},
+{"id":"visual-document-retrieval-rag","name":"Visual Document Retrieval & Multimodal RAG","description":"Retrieval over visually rich documents and retrieval-augmented generation with images: visual document retrieval and multimodal RAG."},
+{"id":"domain-specific-retrieval","name":"Domain-Specific Image Retrieval","description":"Image retrieval in specialized domains: remote sensing, medical and histopathology images, fashion and products, art, trademarks, faces, food and 3D shapes."}
+],
+"papers":[]
+}

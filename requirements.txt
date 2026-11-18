@@ -1,0 +1,3 @@
+# Runtime dependencies of daily_arxiv.py and test_local.py (Python 3.10+).
+requests>=2.31,<3
+PyYAML>=6.0,<7

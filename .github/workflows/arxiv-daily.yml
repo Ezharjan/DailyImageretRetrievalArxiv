@@ -1,0 +1,107 @@
+# Fetches new image retrieval papers from arXiv every day, refreshes code links
+# once a week, and commits the regenerated site data (GitHub Pages then rebuilds
+# the site from /docs). All runs share one concurrency group, so they never run
+# at the same time or race each other when pushing.
+name: Image Retrieval arXiv Daily
+
+on:
+  schedule:
+    # arXiv announces new papers at 20:00 US Eastern time (Sunday to Thursday) and
+    # its API lists them from the following midnight, i.e. 04:00 or 05:00 UTC.
+    - cron: "37 6 * * *"   # daily paper update
+    - cron: "47 7 * * 0"   # weekly code-link refresh (Sundays)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Task to run"
+        type: choice
+        options:
+          - update
+          - refresh-code-links
+          - rebuild
+        default: update
+      max_results:
+        description: "Papers per topic for 'update' (leave empty to use config.yaml; e.g. 300 for a first backfill)"
+        type: string
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: arxiv-daily-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Update papers
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      MODE: ${{ github.event_name == 'schedule' && (github.event.schedule == '47 7 * * 0' && 'refresh-code-links' || 'update') || inputs.mode || 'update' }}
+      MAX_RESULTS: ${{ inputs.max_results }}
+    steps:
+      - name: Check out the latest commit of the branch
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run offline tests
+        run: python test_local.py
+
+      - name: Update data (${{ env.MODE }})
+        run: |
+          case "$MODE" in
+            update)
+              if [ -n "$MAX_RESULTS" ]; then
+                python daily_arxiv.py --max_results "$MAX_RESULTS"
+              else
+                python daily_arxiv.py
+              fi
+              ;;
+            refresh-code-links)
+              python daily_arxiv.py --update_paper_links
+              ;;
+            rebuild)
+              python daily_arxiv.py --rebuild
+              ;;
+            *)
+              echo "::error::Unknown mode '$MODE'"
+              exit 1
+              ;;
+          esac
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all -- docs
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          case "$MODE" in
+            update) message="Update image retrieval papers" ;;
+            refresh-code-links) message="Refresh code links" ;;
+            *) message="Rebuild site data" ;;
+          esac
+          git commit --quiet -m "$message ($(date -u +%Y-%m-%d))"
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt); rebasing onto the latest remote commit."
+            git pull --rebase || { git rebase --abort; break; }
+          done
+          echo "::error::Could not push the updated data."
+          exit 1

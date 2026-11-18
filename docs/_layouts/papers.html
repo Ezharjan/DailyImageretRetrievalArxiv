@@ -1,0 +1,119 @@
+---
+layout: default
+---
+{%- comment -%}
+  Paper explorer page. The paper list is rendered in the browser from
+  data/papers.json by assets/js/paper-explorer.js, which keeps this page small
+  and fast regardless of how many papers have been collected. Page metadata
+  (last_updated, paper_count, topic_count) is written to index.md by
+  daily_arxiv.py. Do not put inline <script> blocks here: the theme compresses
+  HTML whitespace, which would break them.
+{%- endcomment -%}
+{%- assign data_version = site.time | date: "%s" -%}
+{%- assign updated = page.last_updated | default: "" -%}
+<div class="pe" id="paper-explorer"
+     data-papers="{{ '/data/papers.json' | relative_url }}?v={{ data_version }}"
+     data-abstracts="{{ '/data/abstracts/' | relative_url }}"
+     data-version="{{ data_version }}">
+
+  <header class="pe-hero">
+    <h1 class="pe-hero__title no_anchor" id="pe-title" tabindex="-1">{{ site.title }}</h1>
+    <p class="pe-hero__lead">{{ site.description }}</p>
+    <ul class="pe-hero__meta">
+      <li><span class="pe-pill" data-pe-updated>{% if updated != "" %}Updated {{ updated }}{% else %}Awaiting the first update{% endif %}</span></li>
+      <li><a class="pe-pill pe-pill--link" href="{{ '/feed.xml' | relative_url }}">Atom feed</a></li>
+      <li><a class="pe-pill pe-pill--link" href="{{ '/data/papers.json' | relative_url }}">JSON data</a></li>
+      <li><a class="pe-pill pe-pill--link" href="{{ '/about/' | relative_url }}">How it works</a></li>
+    </ul>
+  </header>
+
+  <section class="pe-stats" aria-label="Collection statistics">
+    <div class="pe-stat">
+      <span class="pe-stat__value" data-pe-stat="total">{{ page.paper_count | default: 0 }}</span>
+      <span class="pe-stat__label">Papers tracked</span>
+    </div>
+    <div class="pe-stat">
+      <span class="pe-stat__value" data-pe-stat="latest">&ndash;</span>
+      <span class="pe-stat__label" data-pe-stat-label="latest">Added in latest update</span>
+    </div>
+    <div class="pe-stat">
+      <span class="pe-stat__value" data-pe-stat="code">&ndash;</span>
+      <span class="pe-stat__label" data-pe-stat-label="code">With code</span>
+    </div>
+    <div class="pe-stat">
+      <span class="pe-stat__value" data-pe-stat="topics">{{ page.topic_count | default: 0 }}</span>
+      <span class="pe-stat__label">Research topics</span>
+    </div>
+  </section>
+
+  <form class="pe-toolbar" id="pe-toolbar" role="search" aria-label="Filter papers" autocomplete="off">
+    <div class="pe-search">
+      <label class="pe-visually-hidden" for="pe-q">Search papers</label>
+      <svg class="pe-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4.2-4.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input class="pe-search__input" type="search" id="pe-q" name="q" maxlength="200"
+             placeholder="Search titles, authors or arXiv IDs" spellcheck="false"
+             autocomplete="off" enterkeyhint="search" aria-keyshortcuts="/">
+      <kbd class="pe-search__kbd" aria-hidden="true" title="Press / to search">/</kbd>
+    </div>
+    <div class="pe-filters">
+      <div class="pe-field pe-field--topic">
+        <label class="pe-field__label" for="pe-topic">Topic</label>
+        <select class="pe-select" id="pe-topic" name="topic">
+          <option value="">All topics</option>
+        </select>
+      </div>
+      <div class="pe-field">
+        <label class="pe-field__label" for="pe-range">Period</label>
+        <select class="pe-select" id="pe-range" name="range">
+          <option value="">All time</option>
+          <option value="latest">Latest update</option>
+          <option value="7">Last 7 days</option>
+          <option value="30">Last 30 days</option>
+          <option value="90">Last 90 days</option>
+          <option value="365">Last 12 months</option>
+        </select>
+      </div>
+      <div class="pe-field">
+        <label class="pe-field__label" for="pe-sort">Sort</label>
+        <select class="pe-select" id="pe-sort" name="sort">
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+        </select>
+      </div>
+      <div class="pe-field pe-field--inline">
+        <label class="pe-check" for="pe-code">
+          <input type="checkbox" id="pe-code" name="code">
+          <span>With code only</span>
+        </label>
+        <button type="button" class="pe-btn pe-btn--quiet" id="pe-reset" hidden>Reset filters</button>
+      </div>
+    </div>
+  </form>
+
+  <p class="pe-status" id="pe-status" role="status" aria-live="polite">Loading papers&hellip;</p>
+
+  <div class="pe-results" id="pe-results" aria-busy="true">
+    <div class="pe-skeleton" aria-hidden="true">
+      <div class="pe-skeleton__line"></div>
+      <div class="pe-skeleton__card"></div>
+      <div class="pe-skeleton__card"></div>
+      <div class="pe-skeleton__card"></div>
+    </div>
+  </div>
+
+  <div class="pe-more" id="pe-more" hidden>
+    <button type="button" class="pe-btn" id="pe-more-btn">Show more</button>
+  </div>
+
+  <noscript>
+    <p class="pe-notice">The interactive paper list needs JavaScript. You can still follow the
+      <a href="{{ '/feed.xml' | relative_url }}">Atom feed</a> or download the
+      <a href="{{ '/data/papers.json' | relative_url }}">paper data (JSON)</a>.</p>
+  </noscript>
+
+  <button type="button" class="pe-top" id="pe-top" aria-label="Back to top" title="Back to top" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5.5 11.5L12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
+{{ content }}

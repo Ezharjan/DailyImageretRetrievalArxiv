@@ -1,0 +1,14 @@
+{%- comment -%}
+  Added to <head> on every page by Just the Docs (_includes/head.html).
+  The ?v= build stamp makes browsers fetch fresh assets after each deployment.
+{%- endcomment -%}
+{%- assign build_stamp = site.time | date: "%s" -%}
+<link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+<meta name="theme-color" content="#5e41d0">
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}?v={{ build_stamp }}">
+{%- if page.layout == "papers" %}
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+<link rel="preload" href="{{ '/data/papers.json' | relative_url }}?v={{ build_stamp }}" as="fetch" type="application/json" crossorigin="anonymous">
+<script src="{{ '/assets/js/paper-explorer.js' | relative_url }}?v={{ build_stamp }}" defer></script>
+{%- endif %}

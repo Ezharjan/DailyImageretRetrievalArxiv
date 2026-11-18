@@ -1,0 +1,273 @@
+# =============================================================================
+# Image Retrieval arXiv Daily - configuration
+# =============================================================================
+# Read by daily_arxiv.py. Relative paths are resolved against the folder that
+# contains this file (the repository root).
+#
+# How papers are matched
+#   * Every entry in a topic's `filters` list is an arXiv search phrase.
+#     Plain phrases are matched as exact phrases in the paper TITLE or ABSTRACT,
+#     ignoring case. Hyphens are sent to arXiv as spaces, because its API
+#     mishandles hyphenated terms while its index splits words at hyphens:
+#     "sketch-based" therefore finds both "sketch-based" and "sketch based".
+#     One-word spellings such as "geolocalization" need an entry of their own.
+#   * A filter that contains an arXiv field prefix (ti:, abs:, au:, co:, jr:,
+#     cat:, rn:, all:), parentheses or AND / OR / ANDNOT is passed to arXiv
+#     unchanged, e.g. 'ti:"image search"' matches the title only. Write spaces
+#     instead of hyphens in such filters.
+#   * Results are restricted to the arXiv categories in `arxiv.categories`, or
+#     to the topic's own `categories` list when one is given.
+#   * A paper can belong to several topics; it is stored once.
+#
+# Check what a topic matches before committing a change:
+#     python daily_arxiv.py --dry_run --topic <id>
+# =============================================================================
+
+site:
+  title: "Image Retrieval arXiv Daily"
+  description: "Daily-updated arXiv papers on image retrieval and visual search, organized by research topic."
+  # Public URL of the GitHub Pages site (used for the Atom feed links).
+  url: "https://ezharjan.github.io/DailyImageRetrivalArxiv/"
+  # GitHub repository as "owner/name" (used for links and the API User-Agent).
+  repository: "Ezharjan/DailyImageRetrivalArxiv"
+
+# Newest papers requested per topic on every run (1-1000). Papers already in
+# the database are merged, so a generous window safely covers missed days.
+# Use `python daily_arxiv.py --max_results 300` once for a deeper backfill.
+max_results: 100
+
+arxiv:
+  # Default arXiv categories. A paper qualifies if ANY of its categories
+  # (primary or cross-list) is in this list.
+  categories: [cs.CV, cs.IR, cs.MM, cs.LG, cs.AI, cs.CL, cs.RO, cs.GR, eess.IV]
+  # Where plain-phrase filters are searched: ti = title, abs = abstract.
+  search_fields: [ti, abs]
+  # Results per API request (arXiv allows up to 2000; 100 keeps responses fast).
+  page_size: 100
+  # Seconds between API requests. arXiv's terms of use require at least 3.
+  request_delay: 3.0
+  # Per-request read timeout (seconds) and retries for transient failures.
+  timeout: 60
+  max_retries: 4
+
+code_links:
+  # Take the repository link (GitHub, GitLab, Codeberg, Bitbucket or
+  # anonymous.4open.science) that authors give in the abstract or the comments.
+  from_abstract: true
+  # Ask the Hugging Face Papers API for a linked GitHub repository when the
+  # abstract has none. (Papers with Code, used previously, shut down in 2025.)
+  huggingface: true
+  # `--update_paper_links` re-checks papers published within this many days.
+  refresh_days: 90
+  # Seconds between Hugging Face API requests. Anonymous clients may send 500
+  # requests per five minutes, so values below 0.6 risk being rate limited.
+  request_delay: 0.7
+  # Stop the Hugging Face lookups of one run after this many minutes, so that a
+  # large backfill finishes within the workflow's time limit. The newest papers
+  # are checked first, and the weekly refresh continues with the recent ones.
+  time_limit_minutes: 30
+
+output:
+  # Paper database (papers.json) and monthly abstract files (abstracts/YYMM.json).
+  data_dir: docs/data
+  # Generated pages and data used by the Jekyll site.
+  site_page: docs/index.md
+  topics_data: docs/_data/topics.json
+  feed: docs/feed.xml
+  # Number of most recently added papers in the Atom feed.
+  feed_size: 100
+  # Drop papers published more than this many days ago (0 = keep everything).
+  retention_days: 0
+
+# -----------------------------------------------------------------------------
+# Research topics
+# -----------------------------------------------------------------------------
+# id          URL-safe identifier used in links and in the database. Keep it
+#             stable: renaming an id drops that topic's existing assignments.
+# description One sentence shown on the website.
+# categories  Optional per-topic override of arxiv.categories.
+# filters     Search phrases (see the header of this file).
+# -----------------------------------------------------------------------------
+keywords:
+  "Image Retrieval & Visual Search":
+    id: image-retrieval
+    description: "The core topic: every paper that names image retrieval in its title or abstract, plus image search, similarity search, and near-duplicate or copy detection."
+    categories: [cs.CV, cs.IR, cs.MM, eess.IV]
+    filters:
+      - "image retrieval"
+      - 'ti:"image search"'
+      - "image similarity search"
+      - "reverse image search"
+      - "visual search engine"
+      - "image copy detection"
+      - "near-duplicate image"
+      - "image deduplication"
+
+  "Instance-Level & Landmark Retrieval":
+    id: instance-landmark-retrieval
+    description: "Finding the same object or place instance: landmark and particular-object retrieval, local and global descriptors, re-ranking and spatial verification."
+    filters:
+      - "instance-level image retrieval"
+      - "instance-level retrieval"
+      - "instance retrieval"
+      - "instance search"
+      - "landmark retrieval"
+      - "landmark recognition"
+      - "particular object retrieval"
+      - "Google Landmarks"
+      - "Revisited Oxford"
+      - "spatial verification"
+      - "image re-ranking"
+
+  "Image-Text & Cross-Modal Retrieval":
+    id: cross-modal-retrieval
+    description: "Retrieving images with language and vice versa: image-text matching, text-to-image and image-to-text retrieval, and vision-language retrieval."
+    filters:
+      - "image-text retrieval"
+      - "text-image retrieval"
+      - "text-to-image retrieval"
+      - "image-to-text retrieval"
+      - "image-text matching"
+      - "cross-modal retrieval"
+      - "cross-modal image retrieval"
+      - "text-based image retrieval"
+      - "language-based image retrieval"
+      - "vision-language retrieval"
+
+  "Composed & Interactive Image Retrieval":
+    id: composed-image-retrieval
+    description: "Retrieval with multimodal queries such as a reference image plus modification text, including zero-shot CIR, text feedback and dialog-based search."
+    filters:
+      - "composed image retrieval"
+      - "composed video retrieval"
+      - "composed retrieval"
+      - "text-guided image retrieval"
+      - "image retrieval with text feedback"
+      - "interactive image retrieval"
+      - "dialog-based image retrieval"
+      - "dialogue-based image retrieval"
+      - "conversational image retrieval"
+      - "chat-based image retrieval"
+      - "multi-turn image retrieval"
+
+  "Sketch-Based Image Retrieval":
+    id: sketch-based-image-retrieval
+    description: "Retrieving photos, videos or 3D shapes from free-hand sketches: category-level, fine-grained and zero-shot SBIR."
+    filters:
+      - "sketch-based image retrieval"
+      - "sketch-based retrieval"
+      - "sketch-based 3D shape retrieval"
+      - "sketch-based video retrieval"
+      - "sketch-to-image retrieval"
+      - "sketch retrieval"
+
+  "Fine-Grained Retrieval & Metric Learning":
+    id: fine-grained-metric-learning
+    description: "Learning discriminative embeddings for retrieval: deep metric learning objectives and fine-grained image retrieval."
+    filters:
+      - "fine-grained image retrieval"
+      - "fine-grained retrieval"
+      - "deep metric learning"
+      - 'ti:"metric learning"'
+
+  "Hashing & Efficient Retrieval":
+    id: hashing-efficient-retrieval
+    description: "Compact codes and fast search for large-scale retrieval: deep and cross-modal hashing, quantization and approximate nearest-neighbor search."
+    categories: [cs.CV, cs.IR, cs.MM, cs.DB, cs.DS, eess.IV]
+    filters:
+      - "deep hashing"
+      - "image hashing"
+      - "learning to hash"
+      - "cross-modal hashing"
+      - "unsupervised hashing"
+      - "supervised hashing"
+      - "hash codes"
+      - "product quantization"
+      - "approximate nearest neighbor search"
+      - "approximate nearest neighbour search"
+      - "vector search"
+
+  "Person & Object Re-Identification":
+    id: re-identification
+    description: "Re-identification and person search framed as retrieval: person, vehicle, animal and object re-ID, and text-based person retrieval."
+    categories: [cs.CV, cs.MM, cs.IR, cs.RO, eess.IV]
+    filters:
+      - "re-identification"
+      - "reidentification"
+      - "re-ID"
+      - "ReID"
+      - "person search"
+      - "person retrieval"
+
+  "Visual Place Recognition & Geo-Localization":
+    id: place-recognition-geo-localization
+    description: "Image-based localization through retrieval: visual place recognition, cross-view and image geo-localization."
+    filters:
+      - "visual place recognition"
+      - "geo-localization"
+      - "geo-localisation"
+      - "geolocalization"
+      - "geolocalisation"
+      - "image geolocation"
+      - "image-based localization"
+
+  "Video & Text-Video Retrieval":
+    id: video-retrieval
+    description: "Searching video collections: text-to-video retrieval, video moment retrieval, content-based video retrieval and video copy detection."
+    filters:
+      - "video retrieval"
+      - "video-text retrieval"
+      - "moment retrieval"
+      - "video copy detection"
+
+  "Multimodal Embeddings & Universal Retrieval":
+    id: multimodal-embeddings
+    description: "General-purpose embedding models for search across images and text: universal multimodal retrieval and MLLM-based embedders."
+    filters:
+      - "multimodal retrieval"
+      - "multi-modal retrieval"
+      - "multimodal embedding"
+      - "multimodal embeddings"
+      - "universal image embedding"
+      - "vision-language embedding"
+
+  "Visual Document Retrieval & Multimodal RAG":
+    id: visual-document-retrieval-rag
+    description: "Retrieval over visually rich documents and retrieval-augmented generation with images: visual document retrieval and multimodal RAG."
+    filters:
+      - "visual document retrieval"
+      - "document image retrieval"
+      - "multimodal retrieval-augmented generation"
+      - "multi-modal retrieval-augmented generation"
+      - "multimodal RAG"
+      - "multi-modal RAG"
+      - "visual RAG"
+      - "visual retrieval-augmented generation"
+      - "retrieval-augmented image"
+      - "ColPali"
+
+  "Domain-Specific Image Retrieval":
+    id: domain-specific-retrieval
+    description: "Image retrieval in specialized domains: remote sensing, medical and histopathology images, fashion and products, art, trademarks, faces, food and 3D shapes."
+    categories: [cs.CV, cs.MM, cs.GR, eess.IV]
+    filters:
+      - "remote sensing image retrieval"
+      - "remote sensing image-text retrieval"
+      - "remote sensing cross-modal retrieval"
+      - "medical image retrieval"
+      - "histopathology image retrieval"
+      - "pathology image retrieval"
+      - "fashion retrieval"
+      - "fashion image retrieval"
+      - "clothing retrieval"
+      - "product retrieval"
+      - "product image retrieval"
+      - "street-to-shop"
+      - "artwork retrieval"
+      - "trademark retrieval"
+      - "logo retrieval"
+      - "patent image retrieval"
+      - "face image retrieval"
+      - "recipe retrieval"
+      - "3D shape retrieval"
+      - "3D model retrieval"

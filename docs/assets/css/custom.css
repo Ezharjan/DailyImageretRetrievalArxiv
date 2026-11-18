@@ -1,0 +1,994 @@
+/* ==========================================================================
+   Image Retrieval arXiv Daily - site styles
+   Loaded after the Just the Docs theme (see _includes/head_custom.html).
+   Plain CSS on purpose: it is served as-is, without Sass processing.
+   Palette follows the theme: purple #5e41d0 / #7253ed, text #27262b.
+   ========================================================================== */
+
+:root {
+  --pe-accent: #5e41d0;
+  --pe-accent-strong: #4e26af;
+  --pe-accent-soft: #f1edfd;
+  --pe-accent-ring: rgba(94, 65, 208, 0.28);
+  --pe-text: #27262b;
+  --pe-text-muted: #5c5962;
+  --pe-text-subtle: #6b6873;
+  --pe-border: #e6e1e8;
+  --pe-border-strong: #d3ccd8;
+  --pe-surface: #ffffff;
+  --pe-surface-alt: #f7f6fb;
+  --pe-code: #0f766e;
+  --pe-code-soft: #e3f4f1;
+  --pe-new: #9a4b00;
+  --pe-new-soft: #fff1db;
+  --pe-mark: #fff3b0;
+  --pe-radius: 10px;
+  --pe-radius-sm: 6px;
+  --pe-shadow: 0 1px 2px rgba(39, 38, 43, 0.05), 0 1px 4px rgba(39, 38, 43, 0.06);
+  /* Unit for the explorer's font sizes (see the note below). */
+  --pe-unit: 1rem;
+}
+
+/* The theme shrinks the root font size to 0.875rem (14px) on screens narrower
+   than 31.25rem, which would scale every rem-based size down with it. Spacing
+   may follow, but text must stay readable and form controls need 16px to keep
+   iOS from zooming in on focus, so font sizes use --pe-unit, which undoes it. */
+@media (max-width: 31.24rem) {
+  :root {
+    --pe-unit: 1.142857rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Site-wide refinements
+   -------------------------------------------------------------------------- */
+
+.site-title::before {
+  content: "";
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 0.6rem;
+  background: url("../images/logo.svg") center / contain no-repeat;
+}
+
+/* The fixed-height sidebar header fits the site name on two lines. */
+@media (min-width: 50rem) {
+  .side-bar .site-title {
+    font-size: 1.0625rem !important;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+
+.main-content :focus-visible,
+.side-bar :focus-visible {
+  outline: 2px solid var(--pe-accent);
+  outline-offset: 2px;
+}
+
+.main-content table {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Topic table on the About page: fixed column shares, top-aligned cells; on
+   narrow screens it keeps a readable width and scrolls inside its wrapper. */
+.topic-table {
+  width: 100%;
+  min-width: 44rem;
+  table-layout: fixed;
+}
+
+.topic-table th {
+  text-align: left;
+}
+
+.topic-table th:nth-child(1) {
+  width: 22%;
+}
+
+.topic-table th:nth-child(2) {
+  width: 36%;
+}
+
+.topic-table td {
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.topic-table td:first-child {
+  font-weight: 600;
+}
+
+.topic-table code {
+  overflow-wrap: anywhere;
+}
+
+.topic-table small {
+  display: block;
+  margin-top: 0.35rem;
+}
+
+/* --------------------------------------------------------------------------
+   Paper explorer: neutralize theme rules for rendered Markdown
+   (Selectors match the specificity of the theme's `.main-content ul` rules;
+   form-control resets use :where() so component classes always win.)
+   -------------------------------------------------------------------------- */
+
+.pe {
+  color: var(--pe-text);
+}
+
+.pe a {
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.pe ul,
+.pe ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pe ul > li::before,
+.pe ol > li::before {
+  content: none;
+}
+
+.pe h1,
+.pe h2,
+.pe h3 {
+  margin: 0;
+}
+
+:where(.pe) button,
+:where(.pe) input,
+:where(.pe) select {
+  font: inherit;
+  color: inherit;
+}
+
+:where(.pe) button {
+  cursor: pointer;
+}
+
+.pe [hidden] {
+  display: none !important;
+}
+
+.pe-visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   The theme styles headings in page content with `!important` font sizes and
+   with selectors such as `.main-content h1 + p`. The explorer's headings and
+   the paragraphs after them therefore use `.main-content .pe ...` selectors,
+   and their font sizes are marked `!important` as well.
+   -------------------------------------------------------------------------- */
+
+.pe-hero {
+  padding: 1.5rem 1.5rem 1.25rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #f4f0ff 0%, #eef4ff 100%);
+  border: 1px solid #e4ddfb;
+  border-radius: 14px;
+}
+
+.main-content .pe .pe-hero__title {
+  margin: 0;
+  font-size: calc(1.75 * var(--pe-unit)) !important;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #1f1d24;
+}
+
+.pe-hero__title:focus {
+  outline: none;
+}
+
+.main-content .pe .pe-hero__lead {
+  max-width: 42rem;
+  margin: 0.5rem 0 0;
+  font-size: calc(1 * var(--pe-unit));
+  line-height: 1.5;
+  color: var(--pe-text-muted);
+}
+
+.pe .pe-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pe-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.75rem;
+  padding: 0.15rem 0.7rem;
+  font-size: calc(0.8125 * var(--pe-unit));
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--pe-text-muted);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--pe-border);
+  border-radius: 999px;
+}
+
+.pe-pill--link {
+  color: var(--pe-accent);
+  text-decoration: none;
+}
+
+.pe-pill--link:hover {
+  color: var(--pe-accent-strong);
+  text-decoration: none;
+  border-color: var(--pe-accent);
+}
+
+/* --------------------------------------------------------------------------
+   Statistics
+   -------------------------------------------------------------------------- */
+
+.pe-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.pe-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.85rem 1rem;
+  background: var(--pe-surface);
+  border: 1px solid var(--pe-border);
+  border-radius: var(--pe-radius);
+  box-shadow: var(--pe-shadow);
+}
+
+.pe-stat__value {
+  font-size: calc(1.5 * var(--pe-unit));
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--pe-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.pe-stat__label {
+  font-size: calc(0.75 * var(--pe-unit));
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+  color: var(--pe-text-subtle);
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Toolbar
+   -------------------------------------------------------------------------- */
+
+.pe-toolbar {
+  padding: 0.85rem;
+  margin-bottom: 0.75rem;
+  background: var(--pe-surface-alt);
+  border: 1px solid var(--pe-border);
+  border-radius: var(--pe-radius);
+}
+
+.pe-search {
+  position: relative;
+}
+
+.pe-search__icon {
+  position: absolute;
+  top: 50%;
+  left: 0.8rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--pe-text-subtle);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.pe-search__input {
+  display: block;
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 2.75rem 0 2.5rem;
+  font-size: calc(1 * var(--pe-unit));
+  text-overflow: ellipsis;
+  background: var(--pe-surface);
+  border: 1px solid var(--pe-border-strong);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.pe-search__input::placeholder {
+  color: #6f6b78;
+  text-overflow: ellipsis;
+  opacity: 1;
+}
+
+.pe-search__input:focus {
+  border-color: var(--pe-accent);
+  box-shadow: 0 0 0 3px var(--pe-accent-ring);
+}
+
+.pe-search__input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+.pe-search__kbd {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  min-width: 1.4rem;
+  padding: 0.05rem 0.4rem;
+  font-family: inherit;
+  font-size: calc(0.75 * var(--pe-unit));
+  line-height: 1.4;
+  color: var(--pe-text-subtle);
+  text-align: center;
+  background: var(--pe-surface-alt);
+  border: 1px solid var(--pe-border-strong);
+  border-radius: 4px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.pe-search__input:focus ~ .pe-search__kbd,
+.pe-search__input:not(:placeholder-shown) ~ .pe-search__kbd {
+  display: none;
+}
+
+.pe-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.65rem 0.75rem;
+  align-items: end;
+  margin-top: 0.75rem;
+}
+
+.pe-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.pe-field__label {
+  margin-bottom: 0.25rem;
+  font-size: calc(0.75 * var(--pe-unit));
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--pe-text-subtle);
+  text-transform: uppercase;
+}
+
+.pe-select {
+  width: 100%;
+  min-width: 0;
+  height: 2.375rem;
+  padding: 0 2rem 0 0.7rem;
+  font-size: calc(0.9 * var(--pe-unit));
+  text-overflow: ellipsis;
+  background: var(--pe-surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 7.5l5 5 5-5' fill='none' stroke='%235c5962' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 0.6rem center / 1rem no-repeat;
+  border: 1px solid var(--pe-border-strong);
+  border-radius: 8px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.pe-select:focus {
+  border-color: var(--pe-accent);
+  box-shadow: 0 0 0 3px var(--pe-accent-ring);
+}
+
+.pe-field--inline {
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-column: 1 / -1;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pe-check {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  min-height: 24px;
+  font-size: calc(0.9 * var(--pe-unit));
+  cursor: pointer;
+  user-select: none;
+}
+
+.pe-check input {
+  width: 1.05rem;
+  height: 1.05rem;
+  margin: 0;
+  accent-color: var(--pe-accent);
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+
+.pe-btn {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.375rem;
+  padding: 0.4rem 1.1rem;
+  font-size: calc(0.9 * var(--pe-unit));
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+  text-decoration: none;
+  background: var(--pe-accent);
+  border: 1px solid var(--pe-accent);
+  border-radius: 8px;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.pe-btn:hover {
+  color: #fff;
+  text-decoration: none;
+  background: var(--pe-accent-strong);
+  border-color: var(--pe-accent-strong);
+}
+
+.pe-btn--quiet {
+  min-height: 2rem;
+  padding: 0.25rem 0.75rem;
+  color: var(--pe-accent);
+  background: transparent;
+  border-color: var(--pe-border-strong);
+}
+
+.pe-btn--quiet:hover {
+  color: var(--pe-accent-strong);
+  background: var(--pe-accent-soft);
+  border-color: var(--pe-accent);
+}
+
+/* --------------------------------------------------------------------------
+   Status, notices and loading skeleton
+   -------------------------------------------------------------------------- */
+
+.pe-status {
+  min-height: 1.5em;
+  margin: 0 0 0.25rem;
+  font-size: calc(0.875 * var(--pe-unit));
+  color: var(--pe-text-muted);
+}
+
+.pe-notice {
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+  font-size: calc(0.95 * var(--pe-unit));
+  line-height: 1.55;
+  color: var(--pe-text-muted);
+  text-align: center;
+  background: var(--pe-surface-alt);
+  border: 1px dashed var(--pe-border-strong);
+  border-radius: var(--pe-radius);
+}
+
+.pe-notice strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: calc(1 * var(--pe-unit));
+  color: var(--pe-text);
+}
+
+.pe-notice .pe-btn {
+  margin-top: 0.85rem;
+}
+
+.pe-notice--error {
+  background: #fff5f5;
+  border-color: #f1b7b7;
+}
+
+.pe-skeleton__line,
+.pe-skeleton__card {
+  background: linear-gradient(90deg, #f0eef4 0%, #f8f7fb 40%, #f0eef4 80%);
+  background-size: 200% 100%;
+  border-radius: var(--pe-radius-sm);
+  animation: pe-shimmer 1.4s ease-in-out infinite;
+}
+
+.pe-skeleton__line {
+  width: 11rem;
+  height: 1.1rem;
+  margin: 1.25rem 0 0.75rem;
+}
+
+.pe-skeleton__card {
+  height: 6.5rem;
+  margin-bottom: 0.75rem;
+}
+
+@keyframes pe-shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}
+
+/* --------------------------------------------------------------------------
+   Paper list
+   -------------------------------------------------------------------------- */
+
+.pe-day + .pe-day {
+  margin-top: 0.5rem;
+}
+
+.main-content .pe .pe-day__title {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0.6rem 0 0.45rem;
+  margin: 0;
+  font-size: calc(1 * var(--pe-unit)) !important;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--pe-text);
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 2px solid var(--pe-accent);
+  -webkit-backdrop-filter: saturate(1.4) blur(6px);
+  backdrop-filter: saturate(1.4) blur(6px);
+}
+
+.pe-day__count {
+  font-size: calc(0.8125 * var(--pe-unit));
+  font-weight: 500;
+  color: var(--pe-text-subtle);
+  white-space: nowrap;
+}
+
+.pe-card {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--pe-border);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 11rem;
+}
+
+.main-content .pe .pe-card__title {
+  margin: 0;
+  font-size: calc(1.0625 * var(--pe-unit)) !important;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.pe-card__title a {
+  color: #1f1d24;
+  text-decoration: none;
+}
+
+.pe-card__title a:hover {
+  color: var(--pe-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.pe-card__title mark,
+.pe-card__authors mark {
+  padding: 0 0.05em;
+  color: inherit;
+  background: var(--pe-mark);
+  border-radius: 2px;
+}
+
+.main-content .pe .pe-card__authors {
+  margin: 0.3rem 0 0;
+  font-size: calc(0.9 * var(--pe-unit));
+  line-height: 1.45;
+  color: var(--pe-text-muted);
+}
+
+.pe-card__more-authors {
+  padding: 0;
+  margin-left: 0.25rem;
+  font-size: calc(0.85 * var(--pe-unit));
+  color: var(--pe-accent);
+  white-space: nowrap;
+  background: none;
+  border: 0;
+}
+
+.pe-card__more-authors:hover {
+  text-decoration: underline;
+}
+
+.pe-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.6rem;
+  align-items: center;
+  margin: 0.4rem 0 0;
+  font-size: calc(0.8125 * var(--pe-unit));
+  line-height: 1.4;
+  color: var(--pe-text-subtle);
+}
+
+.pe-card__meta > span + span::before {
+  margin-right: 0.6rem;
+  color: #b9b4bf;
+  content: "\00b7";
+}
+
+.pe-card__meta > .pe-badge + span::before {
+  content: none;
+}
+
+.pe-card__note {
+  margin: 0.35rem 0 0;
+  font-size: calc(0.8125 * var(--pe-unit));
+  line-height: 1.45;
+  color: var(--pe-text-muted);
+  overflow-wrap: anywhere;
+}
+
+.pe-card__note b {
+  font-weight: 600;
+  color: var(--pe-text);
+}
+
+.pe-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.05rem 0.45rem;
+  font-size: calc(0.6875 * var(--pe-unit));
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.pe-badge--new {
+  color: var(--pe-new);
+  background: var(--pe-new-soft);
+}
+
+.pe-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.65rem;
+}
+
+.pe-card__topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.pe-tag {
+  max-width: 100%;
+  padding: 0 0.55rem;
+  overflow: hidden;
+  font-size: calc(0.75 * var(--pe-unit));
+  font-weight: 500;
+  line-height: 22px; /* plus the border: a 24px touch target at any root size */
+  color: var(--pe-accent-strong);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: var(--pe-accent-soft);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.pe-tag:hover {
+  border-color: var(--pe-accent);
+}
+
+.pe-tag[aria-pressed="true"] {
+  color: #fff;
+  background: var(--pe-accent);
+}
+
+.pe-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-left: auto;
+}
+
+.pe-action {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.875rem;
+  padding: 0.2rem 0.7rem;
+  font-size: calc(0.8125 * var(--pe-unit));
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--pe-text-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  background: var(--pe-surface);
+  border: 1px solid var(--pe-border-strong);
+  border-radius: var(--pe-radius-sm);
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.pe-action:hover {
+  color: var(--pe-accent);
+  text-decoration: none;
+  border-color: var(--pe-accent);
+}
+
+.pe-action[aria-expanded="true"] {
+  color: var(--pe-accent);
+  background: var(--pe-accent-soft);
+  border-color: var(--pe-accent);
+}
+
+.pe-action--code {
+  color: var(--pe-code);
+  background: var(--pe-code-soft);
+  border-color: #b5ded7;
+}
+
+.pe-action--code:hover {
+  color: #0b5c56;
+  border-color: var(--pe-code);
+}
+
+.pe-action.is-done {
+  color: var(--pe-code);
+  border-color: var(--pe-code);
+}
+
+.pe-card__abstract {
+  padding: 0.85rem 1rem;
+  margin-top: 0.75rem;
+  font-size: calc(0.9 * var(--pe-unit));
+  line-height: 1.6;
+  color: var(--pe-text);
+  overflow-wrap: break-word;
+  background: var(--pe-surface-alt);
+  border-left: 3px solid var(--pe-accent);
+  border-radius: 0 var(--pe-radius-sm) var(--pe-radius-sm) 0;
+}
+
+.pe-card__abstract.is-loading {
+  color: var(--pe-text-subtle);
+}
+
+.pe-card__abstract pre {
+  max-height: 16rem;
+  padding: 0.75rem;
+  margin: 0.5rem 0 0;
+  overflow: auto;
+  font-size: calc(0.8 * var(--pe-unit));
+  white-space: pre-wrap;
+  background: var(--pe-surface);
+  border: 1px solid var(--pe-border);
+  border-radius: var(--pe-radius-sm);
+}
+
+.pe-more {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Back-to-top button
+   -------------------------------------------------------------------------- */
+
+.pe-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  color: #fff;
+  background: var(--pe-accent);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(78, 38, 175, 0.35);
+  /* Hidden with `visibility` so the button also leaves the keyboard tab order. */
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.15s ease, visibility 0s linear 0.2s;
+}
+
+.pe-top.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  transition-delay: 0s;
+}
+
+.pe-top:hover {
+  background: var(--pe-accent-strong);
+}
+
+.pe-top svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar topic navigation (desktop)
+   -------------------------------------------------------------------------- */
+
+.pe-topic-nav {
+  padding-bottom: 1rem;
+}
+
+.pe-topic-nav .nav-list .nav-list-item .nav-list-link.pe-topic-link {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  justify-content: space-between;
+  min-height: 0;
+  padding-top: 0.35rem;
+  padding-right: 1rem;
+  padding-bottom: 0.35rem;
+  line-height: 1.35;
+}
+
+.pe-topic-link__count {
+  flex: none;
+  font-size: calc(0.75 * var(--pe-unit));
+  font-weight: 500;
+  color: var(--pe-text-subtle);
+  font-variant-numeric: tabular-nums;
+}
+
+.pe-topic-link.active .pe-topic-link__count {
+  color: var(--pe-accent);
+}
+
+@media (max-width: 49.99rem) {
+  .pe-topic-nav {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive layout
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 49.99rem) {
+  .pe-hero {
+    padding: 1rem 1rem 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .main-content .pe .pe-hero__title {
+    font-size: calc(1.375 * var(--pe-unit)) !important;
+  }
+
+  .main-content .pe .pe-hero__lead {
+    font-size: calc(0.9375 * var(--pe-unit));
+  }
+
+  .pe .pe-hero__meta {
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+
+  .pe-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .pe-stat {
+    padding: 0.6rem 0.75rem;
+  }
+
+  .pe-stat__value {
+    font-size: calc(1.25 * var(--pe-unit));
+  }
+
+  .pe-toolbar {
+    padding: 0.65rem;
+  }
+
+  .pe-search__kbd {
+    display: none;
+  }
+
+  .pe-search__input {
+    padding-right: 0.75rem;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .pe-filters {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .pe-field--topic {
+    grid-column: 1 / -1;
+  }
+
+  .pe-card__actions {
+    margin-left: 0;
+  }
+
+  .pe-top {
+    right: 0.85rem;
+    bottom: 0.85rem;
+  }
+}
+
+/* Small screens and touch devices: 16px text in the dropdowns keeps iOS Safari
+   from zooming the page when one of them gets focus. */
+@media (max-width: 37.5rem), (pointer: coarse) {
+  .pe-select {
+    font-size: var(--pe-unit);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pe *,
+  .pe *::before,
+  .pe *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media print {
+  .pe-toolbar,
+  .pe-more,
+  .pe-top,
+  .pe-card__actions,
+  .pe-skeleton {
+    display: none !important;
+  }
+
+  .pe-hero {
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+
+  .main-content .pe .pe-day__title {
+    position: static;
+  }
+
+  .pe-card {
+    content-visibility: visible;
+    break-inside: avoid;
+  }
+}
