@@ -4,8 +4,8 @@ layout: papers
 title: Papers
 nav_order: 1
 permalink: /
-description: "Daily-updated arXiv papers on image retrieval and visual search, organized by research topic."
-last_updated: ""
-paper_count: 0
+description: "Daily-updated arXiv papers on image retrieval and visual search, organized by research topic. 3,145 papers across 13 topics."
+last_updated: "2026-11-18"
+paper_count: 3145
 topic_count: 13
 ---
