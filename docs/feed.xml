@@ -5,11 +5,105 @@
   <link href="https://ezharjan.github.io/DailyImageRetrievalArxiv/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ezharjan.github.io/DailyImageRetrievalArxiv/" rel="alternate" type="text/html" />
   <id>https://ezharjan.github.io/DailyImageRetrievalArxiv/</id>
-  <updated>2026-11-18T20:59:56Z</updated>
+  <updated>2026-11-19T16:02:01Z</updated>
   <author>
     <name>Image Retrieval arXiv Daily</name>
   </author>
   <generator uri="https://github.com/Ezharjan/DailyImageRetrievalArxiv" version="2.0.0">daily_arxiv.py</generator>
+  <entry>
+    <id>https://arxiv.org/abs/2611.24371</id>
+    <title>One Affinity, Two Axes: Bidirectional Slot Attention for Iterative Aggregation across the Structure--Detail Spectrum in Visual Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.24371" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.24371" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-18T00:00:00Z</published>
+    <updated>2026-11-19T00:00:00Z</updated>
+    <author>
+      <name>Zihang Wang</name>
+    </author>
+    <author>
+      <name>Wenkai Zhu</name>
+    </author>
+    <author>
+      <name>Lingdong Kong</name>
+    </author>
+    <author>
+      <name>Teng Yan</name>
+    </author>
+    <author>
+      <name>Alan Liang</name>
+    </author>
+    <author>
+      <name>Shuyuan Li</name>
+    </author>
+    <author>
+      <name>Xieyuanli Chen</name>
+    </author>
+    <author>
+      <name>Dong Kong</name>
+    </author>
+    <author>
+      <name>Guanyu Zong</name>
+    </author>
+    <category term="instance-landmark-retrieval" label="Instance-Level &amp; Landmark Retrieval" />
+    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
+    <summary type="text">Aggregating dense patch tokens into compact and discriminative global descriptors is central to visual retrieval. Although foundation models provide rich local features, existing aggregation heads still rely on single-pass mappings and lack an explicit mechanism to coordinate structural and fine-grained cues. Therefore, we propose Bidirectional Slot Attention (BiSA), which reformulates aggregation as an iterative coupled system. Cross-Axis Consensus (CAC) progressively refines learnable slots by interpreting a single shared token--slot affinity along two complementary axes. Along the competition axis, slots vie for each token under a temperature shared across all of them, determining token ownership and inducing a non-redundant scene decomposition. Along the selection axis, a slot-specific temperature governs the breadth of each slot's response, spanning a spectrum from broad layouts to sparse fine-grained details. Their consensus couples non-redundant decomposition with multi-granular slot specialization. Furthermore, the two axes expose intrinsic token-reliability cues at no extra cost: a token's claim strength under competition and its salience under selection. Progressive Token Filtering (PTF) converts these cues into a retention probability that down-weights unreliable tokens before the next CAC iteration, without any segmentation branch or external prior, forming a self-reinforcing loop of competitive decomposition, selective focusing, and feedback purification. Across all three retrieval tasks, BiSA leads on five of six place recognition benchmarks (+4.2 R@1 on Baidu Mall), tops all 16 metrics of drone--satellite geo-localization (+8.4 R@1 at 150 m), and improves instance-level retrieval on ROxford-Hard by 4.5 mAP points. Notably, the selection axis adds only 20 learnable scalars, yet improves average R@1 by 2.8 points.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.23606</id>
+    <title>VIBRA: Backward-Compatible Cross-Modal Retrieval with Consensus Barycenters</title>
+    <link href="https://arxiv.org/abs/2611.23606" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.23606" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-17T00:00:00Z</published>
+    <updated>2026-11-19T00:00:00Z</updated>
+    <author>
+      <name>Shubing Yang</name>
+    </author>
+    <author>
+      <name>Xutong Liu</name>
+    </author>
+    <author>
+      <name>Dongfang Zhao</name>
+    </author>
+    <category term="cross-modal-retrieval" label="Image-Text &amp; Cross-Modal Retrieval" />
+    <summary type="text">Backward-compatible retrieval enables a new encoder to query the gallery that an old model has already encoded, so that a cross-modal retrieval system can be upgraded without re-encoding billions of items. Existing compatible methods either fit the old query and stay near the accuracy of the old model, or run the old and the new encoder for every query. We propose VIBRA, which matches relevance on the old gallery, corrects the errors of a single model with the barycenter of several views, which is itself a query in the old space, and trains the new encoder to inherit this consensus, so that models absent at deployment still shape every query. We show that the barycenter gains margin over the average of its views exactly when their hardest irrelevant items differ, and we characterize the share of this gain that one encoder can reach. On five benchmarks with five upgrades among six CLIP, MetaCLIP and SigLIP2 backbones, VIBRA is the best compatible method in all 50 settings, improving Recall@1 by up to 5.6 points over the strongest baseline and by up to 18.0 points over the old model, while adding less than 1 ms to the latency of the new encoder.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.23347</id>
+    <title>SurgCBVR: A Multi-Domain Benchmark for Content-Based Surgical Video-to-Video Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.23347" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.23347" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-17T00:00:00Z</published>
+    <updated>2026-11-19T00:00:00Z</updated>
+    <author>
+      <name>Mohammad Eslami</name>
+    </author>
+    <author>
+      <name>Mousa Moradi</name>
+    </author>
+    <author>
+      <name>Negin Ghamsarian</name>
+    </author>
+    <author>
+      <name>Nazlee Zebardast</name>
+    </author>
+    <author>
+      <name>Jennifer L Lindsey</name>
+    </author>
+    <author>
+      <name>Sophia Y. Wang</name>
+    </author>
+    <author>
+      <name>Lucia Sobrin</name>
+    </author>
+    <author>
+      <name>Rishi P Singh</name>
+    </author>
+    <author>
+      <name>Tobias Elze</name>
+    </author>
+    <category term="video-retrieval" label="Video &amp; Text-Video Retrieval" />
+    <summary type="text">Hospitals record thousands of hours of surgical video annually, yet these archives remain difficult to search by content. Surgeons cannot readily retrieve similar operations, complications, or workflow events. Existing surgical computer vision primarily produces labels rather than retrieving relevant videos. We introduce SurgCBVR, the first benchmark for content-based video-to-video retrieval in surgery. It integrates eight public datasets across four domains-ophthalmic, laparoscopic, robotic-assisted, and colonoscopy-covering six procedure types, 679 cases, and 76,489 clips (106 hours). SurgCBVR comprises two tiers: Scene, retrieving the same operative state across cases and sites, and Workflow, retrieving and localizing phase transitions and deviations. Scene includes 74,765 clips spanning 40 classes, three temporal granularities, and three playback speeds; Workflow contains 1,724 transition clips. Fixed clip lengths and frame counts, together with phase-classifier oracle and duration-only baselines, help assess label and timing shortcuts. We evaluate six generic and surgical foundation models, two video retrieval methods, and contrastive heads trained on SurgCBVR, using within-dataset, cross-dataset, and pooled-gallery retrieval restricted to the same procedure type. Frozen representations barely outperform a timing-only baseline, transition retrieval approaches chance, and trained heads lose up to half their accuracy across datasets. These findings expose substantial limitations in current video representations and establish SurgCBVR as a benchmark for advancing surgery-aware retrieval.</summary>
+  </entry>
   <entry>
     <id>https://arxiv.org/abs/2611.22637</id>
     <title>OVET-Consensus: Rank-Preserving Counterfactual Event Verification for Video Moment Grounding</title>
@@ -2557,91 +2651,5 @@
     </author>
     <category term="instance-landmark-retrieval" label="Instance-Level &amp; Landmark Retrieval" />
     <summary type="text">Radiology report generation (RRG) streamlines clinical workflows and alleviates the burden of radiologists' documentation. Standard vision-language models capture global visual cues and lack fine-grained alignment between anatomical regions and diagnostic text. Most retrieval-augmented methods retrieve complete historical reports, introducing redundant noise and severe vision-text mismatches that trigger clinically risky hallucinations and missed lesions. In this paper, we introduce AR-RRG, an anatomy-guided retrieval-driven method for the generation of radiology reports. AR-RRG consists of two core modules: the anatomy-aware self-training lesion detection network (ASLDNet) and the retrieval-driven radiology report generation (RRRG). ASLDNet leverages anatomy-aware spatial verification (ASV) and class-adaptive dynamic thresholding (CDT) via self-training, delivering accurate lesion localization to support subsequent generation. As the generative branch of AR-RRG, RRRG eliminates clinical hallucinations through dual-granularity retrieval (DR) and complements missing lesions with a neighborhood consensus (NC) mechanism. A parallel continuous visual perception (PCVP) stream converts radiographs into visual tokens through fixed medical encoding and resampling. Multi-scale text and visual features are fused, followed by LoRA-efficient large language model tuning to generate clinically consistent, visually grounded radiology reports. Extensive evaluations on MS-CXR, MIMIC-CXR, and IU X-Ray demonstrate that AR-RRG consistently outperforms state-of-the-art methods across mainstream metrics. Our code will be made publicly available.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.01074</id>
-    <title>Grounding Across Views: Cross-View Referring Reasoning for Visual Grounding</title>
-    <link href="https://arxiv.org/abs/2611.01074" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.01074" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-10-31T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Hao Gan</name>
-    </author>
-    <author>
-      <name>Liuqian Wang</name>
-    </author>
-    <author>
-      <name>Zhuping Hu</name>
-    </author>
-    <author>
-      <name>Yufei Gao</name>
-    </author>
-    <author>
-      <name>Wentao Chao</name>
-    </author>
-    <author>
-      <name>Chong Fu</name>
-    </author>
-    <author>
-      <name>Shuang Li</name>
-    </author>
-    <author>
-      <name>Chengming Liu</name>
-    </author>
-    <author>
-      <name>Lei Shi</name>
-    </author>
-    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
-    <summary type="text">Cross-view object geo-localization (CVOGL) aims to identify a query-view target in a satellite image, yet reliable instance grounding remains challenging under substantial viewpoint discrepancies. Although recent methods incorporate multimodal prompts, they insufficiently address the varying transferability of linguistic and visual evidence across views. Viewpoint-dependent descriptions (e.g., building facades visible in oblique UAV views but not in top-down satellite images) may become unreliable for satellite grounding, while visually similar instances further complicate target identification. To address these challenges, we rethink CVOGL from a visual grounding perspective and propose GAV (Grounding Across Views), a view-aware framework for constructing target-centered evidence and establishing discriminative cross-view correspondence. Specifically, view-aware referring reasoning mitigates viewpoint-dependent ambiguity, multi-token exemplar prompting and contrastive alignment strengthen visual-semantic correspondence, and scene-level supervision with alignment-based verification distinguishes competing satellite instances. We further introduce CVOGL-Text, a street- and drone-to-satellite benchmark with query-derived expressions. GAV achieves state-of-the-art performance on MoP-UAV with 62.55% Acc@0.5 (+18.19 percentage points) and outperforms evaluated click-point baselines on CVOGL-Text.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.00819</id>
-    <title>ODC: Orthogonal Drift Correction for Improved Text-to-Image Semantic Alignment at Inference</title>
-    <link href="https://arxiv.org/abs/2611.00819" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.00819" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/kasrakamali/ODC" rel="related" title="Code" />
-    <published>2026-10-31T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Kasra Kamali</name>
-    </author>
-    <author>
-      <name>Basim Azam</name>
-    </author>
-    <author>
-      <name>Tuan Duong Trinh</name>
-    </author>
-    <author>
-      <name>Jean Honorio</name>
-    </author>
-    <author>
-      <name>Naveed Akhtar</name>
-    </author>
-    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
-    <summary type="text">Text-to-image models have achieved remarkable success in generating high-quality images from textual descriptions. However, they often struggle with "semantic drift," where the generated output fails to precisely align with complex or nuanced text prompts. While recent approaches have attempted to address semantic errors regarding attribute binding or object presence, there remains a gap for a more holistic method that addresses these issues by directly refining the text embeddings of the initial user prompt. In this work, we introduce Orthogonal Drift Correction (ODC), an inference-time guidance method designed to mitigate semantic drift without requiring model retraining or additional user inputs. ODC guides image generation through a two-stage process. In the first stage, it identifies the semantic drift by evaluating the initially generated image against the user prompt in a shared vision-language embedding space. It then isolates the component of this drift vector that is orthogonal to the prompt's direction and translates it back into text via a vocabulary-based surrogate mechanism. In the second stage, it produces refined text conditioning for a second generation pass by feeding both the initial text embedding and the re-embedded drift representation into an adaptive rank-reduced concept removal module. Our experiments demonstrate that ODC consistently improves prompt-image alignment, increasing CLIP scores by up to 5.4% over the baseline on the COALBench-300 and PartiPrompts benchmarks. Furthermore, on the T2I-CompBench complex subset, ODC improves the average 3-in-1 score by 4.5% over the competing methods. As a plug-and-play module, ODC offers a practical and efficient method for improving the reliability of text-to-image models. Code is available at https://github.com/kasrakamali/ODC.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.00802</id>
-    <title>EduExplain: A Benchmark for Explanation-Set Retrieval and Storyboard Construction in Educational Explanation</title>
-    <link href="https://arxiv.org/abs/2611.00802" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.00802" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/data-iitd/eduexplain" rel="related" title="Code" />
-    <published>2026-10-31T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Aryan Ahmed</name>
-    </author>
-    <author>
-      <name>Riti Verma</name>
-    </author>
-    <author>
-      <name>Sanskar Singh</name>
-    </author>
-    <author>
-      <name>Maya Ramanath</name>
-    </author>
-    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
-    <summary type="text">Generating an educational explanation for a learner's query is not a single retrieval step but a pipeline: a system must first retrieve a compact set of complementary resources--passages, figures, examples, activities--that jointly support an explanation, then structure that set into an ordered, timed, role-assigned plan before rendering it as a lesson or video. Existing retrieval benchmarks evaluate neither stage at the level these applications require: they score individual documents rather than explanation sets, and provide no ground truth for how a set should be organised into an explanation. We present EduExplain, a benchmark providing human-validated ground truth for both stages. Built from secondary-level science textbooks, it comprises 6,921 typed, multimodal resources and 2,123 concepts, and pairs each of 321 learner-oriented queries with one or more human-validated explanation sets (retrieval ground truth) and 741 reference storyboards (structuring ground truth). The benchmark exposes characteristics absent from prior datasets: heterogeneous multimodal retrieval units, multiple valid explanation sets per query, and plans whose quality depends on pedagogical role composition, grounding, and timing rather than relevance alone. We describe an LLM-assisted, human-validated construction pipeline, report inter-annotator agreement for both layers, and establish baselines for each stage--lexical, dense, multimodal, and cross-encoder retrieval paired with four selection strategies, and free-form and fixed-template storyboard construction. Our results show that first-stage retrieval quality dominates retrieval-stage performance, that off-the-shelf diversity-based selection underperforms simple top-ranked selection, and that unconstrained and rigidly templated structuring both fall short of the reference plans. The benchmark is available at https://github.com/data-iitd/eduexplain.</summary>
   </entry>
 </feed>
