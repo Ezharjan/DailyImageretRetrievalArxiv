@@ -5,11 +5,239 @@
   <link href="https://ezharjan.github.io/DailyImageRetrievalArxiv/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ezharjan.github.io/DailyImageRetrievalArxiv/" rel="alternate" type="text/html" />
   <id>https://ezharjan.github.io/DailyImageRetrievalArxiv/</id>
-  <updated>2026-11-19T16:02:01Z</updated>
+  <updated>2026-11-20T15:43:56Z</updated>
   <author>
     <name>Image Retrieval arXiv Daily</name>
   </author>
   <generator uri="https://github.com/Ezharjan/DailyImageRetrievalArxiv" version="2.0.0">daily_arxiv.py</generator>
+  <entry>
+    <id>https://arxiv.org/abs/2611.26120</id>
+    <title>Better Retrieval, Not Better Binding: Pretraining Exposure in Egocentric Video Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.26120" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.26120" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-19T00:00:00Z</published>
+    <updated>2026-11-20T00:00:00Z</updated>
+    <author>
+      <name>Yuqi Guo</name>
+    </author>
+    <author>
+      <name>Michael Wray</name>
+    </author>
+    <category term="instance-landmark-retrieval" label="Instance-Level &amp; Landmark Retrieval" />
+    <category term="video-retrieval" label="Video &amp; Text-Video Retrieval" />
+    <summary type="text">Video-language models (VLMs) achieve strong performance on video-text retrieval and are increasingly used for egocentric video understanding. Yet, despite gains in zero-shot retrieval, they have shown limitations in compositional understanding, and it remains unclear whether they understand compositional relationships between verbs and nouns. In this work, we introduce Ego-ExBind, a compositional diagnostic protocol for analyzing pretraining exposure and verb-noun binding in egocentric video-text retrieval. Ego-ExBind consists of an Exposure Ledger built from the EgoClip pretraining corpus used by EgoVLPv2, which defines Seen Composition, Unseen Composition, and Unseen Atom splits for EPIC-KITCHENS-100 multi-instance retrieval (MIR). We further probe noun and verb binding channels through controlled noun-swap and verb-swap negatives. We find that zero-shot retrieval is positively associated with pair exposure within seen compositions, even after controlling for the marginal frequencies of verbs and nouns. However, higher pair exposure is associated with larger noun-swap margins and slightly smaller verb-swap margins. This asymmetry motivates us to test whether exposure reweighting can improve retrieval with little change in the measured swap margins. To isolate the effect of exposure input, we keep the trained checkpoint fixed and replace only the exposure input at inference. We demonstrate that this exposure reweighting can improve video-text retrieval without stronger verb-noun compositional understanding, and that the gain depends on the correct sample-level exposure correspondence. By separating exposure-driven retrieval gains from verb-noun binding, Ego-ExBind provides a diagnostic framework for evaluating whether future improvements in egocentric MIR reflect compositional understanding rather than pretraining familiarity.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.26019</id>
+    <title>A Task-Level Bias Taxonomy for Historical Image Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.26019" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.26019" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-19T00:00:00Z</published>
+    <updated>2026-11-20T00:00:00Z</updated>
+    <author>
+      <name>Omkar Gavali</name>
+    </author>
+    <author>
+      <name>Ratan Sebastian</name>
+    </author>
+    <author>
+      <name>Christoph Rippe</name>
+    </author>
+    <author>
+      <name>Ralph Ewerth</name>
+    </author>
+    <author>
+      <name>Anett Hoppe</name>
+    </author>
+    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
+    <summary type="text">In recent decades, galleries, libraries, archives, and museums (GLAM institutions) have digitised vast amounts of cultural heritage material, including historical imagery. A major challenge in making these collections publicly accessible is enabling effective search and discovery. Many historical images contain incomplete, sparse, or no descriptive metadata. Consequently, machine learning (ML) methods are increasingly being used to generate or enrich metadata to improve the searchability of such collections. However, artificial intelligence (AI)-based systems can reproduce or amplify existing biases, particularly when applied to historical imagery. Factors such as differences between the data used to train the models and the historical images on which they are applied, degraded image quality, monochrome photographs, and historically biased or incomplete descriptions can reduce model performance and introduce bias into search and retrieval results. In this paper, we examine different forms of bias in historical image collections and review current methods to mitigate them. We investigate how these biases arise and how they influence AI-supported search and retrieval systems.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.25866</id>
+    <title>From Sequence to Space: Explicit Spatial Belief with Vision-Language Distillation for Active Geo-Localization</title>
+    <link href="https://arxiv.org/abs/2611.25866" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.25866" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-19T00:00:00Z</published>
+    <updated>2026-11-20T00:00:00Z</updated>
+    <author>
+      <name>Ziyang Xu</name>
+    </author>
+    <author>
+      <name>Peng Han</name>
+    </author>
+    <author>
+      <name>Hai Zhou</name>
+    </author>
+    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
+    <summary type="text">Active geo-localization (AGL) asks an agent to navigate a small aerial search grid and reach a target specified by an aerial image, a ground-level photograph, or text. Existing methods align the goal modalities well, but they keep the navigation state inside a large sequential Transformer and train with a dense distance reward that uses the hidden goal location. This paper proposes EAGLE, an Explicit spatial-belief Agent for Geo-Localization and Exploration. Offline training jointly optimizes a teacher-conditioned Swin branch and a context-free Swin student from the same randomly masked partial mosaics. The teacher branch attends to frozen full-scene context extracted by Qwen2.5-VL-7B, both branches receive masked-cell aerial-feature reconstruction and uncertainty supervision, while the student additionally distills stop-gradient feature predictions from the teacher. After distillation, Qwen, its cached context, and the teacher-attention branch are discarded. The retained student predicts cell-level aerial-feature embeddings and predictive uncertainty from partial observations alone. These predictions are combined with the modality-aligned goal embedding and a trajectory-derived visitation mask to construct the spatial belief tensor. The student is then frozen while a compact CNN actor-critic is optimized with PPO. EAGLE achieves state-of-the-art average success rates of 78.1%, 76.4%, and 76.8% on MASA, xBD zero-shot transfer, and the MM-GAG zero-shot aerial-goal split, respectively, without using a VLM or cached visual tokens at inference. Code will be made publicly available.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.25419</id>
+    <title>DiLE: Discrimination-Aware Latent-Space Learning for Universal Multimodal Embeddings</title>
+    <link href="https://arxiv.org/abs/2611.25419" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.25419" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-19T00:00:00Z</published>
+    <updated>2026-11-20T00:00:00Z</updated>
+    <author>
+      <name>Ben Kang</name>
+    </author>
+    <author>
+      <name>Junda Wang</name>
+    </author>
+    <author>
+      <name>Yuxuan Yuan</name>
+    </author>
+    <author>
+      <name>Hang Li</name>
+    </author>
+    <author>
+      <name>Yuhan Liu</name>
+    </author>
+    <author>
+      <name>Xin Chen</name>
+    </author>
+    <author>
+      <name>Wanting Geng</name>
+    </author>
+    <author>
+      <name>Tong Lin</name>
+    </author>
+    <author>
+      <name>Pei Fu</name>
+    </author>
+    <author>
+      <name>Dong Wang</name>
+    </author>
+    <author>
+      <name>Jian Luan</name>
+    </author>
+    <author>
+      <name>Huchuan Lu</name>
+    </author>
+    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
+    <summary type="text">Multimodal large language models have greatly improved input understanding in universal multimodal embedding models. However, this understanding does not ensure that their embeddings preserve the evidence needed to distinguish relevant items from confusable alternatives. To preserve essential discriminative evidence in embeddings, this paper proposes DiLE, a discrimination-aware latent-space learning framework that combines task guidance with on-policy retrieval feedback. Specifically, a few learnable queries are used to encode task-relevant information in a compact latent space. Reasoning instructions and auxiliary answer-generation supervision shape these representations to support both task understanding and retrieval discrimination. To address task-specific discriminative needs, we design shared-private expert adaptation that integrates cross-task knowledge sharing with task-specific representation learning. Building on this, the on-policy hard-negative distillation is introduced: the student retrieves confusable candidates, and a reverse KL divergence objective aligns its embedding-based similarity distribution with the teacher's fine-grained relevance distribution over these candidates. Candidates are periodically refreshed using updated student snapshots, tying teacher supervision to the student's evolving retrieval behavior and confusions. Across four model configurations that span two backbone generations, DiLE achieves state-of-the-art performance on MMEB-v2, UVRB, and MRMR, demonstrating its effectiveness across modalities and tasks.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.25374</id>
+    <title>Efficient Privacy-Preserving High-Dimensional Approximate Nearest Neighbor Search</title>
+    <link href="https://arxiv.org/abs/2611.25374" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.25374" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-19T00:00:00Z</published>
+    <updated>2026-11-20T00:00:00Z</updated>
+    <author>
+      <name>Lyu Xu</name>
+    </author>
+    <author>
+      <name>Guozhong Li</name>
+    </author>
+    <author>
+      <name>Qichen Wang</name>
+    </author>
+    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
+    <summary type="text">In the AI era, approximate nearest neighbor (ANN) search on vector databases is critical as it supports similarity retrieval over high-dimensional vectors, which is essential for many large language model (LLM) applications. To reduce costs and improve scalability, vector databases are often outsourced to cloud servers, raising privacy concerns for users whose query vectors contain sensitive information. In this work, we study the problem of asymmetric privacy-preserving ANN search, where the vector database is public but user queries must remain private from an untrusted cloud server. To solve this problem, we propose ObliSC, an efficient privacy-preserving search framework that protects query privacy against access-pattern leakage. ObliSC consists of (i) a search base that retrieves ANNs with a strong privacy guarantee of full obliviousness; and (ii) parallel optimization strategies that accelerate candidate retrieval and refinement while preserving full obliviousness and retrieval quality. Experiments on six standard ANN benchmarks show that ObliSC not only achieves efficiency and result quality competitive with baseline methods but also maintains a lightweight index compared with the evaluated privacy-preserving approaches.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.25172</id>
+    <title>MV-JEPA: Post-Training Video Encoders for Cross-View Understanding</title>
+    <link href="https://arxiv.org/abs/2611.25172" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.25172" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-18T00:00:00Z</published>
+    <updated>2026-11-20T00:00:00Z</updated>
+    <author>
+      <name>Yangchen Zhao</name>
+    </author>
+    <author>
+      <name>Ali Payani</name>
+    </author>
+    <author>
+      <name>Caiwen Ding</name>
+    </author>
+    <category term="instance-landmark-retrieval" label="Instance-Level &amp; Landmark Retrieval" />
+    <category term="video-retrieval" label="Video &amp; Text-Video Retrieval" />
+    <summary type="text">JEPA-based video encoders learn strong representations for video and image understanding through prediction in latent space. However, their standard pretraining predicts features within individual images or video clips, without explicitly exploiting paired camera views of the same object or moment. Consequently, the learned representations may not reliably support matching across different camera viewpoints. To solve this problem, we introduce multi-view predictive post-training to strengthen cross-view instance and temporal correspondence while retaining independent single-view inference. A shared encoder processes masked context views independently, and a training-time predictor jointly predicts latent tokens for masked context regions and a fully held-out view. We alternate cross-view prediction with single-view masked prediction on general image and video data to help retain the encoder's pretrained capabilities. After only 9,000 post-training updates on a single GPU, MV-JEPA improves cross-view instance retrieval and coarse cross-camera moment retrieval on various datasets, with further gains in zero-shot action-phase retrieval and frozen-feature classification on AE2. Frozen-probe evaluations further indicate that post-training largely preserves motion recognition, image recognition, and dense semantic segmentation performance on the evaluated benchmarks. Together, these results demonstrate that multi-view predictive post-training can strengthen instance and coarse temporal correspondence in JEPA video encoders without modifying the encoder architecture or single-view inference interface.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.24163</id>
+    <title>Stabilizing Neural-to-Image Retrieval with Frequency-Domain Priors and Adaptive Supervision</title>
+    <link href="https://arxiv.org/abs/2611.24163" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.24163" rel="related" type="application/pdf" title="PDF" />
+    <link href="https://github.com/wanfkuabc/Geometry-Regularized-Brain-Embeddings" rel="related" title="Code" />
+    <published>2026-11-18T00:00:00Z</published>
+    <updated>2026-11-20T00:00:00Z</updated>
+    <author>
+      <name>YaoYang Liu</name>
+    </author>
+    <author>
+      <name>ZhuoShi Tang</name>
+    </author>
+    <author>
+      <name>Haopeng Lai</name>
+    </author>
+    <author>
+      <name>Weijun Sun</name>
+    </author>
+    <author>
+      <name>Xiaozhao Fang</name>
+    </author>
+    <author>
+      <name>Jie Wen</name>
+    </author>
+    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
+    <summary type="text">Visual neural decoding aims to infer perceived visual stimuli from brain activity, offering important insights into human visual cognition while enabling transformative applications in brain computer interfaces and artificial intelligence. Recent advances in pretrained vision-language models have provided a semantically rich representation space for this task. However, reliable alignment between EEG/MEG signals and visual embeddings remains challenging because neural responses are noisy, highly variable across trials, and subject dependent. To address this issue, we propose a unified neural-to-image retrieval framework that improves retrieval performance by aligning neural and image representations in a shared semantic space. The framework integrates dual-stream adaptation, frequency-domain calibration, and phase-guided temperature modulation to promote more robust cross-modal semantic alignment. Specifically, dual-stream adaptation models a low-dimensional shared subspace with correlation regularization to suppress redundant noise and enhance cross-modal consistency. Frequency-domain calibration conditionally modulates neural representations using amplitude and phase statistics. Phase-guided temperature modulation further adjusts the supervision strength in contrastive learning according to the stability of neural responses. Experiments on THINGS-EEG and THINGS-MEG under both intra-subject and inter-subject settings demonstrate that the proposed framework consistently outperforms strong baselines. These results suggest that robust neural-to-image retrieval under heterogeneous neural conditions benefits from a stable shared semantic space, frequency-informed representation calibration, and adaptive supervision. Code will be released at github.com/wanfkuabc/Geometry-Regularized-Brain-Embeddings.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.24068</id>
+    <title>Benchmarking Reasoning Reliability,Prior_Evidence Contrast,and Spectral Discrimination in Remote-Sensing Geological Image Interpretation</title>
+    <link href="https://arxiv.org/abs/2611.24068" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.24068" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-18T00:00:00Z</published>
+    <updated>2026-11-20T00:00:00Z</updated>
+    <author>
+      <name>Jun Wang</name>
+    </author>
+    <author>
+      <name>Fengpeng Li</name>
+    </author>
+    <author>
+      <name>Wei Han</name>
+    </author>
+    <author>
+      <name>Yuxuan Li</name>
+    </author>
+    <author>
+      <name>Tianjin Huang</name>
+    </author>
+    <author>
+      <name>Jining Yan</name>
+    </author>
+    <author>
+      <name>Sheng Wang</name>
+    </author>
+    <author>
+      <name>Kan Sun</name>
+    </author>
+    <author>
+      <name>Lizhe Wang</name>
+    </author>
+    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
+    <summary type="text">Reliable lithology interpretation requires accurate geological recognition and reasoning grounded in visual evidence. Although Multimodal Large Language Models show promise in remote sensing, their reliability in geological interpretation remains unclear. We introduce HyGeoBench, a diagnostic benchmark of 10,000 questions based on hyperspectral imagery across three dimensions: reasoning reliability, prior_evidence contrast, and spectral discrimination. It covers ten task types, with both multiple-choice and open-ended response formats. Integrating hyperspectral satellite imagery with geological annotations and verified evidence, HyGeoBench examines reasoning errors, conflicts between geological priors and visual evidence, and cross-band inconsistencies. Evaluations reveal limitations in fine-grained recognition and evidence-grounded interpretation. To address these challenges, we propose HyGeoAgent, a tool-augmented framework integrating region observation, text knowledge retrieval, same-band image retrieval, and native PCA analysis through adaptive tool use. Experiments demonstrate consistent improvements over the corresponding base models, improving geological image interpretation across diagnostic dimensions.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.23991</id>
+    <title>SIRAZ: Sparse Inter-Layer Residual Aggregation for Zero-Shot Visual Neural Decoding</title>
+    <link href="https://arxiv.org/abs/2611.23991" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.23991" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-18T00:00:00Z</published>
+    <updated>2026-11-20T00:00:00Z</updated>
+    <author>
+      <name>Neha</name>
+    </author>
+    <author>
+      <name>Mudasir Ganaie</name>
+    </author>
+    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
+    <summary type="text">Brain-computer interfaces aim to establish direct communication between neural activity and external systems, making interpretation of brain signals an important problem. In this context, neural visual decoding seeks to infer visual information from neural activity by learning a mapping between brain responses and the corresponding visual stimuli. It investigates how visual information emerges from neural signals and relates to perceptual processing while enabling the reconstruction or retrieval of visual stimuli from neural signals. Our brain primarily follows a hierarchical pathway to process visual information captured by the eye. However, neural representations learned by existing methods differ fundamentally from those produced by the biological visual system. To bridge this gap and mimic the human vision hierarchy, we introduce Sparse Inter-layer Residual Aggregation for Zero-shot (SIRAZ). SIRAZ is a framework that aligns neural visual representations by jointly modeling early visual processes via fovea- and magnocellular-pathway-inspired Difference-of-Gaussians transformations. To align the semantic information with neural information, it extracts multiple intermediate representations of the image at multiple depths and passes them through the Residual Gated Adapter Mechanism. To study the temporal dynamics of neural signals, the Direction-aware Multi-Scale Temporal Attention Encoder is introduced to align the learned neural representation with the final visual representation. The proposed framework achieves 92.5% top-1 and 99.27% top-5 accuracy in the intra-subject setting on the THINGS-EEG dataset, and 50.25% and 75% top-1 and top-5 accuracy in the THINGS-MEG dataset. The results indicate that combining biologically motivated visual representations with the structured modalities of neural dynamics improves cross-modal alignment and zero-shot image retrieval.</summary>
+  </entry>
   <entry>
     <id>https://arxiv.org/abs/2611.24371</id>
     <title>One Affinity, Two Axes: Bidirectional Slot Attention for Iterative Aggregation across the Structure--Detail Spectrum in Visual Retrieval</title>
@@ -2389,267 +2617,5 @@
     </author>
     <category term="instance-landmark-retrieval" label="Instance-Level &amp; Landmark Retrieval" />
     <summary type="text">Instance retrieval is the main bottleneck of concept-learning systems based on refinement operators. We present NIR, a family of neural instance retrievers for ALCIQ that output graded membership scores from knowledge graph embeddings. We compare tokenization-based encoders (GRU, LSTM, Transformer) with a Compositional encoder that mirrors DL operators via primitive sub-networks. On eight benchmarks, all variants approximate Pellet closely on complete knowledge bases, while the Transformer model is most robust under incompleteness. The source code of our approach is at https://github.com/dice-group/owlapy.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.02794</id>
-    <title>SomaAlign: Reliability-Aware Multimodal Representation Learning for Soft Robotic Grasping</title>
-    <link href="https://arxiv.org/abs/2611.02794" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.02794" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-02T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Haoyuan Wang</name>
-    </author>
-    <author>
-      <name>Shuai Peng</name>
-    </author>
-    <author>
-      <name>Yongkai Liao</name>
-    </author>
-    <author>
-      <name>Yuxiao Sun</name>
-    </author>
-    <author>
-      <name>Wei Luo</name>
-    </author>
-    <author>
-      <name>Xinxing Chen</name>
-    </author>
-    <author>
-      <name>Jian Huang</name>
-    </author>
-    <category term="cross-modal-retrieval" label="Image-Text &amp; Cross-Modal Retrieval" />
-    <summary type="text">Robust multimodal perception for soft robotic grasping is challenged by modality-dependent noise, semantic ambiguity, and limited coordinated multisensory data. We introduce Soma, a dataset containing 100 objects, 1,000 continuous grasping trajectories, and 74,914 multimodal samples grouped by software acquisition cycle, spanning remote RGB, hand RGB, depth, tactile, IMU, and structured text observations. We also collect Soma-Success, an independent grasp-outcome dataset with 1,000 trials (998 retained after quality control), to evaluate frozen-encoder transfer for post-hoc grasp outcome classification and early grasp success prediction. Built on Soma, SomaAlign learns multimodal representations in three stages: masked reconstruction estimates relative modality reliability; reliability-aware contrastive alignment uses pair-specific adaptive temperatures to adjust alignment sharpness; and conflict-aware semantic constraints improve intra-sample cross-modal consistency while preserving global feature geometry. SomaAlign achieves an average Recall@10 of 90.66% across 30 directed cross-modal retrieval tasks. The learned representations also support physical attribute recognition, multimodal question answering, cross-modal generation, and cross-dataset transfer to grasp outcome prediction. On Soma-Success, frozen SomaAlign encoders with lightweight probes achieve 94.59% post-hoc classification accuracy and 84.07% early prediction accuracy. Together, Soma, Soma-Success, and SomaAlign provide a data and representation-learning foundation for robust and transferable multimodal perception in soft robotic manipulation.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.02765</id>
-    <title>Recast: Refinement-Centered Approximate Nearest Neighbor Search Optimized for Storage</title>
-    <link href="https://arxiv.org/abs/2611.02765" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.02765" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-02T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Zehai Yang</name>
-    </author>
-    <author>
-      <name>Fengyi Tao</name>
-    </author>
-    <author>
-      <name>Wenzhuo Dong</name>
-    </author>
-    <author>
-      <name>Shimin Chen</name>
-    </author>
-    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
-    <summary type="text">Large-scale ANNS systems often exploit storage in addition to DRAM for supporting vector search. The central question is how to divide the work between memory and storage for achieving both high query throughput-recall and good index maintenance performance. Existing storage-optimized ANNS paradigms fall short of providing a complete answer: disk-resident graph indexes have difficulty in supporting efficient vector deletions, while posting-list systems often incur more disk I/Os for queries. In this paper, we introduce a refinement-centered paradigm for storage-optimized ANNS systems. We propose Recast as a concrete design of this paradigm. Recast stores raw vectors on disk and keeps an IVF index with our RecastQ quantization encoding in memory. For an ANNS query, Recast selects nprobe inverted lists and performs SIMD-based FastScan on their RecastQ codes to identify refinement candidates in memory. It then retrieves candidate vectors from disk, computes exact distances, and refines the top-K result. To reduce disk I/Os, RecastQ computes uncertainty intervals containing true distances with high probability. Our QUIC policy selects a minimal refinement set based on these intervals, minimizing candidate-retrieval I/Os. Both the on-disk raw vectors and the in-memory IVF structure support insertions and deletions. Experiments on real-world data sets show that Recast processes batched insertions and deletions 3.10-37.27x faster than SPFresh and OdinANN, while its QPS at 0.99 recall changes by at most 6.9% after updating 50% of the corpus. For static queries at 0.99 recall, Recast achieves 1.56-2.01x the QPS of the strongest baseline with the matched memory budget on each data set, while requiring 1.22-6.75x less external storage than the evaluated systems. At matched in-memory space, RecastQ also provides a better Recall-refinement frontier than RaBitQ.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.02698</id>
-    <title>GeoGuesser Bench: Benchmarking Vision-Language Agents on Interactive Geolocation</title>
-    <link href="https://arxiv.org/abs/2611.02698" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.02698" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-02T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Huanzhi Mao</name>
-    </author>
-    <author>
-      <name>Yichuan Wang</name>
-    </author>
-    <author>
-      <name>Michael Koo</name>
-    </author>
-    <author>
-      <name>Wenyuan Huang</name>
-    </author>
-    <author>
-      <name>Huy Doan</name>
-    </author>
-    <author>
-      <name>Jinghan Xia</name>
-    </author>
-    <author>
-      <name>Ziyao Wang</name>
-    </author>
-    <author>
-      <name>Joseph E. Gonzalez</name>
-    </author>
-    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
-    <summary type="text">Vision-language model (VLM) agents that act in the open world need two abilities: world knowledge to interpret what they see, and exploration to find what they cannot yet see. We study how agents combine the two through interactive visual geolocation. GeoGuesser Bench contains 282 tasks in an offline Street View environment where agents rotate, zoom, and move between real panoramas. Its three task types shift the balance from knowledge to exploration: agents (1) report the coordinates of their starting location, (2) name the enclosing street, city, state, or country, or (3) find, read, and count nearby objects. The coordinate tasks in (1) also include 42 real GeoGuessr World Championship rounds, whose expert guesses provide a human reference. We evaluate 23 VLMs: the best accuracy is 62.5% on place naming and 35.0% on object finding, and the best agent averages 4352.4 GeoGuessr points on the championship rounds, against 4770.3 for the better expert in each round. Beyond these headline numbers, world knowledge and exploration are only weakly correlated across models: agents that localize well do not necessarily explore well. To understand where agents fail, we categorize their errors into vision, navigation, and tool-use failures. Further ablations show that the strongest agents, such as Claude Opus 4.8, still perform well with limited views, while weaker agents degrade; customizing the environment thus adjusts task difficulty. The environment's verifiable rewards and restorable state also support training, and our Planner-Worker-Compressor harness cuts planner tokens by 57-61% by compacting the interaction history. We hope GeoGuesser Bench and its environment serve as a high-quality foundation for simulating real-world exploration at scale.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.02275</id>
-    <title>Data-Scarce, Multi-Granular, Multimodal: Benchmark Design for Biosynthetic Gene Clusters</title>
-    <link href="https://arxiv.org/abs/2611.02275" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.02275" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-01T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Hanlin Xiao</name>
-    </author>
-    <author>
-      <name>Eriko Takano</name>
-    </author>
-    <author>
-      <name>Mauricio A. Álvarez</name>
-    </author>
-    <author>
-      <name>Rainer Breitling</name>
-    </author>
-    <category term="cross-modal-retrieval" label="Image-Text &amp; Cross-Modal Retrieval" />
-    <summary type="text">Biosynthetic gene clusters (BGCs) are co-located genes that encode the biosynthesis of specialized metabolites, an important source of antibiotics, anticancer agents, immunosuppressants, and agricultural bioactives. Deep learning, particularly self-supervised foundation models, has spurred interest in BGC sequence modeling, but evaluation has lagged behind: existing benchmarks often rely on coarse classification over small curated datasets, providing limited discrimination among models and insight into downstream utility. We propose a benchmark-design framework in which an informative benchmark should be discriminative, separating models with statistical confidence, and applicable, spanning scientifically meaningful tasks under different levels of generalization. We instantiate this framework as BGC-Bench, which derives five tasks from MIBiG, ranging from A-domain substrate prediction to BGC-molecule retrieval, evaluates them under genotype- and phenotype-shift splits, includes an active-learning setting for label-scarce discovery, and is easily extensible to new tasks and encoders. BGCs further provide a shared testbed across granularities and modalities: BGC-Bench compares twelve encoders on nucleotide, amino-acid, or Pfam-domain sequences, including compositional baselines for each input type, and combines BGC and chemical encoders for cross-modal retrieval. No single representation dominates: the best granularity depends on the biological scale of the task, and pretrained encoders do not consistently outperform other representations across tasks and splits. Active-learning experiments show that most tasks remain data-limited, encoder rankings change with labeling budget, and acquisition strategies yield modest gains. These results show that BGC model evaluation requires task-diverse, shift-aware benchmarks, and the framework can be generalized to benchmark design beyond BGCs.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.01962</id>
-    <title>Object-Only Is Not Context-Free: A Counterfactual Diagnostic for Context Removal in Object Retrieval</title>
-    <link href="https://arxiv.org/abs/2611.01962" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.01962" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/bmeivar/kap" rel="related" title="Code" />
-    <published>2026-11-01T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Boaz Meivar</name>
-    </author>
-    <author>
-      <name>Shai Avidan</name>
-    </author>
-    <category term="instance-landmark-retrieval" label="Instance-Level &amp; Landmark Retrieval" />
-    <summary type="text">Object-centric retrieval pipelines often mask the background before pooling backbone features, aiming for a descriptor that reflects the object rather than its scene. Whether this truly yields an object-only descriptor, however, is rarely tested. We introduce the Keyhole Aperture Probe (KAP), a counterfactual diagnostic that repurposes the ground-truth masks of existing panoptic segmentation datasets (COCO, ADE20K) for retrieval: it holds the pooled object region fixed and varies only the pixels outside it, summarizing a backbone's context dependence in a single number. We find that the pooled object region has already integrated its surround. Replacing the context, with a neutral fill or even a different real scene, changes the descriptor, and when retrieval fails under a blank fill, the descriptor matches plain-background images rather than its own object. Object-only is not context-free. Across ten modern backbones, object-only descriptors retain only about a quarter to two-thirds of their full-image accuracy, and the effect is not unique to Transformer self-attention: a convolutional backbone shows it too. The dependence is also reducible: a lightweight adapter that encourages the descriptor to stay stable as context is removed lowers it and improves full-image instance retrieval on INSTRE, transferring to ILIAS with accuracy improved or preserved. A matched contrastive-fine-tuning control does not reproduce those gains. We release KAP as a simple, backbone-agnostic evaluation protocol to measure and reduce this dependence before deployment.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.01751</id>
-    <title>A Deep Reinforcement Learning Framework for Real-Time Electric Vehicle Charging Management in IoEV-Enabled Smart Cities</title>
-    <link href="https://arxiv.org/abs/2611.01751" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.01751" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-01T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Nour-Eddine Moumni</name>
-    </author>
-    <author>
-      <name>Rachid Alaoui</name>
-    </author>
-    <author>
-      <name>Driss Kiouach</name>
-    </author>
-    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
-    <summary type="text">The rapid growth of electric vehicles (EVs) in urban environments demands intelligent, decentralised charging management strategies that operate under strict real-time constraints. This paper proposes an Edge-Intelligent architecture in which each EV selects a charging station (CS) by querying a shared, centrally trained Deep Q-Network (DQN) policy over a lightweight MQTT publish-subscribe backbone; independent per-EV edge inference is the deployment target, not the configuration evaluated here. The reported simulation evaluates that shared DQN policy applied sequentially to each vehicle's observations within a single SUMO run, using MQTT for KPI telemetry while observations are obtained through TraCI. The system is evaluated on two real-world road networks from OpenStreetMap (Rabat Agdal-Hay Riad and Tangier, Morocco); the primary network carries four geolocated public charging stations with heterogeneous power levels (50 kW and 150 kW). Three traffic demand profiles (morning, midday, evening peak) are simulated, and four decision policies are compared: an Adaptive Heuristic, a Tabular Q-Learning agent, the proposed DQN agent, and a Double DQN variant. A multi-seed statistical protocol (7 seeds, Wilcoxon signed-rank test, Cohen's d) evaluates the results. The DQN agent achieves a 6.8% relative improvement in charge rate and a 5.4% increase in delivered energy over the Adaptive Heuristic under Evening Peak demand ($p = 0.016$, Cohen's $d = 0.99$ and $1.51$), while showing no advantage in waiting time; on the second network the heuristic leads on waiting time, so the ranking is not stable across geographies. A scalability analysis shows linear state-space growth with station count and sub-millisecond inference; all runs include intermittent station outages under a Markov failure process.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.01601</id>
-    <title>Accurate automated photo-identification of Near Eastern and European fire salamanders</title>
-    <link href="https://arxiv.org/abs/2611.01601" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.01601" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-01T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Maayan Yesharim</name>
-    </author>
-    <author>
-      <name>Hava Goldstein</name>
-    </author>
-    <author>
-      <name>Gabi Kolodny</name>
-    </author>
-    <author>
-      <name>Assaf Ben-Levy</name>
-    </author>
-    <author>
-      <name>Tamar Kis-Papo</name>
-    </author>
-    <author>
-      <name>Dor Gavish</name>
-    </author>
-    <author>
-      <name>Rotem Vidan</name>
-    </author>
-    <author>
-      <name>Nirit Lavie-Alon</name>
-    </author>
-    <author>
-      <name>Olga Rybak</name>
-    </author>
-    <author>
-      <name>Yoav Ram</name>
-    </author>
-    <category term="re-identification" label="Person &amp; Object Re-Identification" />
-    <summary type="text">Photo-identification underpins non-invasive capture-recapture monitoring of amphibians, but manual identification becomes slow and error-prone as reference libraries grow. Focusing on the Near Eastern fire salamander (Salamandra infraimmaculata), we developed a pipeline based on zero-shot local-feature matching (SuperPoint and LightGlue) without species-specific training and evaluated it on $2{,}440$ field photographs from Haifa and Tel Dan in northern Israel. We isolated the yellow spot pattern, scored image similarity by the number of high-confidence keypoint matches, which reduced a confound whereby many-spotted individuals accumulate spurious matches, and assigned identities across the database by two-tier clustering. Pipeline-assisted expert review corrected misidentifications, reducing the number of identities by almost a quarter. On held-out individuals, the pipeline ranked the correct individual first for $95.2\%$ of queries and recovered identities with an ARI of $0.958$. Without modification, it reached $95.1\%$ and $91.7\%$ top-1 accuracy on two datasets of the European fire salamander (Salamandra salamandra) and recognised $93.7\%$ of recaptures in one of them, compared with $38$-$77\%$ for five established programs and $93.9\%$ for visual inspection. Zero-shot local-feature matching thus offers amphibian monitoring a re-identification tool that needs no training data, transfers between related species, scales to databases of over a thousand individuals, and can audit existing databases before capture-recapture analysis.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.01558</id>
-    <title>Text-Assisted Event Stream Visual Place Recognition via Multi-Scale Spatiotemporal Optimal Transport</title>
-    <link href="https://arxiv.org/abs/2611.01558" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.01558" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-01T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Lan Chen</name>
-    </author>
-    <author>
-      <name>Xingxing Xiong</name>
-    </author>
-    <author>
-      <name>Xiao Wang</name>
-    </author>
-    <author>
-      <name>Ziyan Zhang</name>
-    </author>
-    <author>
-      <name>Zikang Yan</name>
-    </author>
-    <author>
-      <name>Yuanhao Zheng</name>
-    </author>
-    <author>
-      <name>Bo Jiang</name>
-    </author>
-    <author>
-      <name>Yonghong Tian</name>
-    </author>
-    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
-    <summary type="text">Benefiting from the high dynamic range, high temporal resolution, and low energy consumption of event cameras, low-altitude economic research leveraging event cameras has become a popular topic. Several existing attempts introduce natural-language descriptions into visual place recognition (VPR) to mitigate the sparsity of structural spatial information inherent to event cameras. Nevertheless, these methods still fail to fully address two core challenges: effectively encoding event streams and semantically aligning event streams with text. In this paper, we propose a multi-scale spatial-temporal optimal transport approach, MSTOT-EPR, to address these challenges. Specifically, given event streams and scene text information, we first adopt a visual encoder and a text encoder to extract respective feature representations. We then apply optimal-transport constraints to achieve cross-modal alignment. We then design a cross-modal bottleneck fusion module to further fuse bimodal features. Furthermore, we develop multi-scale spatial optimal transport and inter-frame temporal optimal transport modules to mine high-quality spatial-temporal event features for scene recognition. Extensive experiments on the NYC-Event-VPR and EPRBench datasets fully validate the effectiveness of our proposed framework for event-based VPR. The source code of this paper will be released upon acceptance.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.01529</id>
-    <title>AR-RRG: Anatomy-Guided Retrieval-Driven Radiology Report Generation</title>
-    <link href="https://arxiv.org/abs/2611.01529" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.01529" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-01T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Xiang Zhang</name>
-    </author>
-    <author>
-      <name>Shijie Song</name>
-    </author>
-    <author>
-      <name>Wanqing Zhao</name>
-    </author>
-    <author>
-      <name>Wei Zhou</name>
-    </author>
-    <author>
-      <name>Rui Cao</name>
-    </author>
-    <author>
-      <name>Dekui Wang</name>
-    </author>
-    <author>
-      <name>Qiyao Hu</name>
-    </author>
-    <author>
-      <name>Xianlin Peng</name>
-    </author>
-    <author>
-      <name>Hangzai Luo</name>
-    </author>
-    <author>
-      <name>Sheng Zhong</name>
-    </author>
-    <author>
-      <name>Jianping Fan</name>
-    </author>
-    <category term="instance-landmark-retrieval" label="Instance-Level &amp; Landmark Retrieval" />
-    <summary type="text">Radiology report generation (RRG) streamlines clinical workflows and alleviates the burden of radiologists' documentation. Standard vision-language models capture global visual cues and lack fine-grained alignment between anatomical regions and diagnostic text. Most retrieval-augmented methods retrieve complete historical reports, introducing redundant noise and severe vision-text mismatches that trigger clinically risky hallucinations and missed lesions. In this paper, we introduce AR-RRG, an anatomy-guided retrieval-driven method for the generation of radiology reports. AR-RRG consists of two core modules: the anatomy-aware self-training lesion detection network (ASLDNet) and the retrieval-driven radiology report generation (RRRG). ASLDNet leverages anatomy-aware spatial verification (ASV) and class-adaptive dynamic thresholding (CDT) via self-training, delivering accurate lesion localization to support subsequent generation. As the generative branch of AR-RRG, RRRG eliminates clinical hallucinations through dual-granularity retrieval (DR) and complements missing lesions with a neighborhood consensus (NC) mechanism. A parallel continuous visual perception (PCVP) stream converts radiographs into visual tokens through fixed medical encoding and resampling. Multi-scale text and visual features are fused, followed by LoRA-efficient large language model tuning to generate clinically consistent, visually grounded radiology reports. Extensive evaluations on MS-CXR, MIMIC-CXR, and IU X-Ray demonstrate that AR-RRG consistently outperforms state-of-the-art methods across mainstream metrics. Our code will be made publicly available.</summary>
   </entry>
 </feed>
