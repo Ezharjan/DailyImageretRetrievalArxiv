@@ -5,11 +5,168 @@
   <link href="https://ezharjan.github.io/DailyImageRetrievalArxiv/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ezharjan.github.io/DailyImageRetrievalArxiv/" rel="alternate" type="text/html" />
   <id>https://ezharjan.github.io/DailyImageRetrievalArxiv/</id>
-  <updated>2026-11-20T15:43:56Z</updated>
+  <updated>2026-11-23T18:43:24Z</updated>
   <author>
     <name>Image Retrieval arXiv Daily</name>
   </author>
   <generator uri="https://github.com/Ezharjan/DailyImageRetrievalArxiv" version="2.0.0">daily_arxiv.py</generator>
+  <entry>
+    <id>https://arxiv.org/abs/2611.27931</id>
+    <title>DiTraR: Diverse Scorers and Transcript-Guided Re-ranking for Video Corpus Moment Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.27931" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.27931" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-20T00:00:00Z</published>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <author>
+      <name>Mohammad Alijanpour Shalmani</name>
+    </author>
+    <author>
+      <name>Alale Rezvani Boroujeni</name>
+    </author>
+    <author>
+      <name>Ali Amini</name>
+    </author>
+    <category term="video-retrieval" label="Video &amp; Text-Video Retrieval" />
+    <summary type="text">Video corpus moment retrieval asks a system to find, in a large collection of untrimmed videos with subtitles, the video and the time interval that a natural-language query describes. We find that most top-ranked errors of a strong corpus-level scorer come from choosing the wrong video, not from imprecise boundaries, and that re-weighting the evidence the scorer already uses does not fix them. We present DiTraR, which addresses video selection from two complementary directions. A witness-interval scorer decomposes the query into probes and scores every candidate interval of every corpus video exactly; a multi-scorer energy ensemble averages the energies of independently trained scorers before one exhaustive search; and a transcript verifier, a frozen language model that reads the time-stamped dialogue of the highest-ranked videos, re-orders the moments without changing their boundaries. With all settings frozen on development data and a single evaluation, DiTraR reaches 24.36 and 13.55 R@1 at IoU 0.5 and 0.7 on the TVR validation split. The ensemble improves queries about visual content, the verifier improves queries about dialogue, and their gains largely add up.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.27521</id>
+    <title>PaMuk-Bench: A Parallel Multilingual Multitask Benchmark for Vision-Language Tasks</title>
+    <link href="https://arxiv.org/abs/2611.27521" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.27521" rel="related" type="application/pdf" title="PDF" />
+    <link href="https://github.com/ghesil/pamuk_bench" rel="related" title="Code" />
+    <published>2026-11-20T00:00:00Z</published>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <author>
+      <name>Silviu-Florin Gheorghe</name>
+    </author>
+    <author>
+      <name>Radu-Stefan Popa</name>
+    </author>
+    <author>
+      <name>Adriana Valentina Costache</name>
+    </author>
+    <author>
+      <name>Adrian-Gabriel Chifu</name>
+    </author>
+    <author>
+      <name>Alessia Amelio</name>
+    </author>
+    <author>
+      <name>Paul Irofti</name>
+    </author>
+    <author>
+      <name>Anders Skaarup Johansen</name>
+    </author>
+    <author>
+      <name>Lallouani Bouchakour</name>
+    </author>
+    <author>
+      <name>Mohamed Lichouri</name>
+    </author>
+    <author>
+      <name>Khaled Lounnas</name>
+    </author>
+    <author>
+      <name>Neelu Madan</name>
+    </author>
+    <author>
+      <name>Yashvir Malik</name>
+    </author>
+    <author>
+      <name>Radu Tudor Ionescu</name>
+    </author>
+    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
+    <summary type="text">While vision-language models (VLMs) currently obtain notable results for highly-studied languages, e.g. English, they exhibit significant performance drops in certain low-resource languages, especially due to the lack of annotated datasets. To this end, we propose PaMuk-Bench, a novel parallel multilingual multitask benchmark for vision-language tasks. Our benchmark includes a set of over 10K curated English prompts that are translated into six languages: Arabic, Danish, French, Hindi, Italian, Romanian. Parallel translations, which are obtained via a semi-automatic process, along with accompanying generated and retrieved images enable the comparative development and evaluation of VLMs across a wide range of tasks: text-to-image generation, image captioning, content-based image retrieval, image generation difficulty estimation, image retrieval difficulty estimation. We empirically show that zero-shot English and multilingual pre-trained VLMs compare consistently worse than their fine-tuned counterparts, confirming that PaMuk-Bench is a valuable resource that can drastically reduce the language gap across a variety of VLM architectures and tasks. PaMuk-Bench is available at https://github.com/ghesil/pamuk_bench.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.27490</id>
+    <title>Which Dwarf Is This? Doppeldwarf-306 and Near-Identical Instance Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.27490" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.27490" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-20T00:00:00Z</published>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <author>
+      <name>Turhan Can Kargin</name>
+    </author>
+    <category term="instance-landmark-retrieval" label="Instance-Level &amp; Landmark Retrieval" />
+    <summary type="text">Most established instance-retrieval benchmarks emphasise landmarks; small sculptures from visually similar series offer a complementary challenge. We introduce Doppeldwarf-306: 1,691 openly licensed photographs of 306 bronze dwarf statues in Wrocław, Poland, many made in themed series that share one style, with the photographer of each image recorded. With no training, nearest-neighbour search over frozen DINOv2 features names the right statue first for 93.1% of leave-one-out queries, and the best of thirteen backbones from seven pretraining paradigms reaches 94.7%. Accuracy falls slowly as candidates are added: for DINOv2, by about 0.8 points each time their number doubles. A natural design for a phone guide compares a photograph only with statues near the user. In simulation this helps, but less than an equal number of randomly chosen statues does, so random subsampling overstates its value; a permutation test ties the penalty to the real layout (p = 0.005). Used as a weight instead of a filter, location raises DINOv2 from 93.4% to 98.7% for a simulated user 25 m from the statue. With the query's photographer withheld, learned local-feature matching raises DINOv2 accuracy from 81.8% to 85.5% and also improves DINOv3. Comparing the two best candidates cuts DINOv2's false acceptance of unknown statues from 38.3% to 19.6% at 90% known acceptance.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.26987</id>
+    <title>GeoCloak: Defending Against Geolocation Reasoning in Multimodal Language Models via Perceptual Image Editing</title>
+    <link href="https://arxiv.org/abs/2611.26987" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.26987" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-20T00:00:00Z</published>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <author>
+      <name>Haoyang Xu</name>
+    </author>
+    <author>
+      <name>Christian Iha</name>
+    </author>
+    <author>
+      <name>Colbren Fujimoto</name>
+    </author>
+    <author>
+      <name>Yingfei Dong</name>
+    </author>
+    <author>
+      <name>Rui Ning</name>
+    </author>
+    <author>
+      <name>Liuwan Zhu</name>
+    </author>
+    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
+    <summary type="text">Multimodal large language models can infer sensitive geographic information from ordinary images by combining visual, textual, architectural, and environmental cues. This capability creates a privacy risk: users may reveal fine-grained location information even when explicit metadata such as GPS tags has been removed. We study this problem as geolocation inference in multimodal language models and present GeoCloak, a cue-aware perceptual editing framework for reducing location leakage from shared images. GeoCloak uses an accessible multimodal model as a proxy to identify geolocation-relevant cues, localizes high-impact regions through object grounding, and applies localized semantic edits designed to disrupt downstream geolocation predictions while preserving the overall scene content. Experiments on street-level image datasets show that GeoCloak substantially reduces administrative-level geolocation accuracy across multiple multimodal models, while maintaining automatic perceptual-quality scores closer to those of the original images than pixel-level perturbation baselines. These results suggest that cue-level semantic editing is a promising direction for reasoning-based visual privacy, while also highlighting open challenges in deployment cost, semantic plausibility, and adaptive evaluation.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.26936</id>
+    <title>SecretAgent: A Multi-Agent Framework for Privacy Protection against Vision Language Models</title>
+    <link href="https://arxiv.org/abs/2611.26936" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.26936" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-20T00:00:00Z</published>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <author>
+      <name>Minda Zhao</name>
+    </author>
+    <author>
+      <name>Yue Zhang</name>
+    </author>
+    <author>
+      <name>Mengyu Wang</name>
+    </author>
+    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
+    <summary type="text">Vision-language models (VLMs) can infer private information from shared images, including locations, personally identifiable information (PII), and personal attributes such as age and sex, even from medical images. Adversarial perturbations can protect such information against black-box VLMs, but existing methods overlook image quality and introduce visible artifacts into the images they protect. We present SecretAgent, the first general multi-agent framework that protects image privacy against VLMs while preserving visual fidelity. LLM agents iteratively locate the visual evidence that reveals private information and adapt an invisible perturbation to the target VLM's answers and to an appearance reviewer agent, which rejects any candidate with visible artifacts. We instantiate SecretAgent with two complementary variants: SecretAgent-Gradient optimizes the perturbation through six surrogate encoders for cross-model transferability, and the gradient-free SecretAgent-Tool composes procedural noise and achieves the best perceptual fidelity on three of the five datasets. Experiments on four privacy applications (geolocation, PII, facial, and medical) across five datasets and six VLMs show that SecretAgent preserves image quality substantially better than existing methods while achieving state-of-the-art privacy protection in every application, and that its protection transfers to other VLMs.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.26752</id>
+    <title>Depth-Linked Residual Tokens for Multimodal Retrieval and Generation</title>
+    <link href="https://arxiv.org/abs/2611.26752" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.26752" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-19T00:00:00Z</published>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <author>
+      <name>Jiangfan Zhang</name>
+    </author>
+    <author>
+      <name>Wentao Bao</name>
+    </author>
+    <author>
+      <name>Xian Wu</name>
+    </author>
+    <author>
+      <name>Xiangjun Fan</name>
+    </author>
+    <author>
+      <name>Jianpeng Cheng</name>
+    </author>
+    <author>
+      <name>Jun Xiao</name>
+    </author>
+    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
+    <summary type="text">Iterative architectures such as looped language models improve parameter efficiency and reasoning capacity of transformers, yet their sequential backbone iterations introduce substantial computational latency. Conversely, parallelizable learnable special tokens (such as the register tokens in Vision Transformer) enable efficient single-pass inference, but often suffer from the absence of sequential refinement and exhibit redundant representations across tokens. To address these challenges, we introduce Depth-Linked Residual Tokens (DepThink), an efficient framework designed for multimodal retrieval and generation. Operating within a single pre-filling forward pass, DepThink appends a sequence of K learnable residual tokens whose hidden states are coupled through a lightweight, learnable residual recurrence. This mechanism enables each residual token to progressively capture complementary information missed by preceding tokens. Theoretically, we prove that DepThink provides strictly expanded geometric directional reachability over standard learnable tokens and guarantees a provable one-step descent advantage. We evaluate DepThink across multimodal retrieval and generation tasks. DepThink consistently outperforms learnable-token baselines and matches or exceeds looped architectures across dense (2B, 8B) and sparse mixture-of-experts (30B-A3B) backbones under both LoRA and full-parameter fine-tuning, while accelerating training by up to 11.9 and inference by 4.3 over looped architectures.</summary>
+  </entry>
   <entry>
     <id>https://arxiv.org/abs/2611.26120</id>
     <title>Better Retrieval, Not Better Binding: Pretraining Exposure in Egocentric Video Retrieval</title>
@@ -2478,144 +2635,5 @@
     </author>
     <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
     <summary type="text">Privacy-preserving approximate nearest neighbor (ANN) search allows clients to search from an untrusted server without revealing sensitive queries, and is useful in scenarios like medical diagnostics and credit scoring. Among the various privacy-preserving primitives, trusted execution environments (TEEs) have much lower overhead than heavy cryptographic ones, yet they leak memory access patterns, enabling adversaries to infer query contents. Oblivious RAM (ORAM) can be used to hide those access patterns at $\mathrm{O}(\log N)$ asymptotic cost, but existing high-performance ANN search algorithms (e.g., IVF or HNSW) exhibit complex, data-dependent access patterns that are unfriendly for ORAM. Furthermore, standard ORAM constructions typically assume there exists a small amount of trusted storage, which weakens the security guarantees and is not always feasible. Solutions that eliminate such trusted storage (known as {\em double obliviousness}) typically degrade performance further to $\mathrm{O}(\log^2 N)$. We introduce O2N2, a doubly oblivious ANN framework built around single-path search in randomly rotated $k$-d tree forests. A pointer-based Circuit ORAM stores the search structure, with separate storage for compact internal nodes and vector-bearing leaves. Each visited leaf is processed by an oblivious selection network, and fixed-schedule duplicate removal and selection combine the local results into the final top-$k$. We evaluate O2N2 on real-world datasets and further test its scalability on 100 million vectors. For 10-NN and 100-NN search at the specified high-recall targets, it achieves a $9.8$--$125.9\times$ speedup over the fastest doubly oblivious baselines.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.03370</id>
-    <title>Fuse To Align: Multimodal Representation Learning for Retrieval via Hypergraph Regularization</title>
-    <link href="https://arxiv.org/abs/2611.03370" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.03370" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-02T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Anindya Nag</name>
-    </author>
-    <author>
-      <name>Ambuj Mehrish</name>
-    </author>
-    <author>
-      <name>Sebastiano Vascon</name>
-    </author>
-    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
-    <summary type="text">Multimodal retrieval must integrate complementary evidence from views that may be missing, noisy, or unequally informative. When a sample provides limited reliable evidence, learning from its views alone can hinder the acquisition of useful retrieval representations. Semantically related training samples may provide complementary observations, yet existing volume-based objectives jointly align modalities within each sample without explicitly enabling information exchange across samples. We therefore propose a training-time hypergraph fusion framework that connects observed modalities both within samples and across semantically related samples, allowing representation learning to draw on evidence beyond an individual sample while leaving the retrieval pipeline unchanged at inference. The framework includes HyVol as a special case and introduces two configurations: wHyVol learns view contribution weights and symmetric semantic affinities, whereas wRHG additionally models typed interactions and participant roles through relational propagation. Missing modalities are omitted rather than imputed, and the hypergraph is discarded after training, incurring no additional inference cost. Experiments on eleven zero-shot video-text and audio-text retrieval benchmarks demonstrate broad improvements with both GRAM and HyperGRAM. Across 17 video benchmark-modality settings evaluated in both retrieval directions, wRHG outperforms GRAM in all 34 comparisons and HyperGRAM in 33 of 34. Mean text-to-video R@1 increases from 63.4 to 68.2 with GRAM and from 64.8 to 68.4 with HyperGRAM, while the largest video-to-text gain reaches 13.3 percentage points on ActivityNet. Under missing-modality evaluation, both weighted configurations retain positive text-to-video gains over GRAM across seven benchmarks at every evaluated missingness rate, even when 90% of clips lack one modality.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.03309</id>
-    <title>MultiInpaintCOCO: Fine-Grained Visual Understanding in Multiple Languages</title>
-    <link href="https://arxiv.org/abs/2611.03309" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.03309" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/ufal/multi-inpaint-coco" rel="related" title="Code" />
-    <published>2026-11-02T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Andrei-Alexandru Manea</name>
-    </author>
-    <author>
-      <name>Jindřich Libovický</name>
-    </author>
-    <author>
-      <name>Philipp J. Rösch</name>
-    </author>
-    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
-    <summary type="text">Previous research shows that vision-language (VL) models struggle to understand fine-grained image details and tend to focus on the overall layout. Moreover, any weakness in English tends to be further amplified in the multilingual setting. To study that, we extend InpaintCOCO, an English dataset focused on fine-grained visual details, to 13 typologically diverse languages across five language families, creating MultiInpaintCOCO - a new multilingual benchmark of 953 minimal-pair examples. We further test several state-of-the-art models in multilingual multimodal retrieval, considering both light VL CLIP-like encoders and large language models. Our results show that performance degrades substantially for lower-resource languages, with the strongest predictor being the data resources available for the languages rather than typological similarity to English. In cross-lingual retrieval, most models exhibit a systematic bias toward English: when given a correct caption in a non-English language and an incorrect one in English, models preferentially select the English caption. This bias varies considerably across architectures. Among the tested models, Gemma 3 shows the strongest English preference while Qwen 3 is the least biased, despite both reaching similar monolingual accuracy across languages. The code is available at https://github.com/ufal/multi-inpaint-coco.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.03302</id>
-    <title>EventGPT: Next-Event Pretraining on Banking Customer Histories</title>
-    <link href="https://arxiv.org/abs/2611.03302" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.03302" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/deburky/EventGPT" rel="related" title="Code" />
-    <published>2026-11-02T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Denis Burakov</name>
-    </author>
-    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
-    <summary type="text">A model pretrained to predict a customer's next event can estimate the probability of future events without training on their labels and provide a reusable representation for supervised downstream banking tasks. We pretrain EventGPT, a hierarchical causal transformer, by next-token maximum likelihood estimation on the public Multimodal Banking Dataset (MBD-mini: 100,224 clients, 38.8 million transactions and 66.3 million geolocation pings). Keeping one state per event, EventGPT trains in about two hours on one L4 GPU at windows up to 8,192 tokens. From its next-event distribution, with no labels, EventGPT scores five targets of the form "the client makes a transaction of a given kind for the first time next month" at ROC-AUC 0.79 to 0.92. Gradient boosting on 114 engineered features needs 10,000 to 300,000 labeled client-months to match it on four targets and stays below it on the fifth. For product prediction, frozen EventGPT embeddings score below the engineered features (mean ROC-AUC 0.787 against 0.808 over five test folds), and a rank-averaged ensemble of EventGPT, profile fields and token counts with the engineered features adds 0.014 to 0.017, of which 0.007 to 0.016 is EventGPT's own. The code and pretrained weights are released.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.03027</id>
-    <title>VLM-as-a-Judge for Person Re-Identification</title>
-    <link href="https://arxiv.org/abs/2611.03027" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.03027" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/bdager/JudgeReID" rel="related" title="Code" />
-    <published>2026-11-02T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Bessie Dominguez-Dager</name>
-    </author>
-    <author>
-      <name>Miguel Cazorla</name>
-    </author>
-    <author>
-      <name>Vincent Lepetit</name>
-    </author>
-    <category term="re-identification" label="Person &amp; Object Re-Identification" />
-    <summary type="text">Cloth-changing person re-identification (CC-ReID) is still very challenging, and no method clearly dominates: methods that lead on one benchmark collapse on the others, because they rest on different identity cues. We show that a general-purpose vision-language model (VLM), used zero-shot as a judge for reranking a short candidate list, beats the expert retrieval models it reranks by a wide and consistent margin. On the four scenarios of CHIRLA, a long-term CC-ReID benchmark that no publicly released Re-ID model is trained on, reranking the candidates of two frozen experts raises rank-1 on every scenario, by 12.9 points on average over the best expert and 9.4 over the best naive ensemble of the two, with no component fine-tuned on the target data. Merging both experts' shortlists matches or beats reranking the stronger expert's shortlist alone, at lower cost. Introducing a VLM does, however, come at a cost: almost all of the pipeline's FLOPs are spent on it. We therefore borrow a criterion from ensembling and invoke the VLM judge only where the two experts disagree at rank 1. This threshold-free gate removes 40% of the calls, and a comparable share of total compute, with no significant drop in rank-1, trading 1.8 to 3.8 points of mAP. Judging remains the dominant cost, but on a benchmark where dedicated experts stall, we find a frozen general-purpose model to be the strongest judge of identity. The code is available at https://github.com/bdager/JudgeReID.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.02896</id>
-    <title>Bridging Low-Level Image Fusion and High-Level Semantic Understanding</title>
-    <link href="https://arxiv.org/abs/2611.02896" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.02896" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-02T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Guangyuan Dong</name>
-    </author>
-    <author>
-      <name>Lingdong Shen</name>
-    </author>
-    <author>
-      <name>Xudong Zhang</name>
-    </author>
-    <author>
-      <name>Haodong Jing</name>
-    </author>
-    <author>
-      <name>Haoyu Wang</name>
-    </author>
-    <author>
-      <name>Zihao Li</name>
-    </author>
-    <author>
-      <name>Zonghao Ying</name>
-    </author>
-    <author>
-      <name>Ziyu Song</name>
-    </author>
-    <author>
-      <name>Shenghao Liu</name>
-    </author>
-    <author>
-      <name>Jiachen Luo</name>
-    </author>
-    <author>
-      <name>Hao Zhang</name>
-    </author>
-    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
-    <summary type="text">Remote sensing image fusion and semantic interpretation are usually optimized separately, so reconstruction quality need not preserve downstream retrieval utility. We propose LANCE, which uses structured language as an explicit, indexable semantic state. A frozen vision-language model maps the input to a closed-vocabulary text record; a language-conditioned generator fuses the imagery; and a dense verifier with a differentiable continuous summarizer re-describes the output. Text-text consistency and anti-collapse contrastive text-mask losses with negative queries close the loop without dense annotations or VLM fine-tuning. A variational EM formulation yields a per-step contraction result under regularity assumptions, distinguishing semantic faithfulness from verifier overfitting. Across seven test sets on GF2, QuickBird, WorldView-III, and WorldView-II, LANCE improves reduced-scale reference metrics by up to 11.7% (median 2.1%) over the strongest learning baseline. Independent evaluation using a held-out VLM and a supervised aerial detector yields gains of +6.4 mAP and +0.072 open-vocabulary F1 over the closest competitor. Text perturbations, cross-verifier transfer, and pseudo-RGB ablations examine the mechanisms underlying these gains. The framework connects image fusion to verifiable semantic representations for multimodal retrieval and knowledge management.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.02842</id>
-    <title>NIR: Approximate Neural Instance Retrieval for ALCIQ</title>
-    <link href="https://arxiv.org/abs/2611.02842" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.02842" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/dice-group/owlapy" rel="related" title="Code" />
-    <published>2026-11-02T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>N'Dah Jean Kouagou</name>
-    </author>
-    <author>
-      <name>Pritilata Saha</name>
-    </author>
-    <author>
-      <name>Caglar Demir</name>
-    </author>
-    <author>
-      <name>Axel-Cyrille Ngonga Ngomo</name>
-    </author>
-    <category term="instance-landmark-retrieval" label="Instance-Level &amp; Landmark Retrieval" />
-    <summary type="text">Instance retrieval is the main bottleneck of concept-learning systems based on refinement operators. We present NIR, a family of neural instance retrievers for ALCIQ that output graded membership scores from knowledge graph embeddings. We compare tokenization-based encoders (GRU, LSTM, Transformer) with a Compositional encoder that mirrors DL operators via primitive sub-networks. On eight benchmarks, all variants approximate Pellet closely on complete knowledge bases, while the Transformer model is most robust under incompleteness. The source code of our approach is at https://github.com/dice-group/owlapy.</summary>
   </entry>
 </feed>
