@@ -5,11 +5,582 @@
   <link href="https://ezharjan.github.io/DailyImageRetrievalArxiv/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ezharjan.github.io/DailyImageRetrievalArxiv/" rel="alternate" type="text/html" />
   <id>https://ezharjan.github.io/DailyImageRetrievalArxiv/</id>
-  <updated>2026-11-23T18:43:24Z</updated>
+  <updated>2026-11-24T18:15:17Z</updated>
   <author>
     <name>Image Retrieval arXiv Daily</name>
   </author>
   <generator uri="https://github.com/Ezharjan/DailyImageRetrievalArxiv" version="2.0.0">daily_arxiv.py</generator>
+  <entry>
+    <id>https://arxiv.org/abs/2611.30707</id>
+    <title>Intra-Class Diversity Loss for Person Re-Identification</title>
+    <link href="https://arxiv.org/abs/2611.30707" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.30707" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-23T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Wei Zhou</name>
+    </author>
+    <author>
+      <name>BaXian Chen</name>
+    </author>
+    <category term="re-identification" label="Person &amp; Object Re-Identification" />
+    <summary type="text">Person re-identification (ReID) aims to retrieve images of the same pedestrian across different cameras. However, the non-overlapping identities between training and testing sets, together with large intra-class variation, make it challenging to learn generalizable pedestrian representations. Most existing ReID loss functions mainly focus on intra-class compactness and inter-class separation, which may overlook useful intra-class differences. To address these issues, we propose a novel Intra-Class Diversity (ICD) loss that aims to maximize intra-class differences in classification-irrelevant directions. To the best of our knowledge, we are the first to introduce this class-weight-orthogonal diversity learning objective for person ReID. Specifically, based on the geometric relationship between the learned representation and its corresponding class-weight vector, we decompose each representation into the component along the class-weight direction and its orthogonal component. This decomposition provides a clear and interpretable geometric basis for modeling intra-class diversity. ICD then encour- ages larger differences among the orthogonal components of samples belonging to the same identity, while the classification loss maintains identity discrimination. The proposed ICD loss can be incorporated into existing ReID frameworks as an additional regularization term without modifying the feature extraction network. Extensive experiments on three widely used ReID datasets demonstrate the effectiveness of ICD and its complementarity with existing metric learning losses.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.30538</id>
+    <title>Where Compositionality Hides: Shared-Content Interference in Vision-Language Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.30538" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.30538" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-23T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Chimata Anudeep</name>
+    </author>
+    <author>
+      <name>Harsh Vardhan Poddar</name>
+    </author>
+    <category term="cross-modal-retrieval" label="Image-Text &amp; Cross-Modal Retrieval" />
+    <summary type="text">Paired compositional benchmarks such as Winoground ask each image to prefer its matching caption and each caption to prefer its matching image. A failed Group decision can come from a wrong caption preference or from the cross-image comparison alone, and Group Score merges the two. Choosing between retraining the encoder and changing the scoring rule therefore requires separating them. We study mean-erasure, which projects each frozen image embedding away from the mean of the two normalized candidate captions. We prove that the projection preserves every within-image caption ranking and makes Group Score equal baseline Text Score. On Winoground, mean-erasure raises CLIP ViT-B/32 Group Score from 9% to 31%, and five CLIP and SigLIP checkpoints gain 21 to 27 percentage points. ColorSwap shows a similar gain for color-object binding. A score decomposition shows that about 60% of Image failures already score the correct joint assignment above the swapped one and fail only on an offset between the two images. Fixed corrections and a learned bilinear scorer gain under one point. A direction estimated from retrieved captions gains about five points with two captions and falls below baseline with sixteen. Before retraining an encoder for paired retrieval, measure the Group loss that mean-erasure recovers: gains beyond baseline Text Score require changing the caption decisions themselves.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.30339</id>
+    <title>AirVT-15k: A Query-Diverse UAV Video-Text Dataset and Query-Adaptive Evidence Alignment Network for Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.30339" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.30339" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-23T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Xi Chen</name>
+    </author>
+    <author>
+      <name>Xu Chen</name>
+    </author>
+    <author>
+      <name>Xiangyang Jia</name>
+    </author>
+    <author>
+      <name>Ting Gan</name>
+    </author>
+    <author>
+      <name>Xu Zhang</name>
+    </author>
+    <author>
+      <name>Shuquan Wei</name>
+    </author>
+    <category term="video-retrieval" label="Video &amp; Text-Video Retrieval" />
+    <summary type="text">Unmanned aerial vehicle video-text retrieval (UAV-TVR) requires matching language to both scene context and subtle object changes. A harbor-layout query relies on global scene context, whereas a departing-vessel query requires local functional cues and motion states. Existing benchmarks provide diverse aerial descriptions but give limited attention to distinct evidence needs within the same video. We introduce AirVT-15k, a benchmark of 15,504 UAV videos and 155,040 captions, with ten complementary bilingual captions per video describing scenes, object states, and temporal changes. We also propose AirFocus-CST, which selects query-relevant frames and patches, encodes temporal feature differences, and combines coarse-to-fine interaction (CFI) with optimal-transport alignment (OTA). Average mean recall reaches 63.67% on AirVT-15k and 24.41% on CapERA, improving over the strongest baselines by 2.96 and 1.91 percentage points, respectively. The dataset and code are available at https://chenxi000233.github.io/AirVT-15k-site/.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.30314</id>
+    <title>SafeRank-ReID: Candidate-Conditioned Re-Ranking under Identity Conflicts for Multimodal Person Re-Identification</title>
+    <link href="https://arxiv.org/abs/2611.30314" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.30314" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-23T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Yizhi Wang</name>
+    </author>
+    <author>
+      <name>Zixuan Li</name>
+    </author>
+    <author>
+      <name>Zhuwen Chen</name>
+    </author>
+    <author>
+      <name>Feiwei Qin</name>
+    </author>
+    <category term="re-identification" label="Person &amp; Object Re-Identification" />
+    <summary type="text">Multimodal Person Re-Identification (ReID) exploits complementary identity cues from different sensing modalities to mitigate the performance degradation caused by challenging imaging conditions. Existing methods typically estimate Modality Reliability at the query level, making it difficult to identify conflicting inputs that retain normal visual quality but correspond to an incorrect identity. Such inputs may receive high confidence, promote irrelevant gallery candidates, and lead to negative fusion. To address this issue, we propose SafeRank-ReID, a candidate-conditioned safe re-ranking framework for Multimodal Person Re-Identification (ReID). To capture the varying support of the same modality for different candidates, we introduce a candidate-conditioned evidence arbitration mechanism that integrates unimodal retrieval evidence, input quality, and cross-modal consistency to estimate trust and conflict logits for each modality-candidate pair. Together, these logits contribute to the normalized modality weights, allowing support strength to vary across modalities and candidates while reducing the contribution of potentially unreliable evidence. A candidate-set refinement module subsequently applies self-attention to jointly model candidate representations and predicts residual scores from their competitive relations, thereby refining the initial fused ranking. For fusion results that remain uncertain after refinement, a query-level fallback gate estimates an interpolation coefficient from the overall conflict level and cross-modal uncertainty, adaptively combining the fused scores with those of the most reliable unimodal branch. Experiments on RGBNT201 and MSVR310 show that SafeRank-ReID maintains competitive clean-input retrieval while improving robustness to Identity Conflicts across person and vehicle benchmarks.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.30278</id>
+    <title>RigidAnchor: Cross-View Geo-Localization for UAV via Iterative Planar Rigid Alignment</title>
+    <link href="https://arxiv.org/abs/2611.30278" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.30278" rel="related" type="application/pdf" title="PDF" />
+    <link href="https://github.com/wwsource/RigidAnchor" rel="related" title="Code" />
+    <published>2026-11-23T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Bo Wang</name>
+    </author>
+    <author>
+      <name>Dekang Zhu</name>
+    </author>
+    <author>
+      <name>Jian Li</name>
+    </author>
+    <author>
+      <name>Zhipeng Meng</name>
+    </author>
+    <author>
+      <name>Bo Wang</name>
+    </author>
+    <author>
+      <name>Dewen Hu</name>
+    </author>
+    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
+    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
+    <summary type="text">A UAV that flies without GNSS has to estimate its absolute position and heading without any external signal. Most existing methods for UAV-to-satellite cross-view geo-localization (U-S CVGL) treat the task as image retrieval: they compress the UAV image and each satellite tile into separate descriptors, rank the tiles by their similarity, and return the center of the best tile. The output can therefore only lie on a pre-defined grid, its accuracy is limited by the tile size, and no heading is produced. Regressing the pose in a single pass removes the grid, but it leaves no chance to correct the estimate afterwards. We observe that satellite tiles are not independent samples. They are laid on the map at a fixed spacing, scale and orientation, so neighboring tiles join into one continuous satellite block with a consistent metric, and a nadir UAV view of that block differs from it by a planar rigid transform only, i.e. a 2D translation plus an in-plane rotation. We therefore reformulate U-S CVGL as solving for this transform between two images of different sizes. Position and heading then become parts of one geometric quantity, and the accuracy is no longer limited by the tile grid. We propose RigidAnchor, which solves the transform iteratively. The network encodes the two images and builds a multi-level correlation pyramid between them. At each iteration, it indexes the pyramid with every aerial cell carried through the current estimate, pools the descriptors of all cells into one hidden state, and lets two decoupled heads predict a translation increment and a rotation increment, the latter being composed rather than added. On Bearing-UAV-90K, the cross-view mean errors are 78.6% lower in position and 69.7% lower in heading than Bearing-UAV, and HSR@15 increases by 19.06 points. Code is available at https://github.com/wwsource/RigidAnchor.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.30142</id>
+    <title>Separating Protocol Effects from Spatio-Temporal Evidence in Person Re-Identification Re-Ranking</title>
+    <link href="https://arxiv.org/abs/2611.30142" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.30142" rel="related" type="application/pdf" title="PDF" />
+    <link href="https://github.com/rizalfanex/spatiotemporal-bayesian-reid" rel="related" title="Code" />
+    <published>2026-11-23T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Mochamad Rizal Fauzan</name>
+    </author>
+    <author>
+      <name>Doan Pham Thao Nhu</name>
+    </author>
+    <author>
+      <name>Jeslin Konthoujam</name>
+    </author>
+    <author>
+      <name>Purit Hongjirakul</name>
+    </author>
+    <author>
+      <name>Lakshay Chawla</name>
+    </author>
+    <category term="re-identification" label="Person &amp; Object Re-Identification" />
+    <summary type="text">Spatio-temporal priors re-rank person re-identification matches using the camera pair and the time gap, and are reported to add large gains on Market-1501. We ask how much of such a gain encodes the evaluation protocol rather than learned spatio-temporal evidence. Starting from a course-project re-ranker that adds log camera-transition and log time-gap terms to cosine similarity, we train a strong ResNet-50 baseline (Rank-1 94.3 %, mAP 86.2 % over three seeds), choose the fusion weights on an identity-disjoint validation split and evaluate on the official test set with control priors. The repository form adds 2.30 mAP points, but a one-parameter penalty on same-camera pairs alone adds 2.19: the protocol never places a true match in the query's camera, so the penalty removes distractors for free. The time term of that form is almost unused; a pair-level diagnostic traces this to its modelling the time gap given a match without dividing by the gap distribution of all candidate pairs. A likelihood-ratio prior adds 4.04 points without the penalty and 5.62 with it; shuffling the time stamps removes the extra gain, so about 3.43 points are tied to identity. The prior fixes the first-ranked match of 4.2 % of the queries and breaks it for 0.1 %. The gain shrinks as the visual baseline improves (11.9 to 5.62 points between a 70.5 % and a 86.2 % mAP model) and concentrates on queries whose true matches share the query's video sequence. The study covers one dataset, one backbone and three seeds.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.30069</id>
+    <title>Pixel as the Common Language: Unified Multimodal Embedding via Visual Rendering</title>
+    <link href="https://arxiv.org/abs/2611.30069" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.30069" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-23T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Xu Yuan</name>
+    </author>
+    <author>
+      <name>Pangjing Wu</name>
+    </author>
+    <author>
+      <name>Wenqi Fan</name>
+    </author>
+    <author>
+      <name>Qing Li</name>
+    </author>
+    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
+    <summary type="text">Multimodal embedding models map heterogeneous inputs into a shared representation space, yet text-only, image-only, and composed inputs are still presented in distinct formats and follow different routes through the model. This fragmentation prevents heterogeneous tasks from jointly optimizing the same end-to-end encoding process, limiting supervision transfer across input configurations. To address this issue, we propose unification before encoding and instantiate this paradigm in RenderEmbed. The framework uses Visual Substrate Rendering to convert heterogeneous inputs into a common visual substrate for encoding with a VLM. From the resulting visual tokens, Progressive Hierarchical Anchor Encoding produces compact retrieval representations by interleaving learnable anchors and fusing their states across layers, retaining broad context and fine-grained cues. Interventional Rendering Learning trains these representations to remain sensitive to content changes and stable across rendering variations through complementary semantic and rendering interventions. Extensive experiments on MMEB and ViDoRe v2, spanning diverse retrieval tasks, show that RenderEmbed outperforms prior state-of-the-art models at the same scale and exhibits strong out-of-domain generalization. Compared with MetaEmbed, RenderEmbed improves MMEB Overall Precision@1 by 1.7 points, with a larger 2.1-point gain on out-of-domain tasks. Transfer and scaling analyses further show that a shared visual pathway enables more effective learning from heterogeneous supervision.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.30055</id>
+    <title>Bi-Refine: Semantic Verification-Guided Progressive Refinement for Moment Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.30055" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.30055" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-23T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Mengnan Liu</name>
+    </author>
+    <author>
+      <name>Sanping Zhou</name>
+    </author>
+    <author>
+      <name>Kun Xia</name>
+    </author>
+    <author>
+      <name>Jiaxuan Lin</name>
+    </author>
+    <author>
+      <name>Yuxuan Wu</name>
+    </author>
+    <author>
+      <name>Gang Hua</name>
+    </author>
+    <category term="video-retrieval" label="Video &amp; Text-Video Retrieval" />
+    <summary type="text">Moment Retrieval (MR) aims to identify the temporal segment in an untrimmed video that corresponds to a natural language query. Existing approaches commonly refine temporal predictions within the localization pathway, without explicitly verifying candidate-level semantic consistency. Moreover, directly reusing semantic scores as feedback can cause over-correction when the verification signal is unreliable. To address these issues, we propose Bi-Refine, a semantic verification-guided progressive refinement framework that formulates MR as a closed-loop verification-and-refinement process. A Heuristic Localization Branch first generates candidate moments, while a Semantic Verification Branch evaluates their query consistency in a semantically enriched latent space. Query supervision further trains the verifier with the same candidate moment but different queries, encouraging it to distinguish the matched query from semantically similar mismatched queries. The resulting verification features are incorporated into a Progressive Refinement Loop that updates both query representations and multimodal features. To suppress potentially harmful updates, a lightweight reliability estimator gates query updates and reweights candidate contributions in feature feedback. A convergence-based adaptive stopping strategy additionally terminates unnecessary refinement during inference. Experiments on three standard MR benchmarks demonstrate the effectiveness and state-of-the-art performance of our method.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.30040</id>
+    <title>Teaching How to Reason, Beyond What to Answer: Evidence-Faithful On-Policy Distillation for streaming video understanding</title>
+    <link href="https://arxiv.org/abs/2611.30040" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.30040" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-23T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Mengnan Liu</name>
+    </author>
+    <author>
+      <name>Sanping Zhou</name>
+    </author>
+    <author>
+      <name>Kun Xia</name>
+    </author>
+    <author>
+      <name>Jiaxuan Lin</name>
+    </author>
+    <author>
+      <name>Gang Hua</name>
+    </author>
+    <author>
+      <name>Le Wang</name>
+    </author>
+    <category term="video-retrieval" label="Video &amp; Text-Video Retrieval" />
+    <summary type="text">Moment Retrieval (MR) aims to localize the temporal segment in a video that corresponds to a given textual description. However, a textual query often provides only a sparse semantic description of the target event, whereas the video contains rich and fine-grained visual variations. This mismatch creates an inherent gap between textual semantics and visual content, making a single textual input insufficient for precise cross-modal alignment. As a result, when multiple temporally adjacent or semantically similar segments exist, the model may struggle to distinguish the target moment from confusing candidates. To address this challenge, we propose a Multi-Perspective Auxiliary Representation (MPAR) framework, which aims to bridge this alignment gap by enriching a single textual input with complementary visual cues from multiple perspectives. Specifically, MPAR consists of three key components: (1) Auxiliary Representation Initialization (ARI) constructs multiple learnable representation slots from the original query, preserving the query intent while preparing flexible carriers for subsequent visual cue injection; (2) Visual-Induced Semantic Structuring (VISS) injects target-specific visual attributes into each representation while preserving semantic coherence with the original query; and (3) Multi-Perspective Semantic Aligner (MPSA) aligns each auxiliary representation with corresponding video regions to enhance discriminative localization. By constructing multi-perspective auxiliary representations and guiding the model to attend to relevant visual regions across these representations, our model achieves more accurate moment localization. Extensive experiments on MR benchmarks demonstrate that our MPAR outperforms state-of-the-art methods, validating the effectiveness of MPAR.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.29948</id>
+    <title>Look Before You Leap: Re-Architecting Disk-Resident Vector Search with TriVS</title>
+    <link href="https://arxiv.org/abs/2611.29948" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.29948" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-23T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Yizou Chen</name>
+    </author>
+    <author>
+      <name>Baotong Lu</name>
+    </author>
+    <author>
+      <name>Peiqi Yin</name>
+    </author>
+    <author>
+      <name>Zhisheng Hu</name>
+    </author>
+    <author>
+      <name>Qi Chen</name>
+    </author>
+    <author>
+      <name>Ming-Chang Yang</name>
+    </author>
+    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
+    <summary type="text">Disk-resident approximate nearest-neighbor search (ANNS) scales vector search beyond DRAM, yet state-of-the-art systems remain I/O-bound, even with fast SSDs and sophisticated I/O execution. To understand this bottleneck, we conduct an I/O-centric analysis that breaks each query down into an approach phase that locates a query-near region and a converge phase that resolves the final top-k. This analysis reveals complementary I/O tradeoffs: cluster-based search circumvents approach-phase I/O through in-memory routing but reads coarse-grained, full clusters during convergence, whereas graph-based search employs fine-grained, vector-level I/O throughout, enabling efficient convergence at the cost of inevitable I/O during the approach phase. To combine the complementary I/O benefits of the two granularities, we present TriVS, a new paradigm that re-architects disk-resident vector search as a trilogy: approach coarsely, distill progressively, and converge exactly. Its key innovations come in two parts. First, it decouples the approach and converge phases from a single search granularity, employing cluster-based search to avoid approach-phase I/O and leveraging vector-level I/O for efficient convergence. Second, to bridge the two granularities, it introduces a new in-memory distill phase between the original two, progressively reducing routed clusters to a vector-level shortlist using compact quantized vectors before disk access. Moreover, coarser clustering shrinks the centroid-routing index, allowing TriVS to reallocate existing memory to distillation rather than expand its memory budget. Our evaluation on five datasets spanning diverse vector types and scales shows that, at Recall@10=0.9, TriVS achieves on average 3.42X PipeANN's throughput, 51.2% lower latency, and 63.7% less disk I/O, while using less memory and storage than PipeANN.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.29877</id>
+    <title>Towards Agentic Video Corpus Moment Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.29877" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.29877" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-23T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Chenwei Xu</name>
+    </author>
+    <author>
+      <name>Shang Wu</name>
+    </author>
+    <author>
+      <name>Zhenyu Pan</name>
+    </author>
+    <author>
+      <name>Jianshu Zhang</name>
+    </author>
+    <author>
+      <name>Pranav Maneriker</name>
+    </author>
+    <author>
+      <name>Lie Lu</name>
+    </author>
+    <author>
+      <name>Fan Du</name>
+    </author>
+    <author>
+      <name>Manling Li</name>
+    </author>
+    <author>
+      <name>Han Liu</name>
+    </author>
+    <category term="video-retrieval" label="Video &amp; Text-Video Retrieval" />
+    <summary type="text">Video corpus moment retrieval (VCMR) requires finding the video and time interval that match a text query in a corpus of videos. We present RELAY, a training-free framework for VCMR that shares memory across queries. RELAY processes a batch of queries in three stages: search with a query bank, ranking with video notes, and localization with video prompt caching. In the search stage, an embedding model scores each video by its best-matching frame. The query bank penalizes videos that score highly for many other queries in the batch. In the ranking stage, a vision-language model (VLM) writes notes on each candidate video's scenes, people, objects, and actions once. Then, a large language model (LLM) reranks the candidates from these notes. In the localization stage, a VLM predicts the time interval of the moment in the top-ranked video. When multiple queries select the same video, prompt caching lets the VLM reuse its frames. On the three VERIFIED benchmarks, RELAY outperforms the trained baselines in video retrieval R@1 without training. Without any labeled moment, its predicted intervals are shorter than the annotated ones. In VCMR, it achieves similar performance to VideoSearch-R1 on one benchmark and trails it at IoU 0.5 on the other two. Human annotators also mark shorter moments than the original annotations of the benchmarks. A single margin, calibrated on a few labeled queries, widens the predicted interval to the annotation convention of the benchmarks. With it, RELAY outperforms the trained baselines in VCMR at IoU 0.5.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.29723</id>
+    <title>ApexID: Hierarchical Learning for Multi-Species Animal Re-Identification</title>
+    <link href="https://arxiv.org/abs/2611.29723" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.29723" rel="related" type="application/pdf" title="PDF" />
+    <link href="https://github.com/MIA-AI-Team/ApexID-Hierarchical-Learning-for-Multi-Species-Animal-Re-Identification-Official-Repo" rel="related" title="Code" />
+    <published>2026-11-22T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Seifeldin Elkerdany</name>
+    </author>
+    <author>
+      <name>Mohamed ElBassat</name>
+    </author>
+    <author>
+      <name>Gamal Abouelhamd</name>
+    </author>
+    <author>
+      <name>Assem Elkady</name>
+    </author>
+    <author>
+      <name>Jana Ghoneim</name>
+    </author>
+    <author>
+      <name>Matin Mahmood</name>
+    </author>
+    <author>
+      <name>Abigail Allen Martin</name>
+    </author>
+    <author>
+      <name>Gerard de Melo</name>
+    </author>
+    <author>
+      <name>Antonio Rueda-Toicen</name>
+    </author>
+    <category term="re-identification" label="Person &amp; Object Re-Identification" />
+    <summary type="text">Animal re-identification (Re-ID) must distinguish individuals across species and capture conditions. We introduce ApexID, a hierarchical SphereFace2-based loss that integrates global identity discrimination with balanced animal-category supervision. Using 132,533 images curated from 19 public datasets, we evaluate three model families and four objectives on four external datasets with observation-aware retrieval protocols. ApexID achieves a dataset-averaged Rank-1 accuracy of 64.89% with ConvNeXt-Small and an mAP of 32.54% with MIEW-ID, outperforming their pretrained reference models. On elephants, a category absent from animal Re-ID training, our ConvNeXt-Small variant achieves the highest retrieval performance among the fourteen evaluated configurations. Scores vary by backbone and dataset, and open-set evaluation reveals remaining discovery challenges. These findings support hierarchical category-identity learning to improve transfer to unseen datasets and species.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.29538</id>
+    <title>STAGE: Structured Test-Time Adaptation with Global Entropic Soft-coupling for Cross-Subject Brain-to-Image Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.29538" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.29538" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-22T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Yihang Zou</name>
+    </author>
+    <author>
+      <name>Ruixi Liang</name>
+    </author>
+    <author>
+      <name>Chunmei Qing</name>
+    </author>
+    <author>
+      <name>Junpeng Tan</name>
+    </author>
+    <author>
+      <name>Haichuan Wei</name>
+    </author>
+    <author>
+      <name>Wanxiang Luo</name>
+    </author>
+    <author>
+      <name>Gao Wu</name>
+    </author>
+    <author>
+      <name>Haodong Li</name>
+    </author>
+    <author>
+      <name>Xiangmin Xu</name>
+    </author>
+    <author>
+      <name>Yefeng Zheng</name>
+    </author>
+    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
+    <summary type="text">Cross-subject brain-to-image retrieval aims to identify viewed images from unseen subjects' brain signals. However, inter-subject variability hinders alignment of brain-image representations, while independent query ranking tends to concentrate predictions on a few candidates, making accurate retrieval difficult without target labels. We propose STAGE (Structured Test-Time Adaptation with Global Entropic Soft-coupling), a structured test-time adaptation framework for recovering cross-subject alignment from uncertain brain-image correspondences. Moment calibration reduces statistical discrepancies between features, while coupling-weighted initialization establishes initial alignment. Coupling-guided adaptation further refines residual feature mismatches, and soft-coupling ranking coordinates candidate competition across queries to prevent overly concentrated matching assignments. Using only unlabeled target batches, STAGE maintains consistent matching from feature calibration to image retrieval while keeping both encoders frozen. Experiments on three public datasets validate STAGE's retrieval performance. On THINGS-EEG2, STAGE achieves 68.25% Top-1 and 90.47% Top-5, improving Top-1 by 18.52 percentage points over SCORE recovery and CSLS on identical frozen NICE features. Calibrated on 200 queries and a 200-image gallery covering their identities, STAGE retains 42.05% Top-1 when ranking 1,854 images with the transform frozen.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.29399</id>
+    <title>SJG: A Skyline Joint Graph for Multi-Component Approximate Nearest Neighbor Search</title>
+    <link href="https://arxiv.org/abs/2611.29399" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.29399" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-22T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Linyun Ma</name>
+    </author>
+    <author>
+      <name>Rui Mao</name>
+    </author>
+    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
+    <summary type="text">Graph-based indexes enable efficient approximate nearest neighbor search at scale by linking similar objects. In applications such as product retrieval and rental listing search, similarity depends on several components whose relative importance varies across queries. The challenge is that the index must select neighbors during construction, but the query weights that determine which objects are closest are not yet known. A straightforward approach is to index each component separately. However, merging the results of these searches can miss the nearest neighbor under the weighted distance. A joint graph allows a search to follow links across components, helping to avoid such misses, but selecting neighbors separately within each component can leave redundant edges, and keeping component hierarchies synchronized limits parallel construction. To address these limitations, we propose the Skyline Joint Graph (SJG). Although query weights can change the ranking of candidate neighbors, the dominance relation among them is independent of those weights. SJG exploits this property by pooling candidates across components and retaining the Skyline for each node, thereby enabling efficient approximate nearest neighbor search under different query weights while supporting parallel graph construction. Extensive experiments on six real-world datasets demonstrate that SJG achieves up to $27.9\times$ the query throughput of baseline methods at 90% Recall@10, while accelerating single-threaded index construction by up to $201\times$. Its index requires at least 36% less space than the smallest baseline index.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.29312</id>
+    <title>Prompt-Consistent Cross-View Object Geo-Localization</title>
+    <link href="https://arxiv.org/abs/2611.29312" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.29312" rel="related" type="application/pdf" title="PDF" />
+    <link href="https://github.com/Sunny-Fresher/CVOGL-MO" rel="related" title="Code" />
+    <published>2026-11-22T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Lingyun Xing</name>
+    </author>
+    <author>
+      <name>Wenning Hao</name>
+    </author>
+    <author>
+      <name>Kai Jiang</name>
+    </author>
+    <author>
+      <name>Dawei Jin</name>
+    </author>
+    <author>
+      <name>Xiaohan Zhang</name>
+    </author>
+    <author>
+      <name>Xiaoxiong Zhang</name>
+    </author>
+    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
+    <summary type="text">Cross-view object geo-localization (CVOGL) aims to locate an object indicated by a click point in a ground or drone query image within a satellite reference image. Through a quantitative prompt-sensitivity evaluation, we find that existing CVOGL methods suffer from a prompt-disobeying overfitting problem: when the click point is moved or removed, their predictions barely respond, indicating that the models rely on spurious feature correlations rather than genuinely following the prompt semantics. We trace this behavior to the limited scale of the benchmark dataset, which contains only 4,343 prompt-object pairs per task, so that the models simply memorize the object associated with each scene instead of learning the true prompt-to-object correspondence. To address this, we propose two plug-and-play components. First, we construct the CVOGL-MO dataset by expanding the existing training and test sets with diverse multi-object annotations, mitigating the memorization that induces shortcut learning. Second, we propose the Cross-View Co-Scene Multi-Object Contrastive Loss (CVMCL), which enforces distinct feature representations for different click points within the same scene, compelling the model to follow prompt instructions. We further design a prompt-sensitivity evaluation protocol with prediction-shift metrics, providing the first quantitative measurement of prompt-following capability for CVOGL. Both components are architecture-agnostic and can be integrated into existing methods without any architectural modification. Experiments on three representative backbones show that our components substantially improve prompt-following accuracy on the new multi-object test sets and markedly increase prompt sensitivity. Our dataset and code will be publicly released at https://github.com/Sunny-Fresher/CVOGL-MO.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.29276</id>
+    <title>ContinuLoc: Continuous Pose Inference over Neural Fields for UAV Geo-Localization</title>
+    <link href="https://arxiv.org/abs/2611.29276" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.29276" rel="related" type="application/pdf" title="PDF" />
+    <link href="https://github.com/ZhouWeikun/ContinuLoc" rel="related" title="Code" />
+    <published>2026-11-22T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Weikun Zhou</name>
+    </author>
+    <author>
+      <name>Jinliang Lin</name>
+    </author>
+    <author>
+      <name>Yu Zang</name>
+    </author>
+    <author>
+      <name>Lin Xie</name>
+    </author>
+    <author>
+      <name>Haiqing Fu</name>
+    </author>
+    <author>
+      <name>Sheng Ao</name>
+    </author>
+    <author>
+      <name>Shangshu Yu</name>
+    </author>
+    <author>
+      <name>Zhiming Luo</name>
+    </author>
+    <author>
+      <name>Cheng Wang</name>
+    </author>
+    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
+    <summary type="text">Cross-view UAV geo-localization involves three design choices: how to represent the UAV observation, how to represent the geo-referenced map, and how to infer pose from their interaction. The dominant paradigm organizes the map as a discretized 2DoF candidate library, coupling map representation to pose inference and thus bounding spatial localization precision by candidate sampling resolution. We decouple map representation from pose inference by encoding the geo-referenced map as a continuously queryable semantic neural field, enabling localization to be formulated as explicit optimization over a continuous 4DoF pose space parameterized by 2D ground position, in-plane heading, and viewing scale. Pose hypotheses are evaluated on demand using global descriptors in a shared semantic feature space, bypassing the sampling bottleneck of retrieval. We learn 4DoF pose-sensitive visual representations under full 4DoF supervision provided by ContinuScenes, a multi-city benchmark with dense near-nadir UAV imagery and complete pose annotations. Inference proceeds hierarchically, progressing from broad pose-space coverage to adaptive concentration on high-compatibility regions. Experiments demonstrate substantial gains over representative localization paradigms under progressively stricter 4DoF accuracy criteria. Code is available at https://github.com/ZhouWeikun/ContinuLoc/</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.29252</id>
+    <title>Zarc: Exact Nearest Neighbors over a Billion Vectors in Seconds</title>
+    <link href="https://arxiv.org/abs/2611.29252" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.29252" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-22T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Dongfang Zhao</name>
+    </author>
+    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
+    <summary type="text">Exact k-nearest-neighbor vector search lies on the critical path of machine learning systems, from sparse attention in the latest large language models (LLMs) to long-context memories and training-data deduplication. Exhaustive GPU search scans the whole dataset for every query, while approximate indexes return inexact neighbors. Recent methods skip almost every vector with a cheap half-precision proof that it lies too far away, but only on one GPU that holds the whole dataset. Our insight is to keep only the short rows of these proofs in GPU memory and to fetch the few remaining full vectors from host memory. Our system, Zarc, answers Euclidean, cosine, inner-product, and filtered queries exactly under updates. On four H100 GPUs, it answers 10,000 exact queries over one billion vectors in 1.1 seconds instead of five minutes. On eleven open LLMs, it retrieves the exact top-10 attention keys 2.2x to 13.1x faster than exhaustive search. In sparse attention over one million tokens, it runs 3.1x faster than bf16 selection with FlashInfer, which misses the exact top-64 for most queries.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.28648</id>
+    <title>Beyond Full-Context Accuracy: Context-Marginalized Evaluation of Test-Time Structure-Aware Inference in EEG-to-Image Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.28648" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.28648" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-21T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Ke Xiao</name>
+    </author>
+    <author>
+      <name>Banghua Yang</name>
+    </author>
+    <author>
+      <name>Yingjie Li</name>
+    </author>
+    <author>
+      <name>Hang Zhang</name>
+    </author>
+    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
+    <summary type="text">Test-time structure-aware inference can improve cross-subject EEG-to-image retrieval by exploiting relations among unlabeled test queries, but it also makes predictions depend on query-set composition. Existing evaluations typically report accuracy under a single full-query context, leaving unclear whether gains and comparative conclusions hold as context changes. We introduce Context-Marginalized Retrieval Evaluation (CMRE), which repeatedly evaluates each target query in sampled contexts using the corresponding rows of a fixed query-gallery similarity matrix. CMRE distinguishes structural exploitability, quantified by gains over independent retrieval, from context robustness, measured by same-query Top-1 context consistency. Under leave-one-subject-out evaluation on THINGS-EEG2 across six frozen representations and six structure-aware inference rules, structure-aware inference improves full-context Top-1 accuracy by up to 20.40 percentage points over independent retrieval. However, the rule selected under full-context evaluation is no longer optimal in 17 of 24 representation-context-size conditions (70.8%). Selecting the full-context winner incurs an average loss of 2.70 percentage points and a maximum loss of 8.29 percentage points under reduced contexts. Representation rankings are likewise inference- and context-dependent: the ordering under independent retrieval is not consistently preserved under structure-aware inference. Moreover, larger retrieval gains do not necessarily imply greater context robustness, showing that retrieval effectiveness and prediction stability provide complementary views of structure-aware inference. Full-context accuracy captures one operating point of context-dependent inference. CMRE complements it by characterizing how structural gains, context consistency, and comparisons of rules and representations change with query context.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.28295</id>
+    <title>GERF: A Token-Efficient Multimodal Retrieval Framework for Schema-Guided Scientific Information Extraction</title>
+    <link href="https://arxiv.org/abs/2611.28295" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.28295" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-20T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Yiyu Qian</name>
+    </author>
+    <author>
+      <name>Xing Wu</name>
+    </author>
+    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
+    <category term="visual-document-retrieval-rag" label="Visual Document Retrieval &amp; Multimodal RAG" />
+    <summary type="text">Scientific information extraction (IE) is a fundamental component of AI for Science, transforming experimental knowledge embedded in scientific literature into structured and traceable data for evidence synthesis, scientific database construction, and data-driven discovery. However, critical experimental details are often distributed across text, tables, figures, captions, and surrounding discussion, making them difficult to recover using conventional text-only extraction. Existing LLM-based and multimodal RAG pipelines typically rely on full-document context or coarse page-level retrieval, introducing substantial irrelevant evidence and high textual and visual token costs. We propose GERF, a Graph-based Evidence Retrieval Framework for token-efficient, schema-guided multimodal scientific IE. GERF represents each article as a heterogeneous evidence graph that connects schema fields, text chunks, figures, and figure-derived content through semantic and structural relations. Using schema fields as retrieval anchors, GERF combines direct semantic retrieval, Random Walk with Restart, and null-aware evidence expansion to construct compact, field-specific multimodal evidence packages. Visual interpretation is applied only to graph-selected figures, avoiding indiscriminate processing of the entire document. We evaluate GERF from two complementary perspectives: evidence retrieval quality and pipeline-level input-token consumption. On the expert-annotated SOFC-Exp corpus, GERF retrieves gold-supported evidence for 94.55% of the evaluated field instances, providing broad field-level evidence coverage for downstream extraction. In the token comparison, GERF reduces average input-token usage by 73.40% relative to full-context processing and uses fewer tokens than the evaluated page-level pipelines.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.28083</id>
+    <title>OSLA: Observation-Aware Local Alignment and Cross-Scene Relation Learning for Any-Scenario Person Re-Identification</title>
+    <link href="https://arxiv.org/abs/2611.28083" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.28083" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-16T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Xinyang Zhang</name>
+    </author>
+    <author>
+      <name>Feiyu Han</name>
+    </author>
+    <author>
+      <name>Chenhao Wu</name>
+    </author>
+    <author>
+      <name>Yang Liu</name>
+    </author>
+    <author>
+      <name>Shang Luo</name>
+    </author>
+    <author>
+      <name>Yingguang Yang</name>
+    </author>
+    <author>
+      <name>Feng Zhang</name>
+    </author>
+    <author>
+      <name>Chongyang Zhang</name>
+    </author>
+    <author>
+      <name>Hao Zheng</name>
+    </author>
+    <author>
+      <name>Kefu Xu</name>
+    </author>
+    <author>
+      <name>Congjing Ran</name>
+    </author>
+    <author>
+      <name>Bin Chong</name>
+    </author>
+    <category term="re-identification" label="Person &amp; Object Re-Identification" />
+    <summary type="text">Any-Scenario Person Re-Identification (AS-ReID) aims to retrieve identities across spectral modalities and aerial-ground viewpoints using a unified model. However, changes in viewpoint and spectrum can make local correspondences unreliable, while conventional sampling may omit cross-camera positive relations needed for training. To address these challenges, we propose OSLA, an observation-aware framework built on supervised CLIP-ReID that combines Local Identity Alignment (LIA) and Cross-Scene Relation Learning (CSR). Specifically, LIA uses historical identity observations and competing-identity information to select reliable cross-scene local correspondences while allowing unmatched regions. Local-to-global distillation transfers identity knowledge from correctly classified historical local features into the global representation. CSR couples observed-cell sampling with spectrum-grouped ranking to jointly organize and optimize cross-camera relations. Sampling across two cameras and two spectra provides same- and cross-spectrum positives, while ranking constrains positive-negative scores separately by gallery spectrum on the final retrieval descriptor. Both modules operate only during training, preserving the original visual encoder and retrieval descriptor at inference. Experiments on WHU-MARS-1000 and WHU-MARS-2337 demonstrate that OSLA achieves absolute Rank-1 gains of 5.0% and 4.8% over UAD, respectively, under the AS-ReID protocol. The code will be available.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.28081</id>
+    <title>BehaviorICL: Task-Conditioned Decoder States for Visual In-Context Learning</title>
+    <link href="https://arxiv.org/abs/2611.28081" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.28081" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-16T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <author>
+      <name>Chenyang Wang</name>
+    </author>
+    <author>
+      <name>Jiamo Hu</name>
+    </author>
+    <author>
+      <name>Chengrui Wu</name>
+    </author>
+    <author>
+      <name>Lingyue Chen</name>
+    </author>
+    <author>
+      <name>Jianguo Chen</name>
+    </author>
+    <author>
+      <name>Xun Xu</name>
+    </author>
+    <author>
+      <name>Xulei Yang</name>
+    </author>
+    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
+    <summary type="text">The usefulness of an in-context demonstration for a vision-language model (VLM) depends on both the query image and the task posed about it. We study whether the frozen target VLM's own decoder states, read before answer generation, can select such demonstrations. BehaviorICL represents each image and task by a task-conditioned processing signature, the hidden states at the final input position across all decoder layers. Its training-free variant, BehaviorICL-Raw, averages cosine similarities between corresponding layer states and passes the retrieved examples with their reference answers to the same VLM. When the same NICO++ images are asked about their object or their context, Raw retrieves largely different demonstrations for the two questions and outperforms an image retriever given task-matched demonstrations on both VLMs. Across two VLMs and eight classification and visual question answering datasets, Raw gives the highest average accuracy among training-free retrievers on both VLMs and exceeds RICES with a CLIP ViT-L/14 encoder by 3.83 points on Qwen and 1.85 on InternVL. A lightweight shared projection, BehaviorICL-Proj, brings further gains on classification. Analyses of extraction text, decoder depth and bank answers help explain these gains, and attention analysis describes how the task text shifts attention at the extraction position toward the classified object. These results support the target VLM's internal states as a practical basis for visual in-context learning.</summary>
+  </entry>
   <entry>
     <id>https://arxiv.org/abs/2611.27931</id>
     <title>DiTraR: Diverse Scorers and Transcript-Guided Re-ranking for Video Corpus Moment Retrieval</title>
@@ -1063,7 +1634,7 @@
       <name>David Sánchez</name>
     </author>
     <author>
-      <name>Benet Manzanares</name>
+      <name>Benet Manzanares-Salor</name>
     </author>
     <author>
       <name>Josep Domingo-Ferrer</name>
@@ -1884,7 +2455,7 @@
       <name>Shinichiro Shirota</name>
     </author>
     <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
-    <summary type="text">The Global Ecosystem Dynamics Investigation (GEDI) mission measures three-dimensional forest structure with a LiDAR aboard the International Space Station. GEDI observations have geolocation errors of about 10 m, which cause misalignment with other remote sensing data and reduce the accuracy of downstream tasks. Matching GEDI ground elevations against high-resolution digital terrain models (DTMs) from airborne LiDAR is one way to correct these errors, but such DTMs exist in few regions. To widen this method's applicability, we super-resolved a more widely available low-resolution DTM and used it for the matching. Our question is whether a super-resolved DTM yields the same correction as a 1 m-resolution airborne LiDAR DTM and, if not, why. In steep forests of western Japan, we super-resolved an existing 10 m-resolution DTM to 1 m. Improving its accuracy required fusion with a global 30 m-resolution DTM from a different source. Using the resulting DTM, we corrected GEDI observation positions first by a single shift per ground track, then per observation. For most tracks, the shifts nearly matched those from the airborne LiDAR DTM, likely because DTM errors canceled out across many observations. Per-observation corrections, however, did not match. At a single observation, the error does not cancel out and is too large for the correction. This error likely originates mainly from the input DTM. Therefore, even without a 1 m-resolution DTM, a roughly 10 m-resolution DTM, fused with a global DTM and super-resolved to 1 m, should yield track-wise corrections nearly matching those from a 1 m-resolution DTM.</summary>
+    <summary type="text">The Global Ecosystem Dynamics Investigation (GEDI) mission measures three-dimensional forest structure with a LiDAR instrument aboard the International Space Station. GEDI observations have geolocation errors of about 10 m, which cause misalignment with other remote sensing data and reduce the accuracy of downstream tasks. Matching GEDI ground elevations against high-resolution digital terrain models (DTMs) from airborne LiDAR is one way to correct these errors, but such DTMs exist in few regions. To widen this method's applicability, we super-resolved a more widely available low-resolution DTM for elevation matching. We ask whether a super-resolved DTM yields the same correction as a 1 m-resolution airborne LiDAR DTM and, if not, why. In steep forests of western Japan, we super-resolved an existing 10 m-resolution DTM to 1 m. Additionally fusing a global 30 m-resolution DTM from a different source substantially improved the accuracy. Using the resulting DTM, we corrected GEDI observation positions first by a single offset per ground track, then point by point. For most tracks, the per-track corrections nearly agreed with those from the airborne LiDAR DTM. Point-by-point corrections, however, did not agree. This was because the error of the generated DTM was close to the elevation differences that point-by-point correction must resolve, and most of this error lay at scales that even a 10 m-resolution DTM can represent. Under similar conditions, a super-resolved DTM may be usable in place of a 1 m-resolution DTM for per-track correction, but improving the accuracy, or using it for point-by-point correction as well, requires reducing the error at these scales rather than reproducing fine relief.</summary>
   </entry>
   <entry>
     <id>https://arxiv.org/abs/2611.09123</id>
@@ -2082,558 +2653,5 @@
     </author>
     <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
     <summary type="text">Vector search now runs as an operator inside database systems, where a missed neighbor makes a query answer wrong, yet approximate nearest neighbor (ANN) indexes are tuned only for a target average recall. Tuned to an average recall of 0.99, indexes left 5-19% of in-distribution queries and, without a query log, up to 99.6% of out-of-distribution queries below it (more under updates) and changed a top-5-tag aggregate over the results for up to 27% of queries. In the spirit of approximate query processing, we present PQR-Search, a $k$-ANN operator that guarantees $\Pr[\mathrm{Recall}(q) &lt; τ] \le δ$ for every query and, for $τ&lt; 1$, $\mathbb E[\mathrm{Recall}(q)] \ge τ$. The probability is over a random rotation inside the index alone, so no distributional assumption is needed, only that queries and updates do not depend on it, and the guarantee holds after insertions and deletions without retuning. PQR-Search prunes 1-bit codes of rotated IVF residuals with exact error quantiles and predicts its cost without data-fitted constants. On 20 datasets of up to 100M vectors, failure rates stayed at most $δ$ in every audit, including the NeurIPS'23 streaming runbook, and the aggregate changed in at most 0.04% of trials. The guarantee costs 2.5$\times$ the single-query latency of HNSW tuned as above and 1.3$\times$ lower batch throughput (geometric means). PQR-Search was 26$\times$ faster than FAISS exhaustive search in batch, faster than IVF with $n_{\rm probe}$ chosen afterwards to meet the target on every test query, and 27-76$\times$ faster than PUFFINN, which also guarantees per-query recall.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.07575</id>
-    <title>Georeferenced Cross-View 3D Reconstruction from Ground and Satellite Images</title>
-    <link href="https://arxiv.org/abs/2611.07575" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.07575" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-05T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>David G. Shatwell</name>
-    </author>
-    <author>
-      <name>Mubarak Shah</name>
-    </author>
-    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
-    <summary type="text">Georeferenced 3D reconstruction from ground images requires recovering not only the local scene geometry, but also localizing every camera center and 3D point in a geographic coordinate frame. Existing cross-view geo-localization methods are able to estimate the GPS coordinate of a single ground camera, but do not reconstruct dense 3D geometry, while recent feed-forward multi-view 3D reconstruction models predict point maps and camera poses only in a local coordinate frame. We introduce X-VGGT, a feed-forward cross-view geometry transformer that unifies these tasks by jointly processing a set of ground-level images and a georeferenced satellite image to predict ground-view camera poses, dense 3D point maps, and a scene-level transform parameterized by gravity, scale, yaw and translation. This transform projects the local reconstruction into the satellite plane, resulting in the geo-registration of all ground images with the georeferenced satellite image. We further propose an evaluation protocol for this joint task and show that, across multiple cross-view datasets, X-VGGT produces accurate georeferenced reconstructions and outperforms prior cross-view geo-localization and multi-view 3D reconstruction models.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.07498</id>
-    <title>Degree-Equalized View-Graph Selection under Tight Pair Budgets</title>
-    <link href="https://arxiv.org/abs/2611.07498" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.07498" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-05T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Minhyeok Im</name>
-    </author>
-    <author>
-      <name>Jongseong Brad Choi</name>
-    </author>
-    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
-    <summary type="text">Fully matching all image pairs in Structure-from-Motion is quadratic in the number of images, so practical pipelines pass a budgeted subset to the final matching and reconstruction backend. One-shot selectors score candidates with image retrieval, cheap geometric probes, or a learned prior and finalize B pairs before full matching. Their priorities do not account for the degree already allocated to each image, which can concentrate edges on a few images. Across nine large 1DSfM internet photo collections at B=2N, the coverage top-B selector leaves 54% of covered images with realized degree at most two. Reconstruction can then fail even when the selected graph is nearly connected and almost fully verified. Our training-free greedy rule, Degree-Equalized Allocation (DEAL), exponentially downweights pairs whose endpoints are already well covered. On these collections, DEAL improves the one-shot selector built on the same prior (from 0.776 to 0.929) and matches the mean registered-image ratio of an SfM-supervised edge prior under the shared backend (0.929 vs 0.930), without training. On the largely saturated 38-scene standard benchmark suite, DEAL gives the highest mean among the evaluated training-free selectors (0.875 vs 0.858 one-shot).</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.07481</id>
-    <title>Compact Motion Embeddings for Feed-forward Unified Human Animation</title>
-    <link href="https://arxiv.org/abs/2611.07481" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.07481" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-05T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Seonwook Park</name>
-    </author>
-    <author>
-      <name>Hyunsoo Cha</name>
-    </author>
-    <author>
-      <name>Amrita Mazumdar</name>
-    </author>
-    <author>
-      <name>Shengze Wang</name>
-    </author>
-    <author>
-      <name>Tianye Li</name>
-    </author>
-    <author>
-      <name>Hanbyul Joo</name>
-    </author>
-    <author>
-      <name>Koki Nagano</name>
-    </author>
-    <author>
-      <name>Shalini De Mello</name>
-    </author>
-    <category term="re-identification" label="Person &amp; Object Re-Identification" />
-    <summary type="text">Animating a reference image with a driver's motion requires a motion representation that captures face, hand, and body articulation but excludes the driver's appearance. Most body animation methods take motion from external pose estimators and render it with many denoising steps; compact learned motion representations mostly cover the face. We present FUHA, a real-time-capable feed-forward transformer that learns a compact motion embedding of the whole human and uses it for face, upper-body, and full-body animation. A Q-Former compresses the driver's features from a frozen visual encoder into this embedding. To disentangle motion from appearance, a novel contrastive loss pulls it toward the motion embedding of the driver's rendered keypoint image and away from that of the same person in another pose. At inference time, FUHA needs no external pose estimators, keypoints, or parametric body models. As a retrieval key, the motion embedding matches body pose better than the learned global embeddings of ten vision encoders. Its same-person retrieval rate is 0.1%, against 9.5% for its own DINOv3 backbone. On our upper-body benchmark, FUHA outperforms all baselines on every self-reenactment metric and on cross-reenactment identity similarity. It is competitive on face and full-body and runs at up to 38.9 FPS at 512x512 on a single RTX 4090.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.06433</id>
-    <title>DreamRealm: Exploring and Materializing Hallucination Worlds for Trustworthy Vision-Language Models</title>
-    <link href="https://arxiv.org/abs/2611.06433" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.06433" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/Alibaba-VELLDEPTH/DreamRealm" rel="related" title="Code" />
-    <published>2026-11-04T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Benlei Cui</name>
-    </author>
-    <author>
-      <name>Chunyang Chai</name>
-    </author>
-    <author>
-      <name>Yiliang Zhang</name>
-    </author>
-    <author>
-      <name>Xiaoqian Xia</name>
-    </author>
-    <author>
-      <name>Chengwen Yao</name>
-    </author>
-    <author>
-      <name>Song Li</name>
-    </author>
-    <author>
-      <name>Longtao Huang</name>
-    </author>
-    <author>
-      <name>Yuwen Zhai</name>
-    </author>
-    <author>
-      <name>Haiwen Hong</name>
-    </author>
-    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
-    <summary type="text">Multimodal large language models (MLLMs) remain prone to visual hallucinations when correct responses depend on subtle visual details. One line of post-training methods constructs visual contrasts through image retrieval, generation, or editing to improve fine-grained perception. However, these contrasts are not built around the model's own hallucinations, making it difficult to ensure that supervision targets its actual perceptual confusions. Another line suppresses hallucinated outputs through response correction or preference learning under fixed image conditions, but leaves the design of supervision signals on the image-input side underexplored. Inspired by how humans correct misconceptions, we introduce DreamRealm, a post-training framework that explores diverse latent hallucinated responses, minimally edits original images to make them valid, and trains the model to assign each response to its supporting image. Our data construction pipeline, RealmForgePipe, mines observed and latent hallucinations from a target model and materializes them through image editing. Using hallucinations mined from Qwen3.5-9B, we construct the Realized Hallucination Dataset (RealmSet). Our training objective, RealmMatch, constructs a likelihood score matrix across image--response combinations and combines supervised learning with bidirectional contrastive losses to reinforce correct matches and suppress mismatches. Compared with the original Qwen3.5-9B model, DreamRealm improves performance across six visual perception and hallucination benchmarks, including gains of 7.26 percentage points in HallusionBench accuracy and 11.34 percentage points in MMVP pair accuracy. Together with ablation studies on data construction and training methods, these results demonstrate that hallucination assignment is a promising paradigm for improving visual perception and mitigating hallucinations.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.06247</id>
-    <title>CAPE-JEPA - Cross-modal Adversarial Probabilistic Embedding JEPA</title>
-    <link href="https://arxiv.org/abs/2611.06247" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.06247" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-04T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Aniket Junghare</name>
-    </author>
-    <author>
-      <name>Biplab Banerjee</name>
-    </author>
-    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
-    <category term="domain-specific-retrieval" label="Domain-Specific Image Retrieval" />
-    <summary type="text">Cross-modal remote sensing image retrieval (RS-CMIR) requires representations that are simultaneously modality-invariant and semantically discriminative, despite the profound physical gap between heterogeneous sensors such as Synthetic Aperture Radar (SAR) and multispectral imagery. Recent JEPA-based Predictive self-supervised approaches such as X-JEPA formulate cross-modal alignment as a deterministic latent forecasting task, implicitly assuming uniform patch predictability and leaving cross-modal distributional alignment unaddressed. We propose CAPE-JEPA, a probabilistic cross-modal Joint Embedding Predictive Architecture with three contributions: (i) a cross-attentional Gaussian predictor outputting per-patch parameters (mu, sigma^2) conditioned on opposite-modality context, trained via negative log-likelihood to model inherent cross-sensor prediction uncertainty; (ii) adversarial distributional regularization combining unimodal isotropic Gaussian regularization with a novel cross-modal adversarial variant that aligns modality distributions via worst-case Epps-Pulley characteristic function tests without explicit sample pairing; and (iii) in-training contrastive learning with attention-pooled heads for scene-level discriminative grounding. Evaluated on BigEarthNet-14K (BEN-14K) and fMoW across SAR, multispectral, and RGB modalities, CAPE-JEPA surpasses X-JEPA by up to 13.74 points on BEN-14K and 15.59 points on fMoW, outperforming all baselines including SkySense and CROMA across both unimodal and cross-modal directions while using fewer parameters (407.30M vs. 432.72M).</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.06143</id>
-    <title>PTQ4SAM3: Semantics-Preserving Post-Training Quantization for Segment Anything Model 3</title>
-    <link href="https://arxiv.org/abs/2611.06143" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.06143" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-04T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Xi Xiao</name>
-    </author>
-    <author>
-      <name>Yunbei Zhang</name>
-    </author>
-    <author>
-      <name>Lin Zhao</name>
-    </author>
-    <author>
-      <name>Janet Wang</name>
-    </author>
-    <author>
-      <name>Xinru Jiang</name>
-    </author>
-    <author>
-      <name>Yanshu Li</name>
-    </author>
-    <author>
-      <name>Chenrui Ma</name>
-    </author>
-    <author>
-      <name>Pan Wang</name>
-    </author>
-    <author>
-      <name>Tianyang Wang</name>
-    </author>
-    <author>
-      <name>Xiao Wang</name>
-    </author>
-    <category term="cross-modal-retrieval" label="Image-Text &amp; Cross-Modal Retrieval" />
-    <summary type="text">Segment Anything Model 3 (SAM 3) can segment objects from text prompts and track them across video, but its memory and computation costs make deployment difficult. Post-training quantization (PTQ) reduces these costs by using fewer bits. However, a quantized model can select the wrong object or lose track of its target across frames. We call this prompt-alignment drift. Controlled tests show that perturbing low-variance feature directions strongly affects target selection. We propose Semantics-Preserving Quantization (SPQ), which gives more calibration weight to concept-sensitive parameters, preserves residual features, and corrects the mean error in video memory. Fixed text concepts guide calibration without task annotations. All three components operate offline and add no inference operators. With a W4A8 image encoder, SPQ improves RefCOCO Pr@0.5 from 42.1 to 72.5 over PTQ4SAM while retaining 54.8 COCO mask AP. Experiments on LVIS, RefCOCO variants, and SA-V show consistent gains. A CLIP study also shows improved image-text retrieval.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.06113</id>
-    <title>Semantic Prior-Guided Incomplete Cross-Modal Retrieval with Noisy Labels</title>
-    <link href="https://arxiv.org/abs/2611.06113" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.06113" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-04T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Jiali Chen</name>
-    </author>
-    <author>
-      <name>Ruitao Pu</name>
-    </author>
-    <author>
-      <name>Yingke Chen</name>
-    </author>
-    <author>
-      <name>Dezhong Peng</name>
-    </author>
-    <category term="cross-modal-retrieval" label="Image-Text &amp; Cross-Modal Retrieval" />
-    <summary type="text">Cross-modal retrieval (CMR) aims to bridge the semantic gaps between modalities by learning shared representations. Unfortunately, due to the dynamism and inconsistencies in real-world data acquisition, multimodal datasets frequently encounter severe modality incompleteness. Existing incomplete CMR methods adhere to a label-driven paradigm, relying heavily on categorical annotations as the semantic benchmark. However, label noise is difficult to avoid and often coexists with modality incompleteness. To address this challenge, we propose a novel semantic prior-guided framework for incomplete cross-modal retrieval with noisy labels, termed SPIRN. Specifically, SPIRN uses fixed semantic priors as a consistent reference for robust representation learning, noisy-label handling, and missing-modality completion. Based on this reference, Semantic Priors Guidance (SPG) establishes a stable category-level semantic space, Quality-aware Robust Learning (QRL) dynamically evaluates sample quality to distinguish clean samples from noisy ones and handles noise via reverse learning, Prior-guided Global Label Calibration (PGLC) rectifies corrupted annotations for refined supervision, and Confidence-driven Selective Imputation (CSI) recovers missing modalities from a cross-modal memory bank while filtering unreliable imputations with an increasing threshold. To the best of our knowledge, this is the first framework to jointly tackle the dual challenges of modality incompleteness and label noise in the CMR community. Extensive experiments on four widely used benchmark datasets demonstrate that SPIRN outperforms 11 state-of-the-art methods in various scenarios involving both missing modalities and noisy labels.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.06089</id>
-    <title>STARE: Scene Text-Aware multimodal Retrieval for Everyday objects</title>
-    <link href="https://arxiv.org/abs/2611.06089" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.06089" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-04T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Kento Tokura</name>
-    </author>
-    <author>
-      <name>Ryosuke Korekata</name>
-    </author>
-    <author>
-      <name>Daichi Yashima</name>
-    </author>
-    <author>
-      <name>Kei Katsumata</name>
-    </author>
-    <author>
-      <name>Kanon Amemiya</name>
-    </author>
-    <author>
-      <name>Miyu Goko</name>
-    </author>
-    <author>
-      <name>Komei Sugiura</name>
-    </author>
-    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
-    <summary type="text">In this study, we focus on service robots that retrieve and transport everyday objects based on free-form instructions that may refer to visual features and scene text. This is challenging because it requires a multimodal understanding of the visual features and spatial relationships of objects, as well as scene text embedded in the environment. To address this, we propose Scene Text-Aware multimodal Retrieval for Everyday objects (STARE), which leverages visual and textual cues in response to free-form instructions. STARE introduces Crosslingual Visual Prompt to enhance scene text interpretation, and models the complex relationships between named entities in the instructions and their corresponding objects. We evaluate STARE using two novel benchmarks, GoGetIt and TextCaps-test, both of which consist of real-world indoor/outdoor images and instructions involving object manipulation and navigation. The results show that STARE outperforms all baseline methods on standard multimodal retrieval metrics. Furthermore, in physical experiments conducted under a zero-shot transfer setting, STARE achieves an overall success rate of 80%. Our project page and code are provided in the Supplementary Materials.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.06085</id>
-    <title>GeoBiaset: A Counterfactual Benchmark for Demographic Bias in World-Level Geolocalization</title>
-    <link href="https://arxiv.org/abs/2611.06085" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.06085" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-04T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Niccolò Niccoli</name>
-    </author>
-    <author>
-      <name>Silvia Dani</name>
-    </author>
-    <author>
-      <name>Marco Mistretta</name>
-    </author>
-    <author>
-      <name>Andrew D. Bagdanov</name>
-    </author>
-    <author>
-      <name>Marco Bertini</name>
-    </author>
-    <author>
-      <name>Lorenzo Seidenari</name>
-    </author>
-    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
-    <summary type="text">World-level image geolocalization is an increasingly important task, yet the biases of current models remain poorly understood. Prior work has identified coarse dataset imbalances noting, for instance, that some cities are absent from training sets and that models tend to perform better in wealthier regions. However, no one has yet examined which visual cues drive these disparities. To do so, we introduce GeoBiaset, the first benchmark designed to measure how geolocalization models are influenced by the apparent race of a person inserted into the image foreground. The dataset consists of 9,541 images, pairing existing geotagged background images with counterfactual edits spanning seven races, holding the ground-truth coordinates fixed. Controlled masking experiments show that occlusion and background drift do not fully explain geolocalization degradation. Alongside the benchmark, we introduce the Person-Origin Perturbation Indicators (POPI), novel metrics that quantify model resilience to these demographic perturbations by measuring whether predictions are pulled toward the region associated with the inserted group. Our evaluation of state-of-the-art geolocalization and multimodal large language models reveals a 16-47% drop in continent-level performance when a subject from a demographically mismatched group is inserted. A landmark versus no-landmark analysis and gradient-weighted heatmaps show that models preferentially attend to geographic landmarks when present, but shift attention to facial features in their absence.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.05992</id>
-    <title>Clips2Story: Training-Free Video Storyboarding and Editing Using Multimodal Retrieval-Embedded Generation</title>
-    <link href="https://arxiv.org/abs/2611.05992" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.05992" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-04T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Junnuo Wang</name>
-    </author>
-    <author>
-      <name>Weihan Xu</name>
-    </author>
-    <author>
-      <name>Hao-Wen Dong</name>
-    </author>
-    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
-    <summary type="text">Video editors often work with large collections of fragmented footage and must select and organize relevant clips into a coherent story. However, many existing video editing and summarization methods assume a temporally ordered source video and aim to preserve its original narrative and temporal structure. In this paper, we introduce Clips2Story, a training-free, LLM-based pipeline that enables users to create keyword-specified short videos from a pool of video clips. Given a pool of clips and a user-specified keyword, we first extract text-based multimodal descriptors for each clip and retrieve the clips most relevant to the keyword. We then provide the textual descriptors of these candidate clips to an LLM, which selects and arranges them into an editable storyboard with connective narrations. Finally, we assemble the selected clips and retrieve accompanying visuals for the narrations to compose the output video. To evaluate the proposed pipeline, we construct a synthetic evaluation dataset from 100 long-form videos across five genres by segmenting each video into short clips using a scene-change detection model and shuffling the resulting clips to remove their temporal order. Through objective evaluation and qualitative examples, we demonstrate that Clips2Story can effectively retrieve keyword-relevant clips and compose coherent storyboards based on user-specified keywords. Human evaluation further shows that Clips2Story outperforms a strong baseline in terms of narrative coherence, keyword alignment, and overall realism.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.05900</id>
-    <title>Weaver: Weaving Preference Evidence through Incremental Reasoning for Personalized Retrieval-Augmented Generation</title>
-    <link href="https://arxiv.org/abs/2611.05900" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.05900" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-04T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Linyao Zheng</name>
-    </author>
-    <author>
-      <name>Zhifang Mao</name>
-    </author>
-    <author>
-      <name>Xuhang Shi</name>
-    </author>
-    <category term="re-identification" label="Person &amp; Object Re-Identification" />
-    <summary type="text">Personalized retrieval-augmented generation requires extracting and applying user preferences from extended interaction histories. This task is challenging because preference evidence is scattered across past conversations and remains bound to specific temporal and situational contexts. Consequently, isolated fragments rarely provide complete support for a response, while preferences expressed under different conditions are easily conflated. To address these limitations, we propose Weaver, a framework that incrementally weaves memory-conditioned retrieval trajectories with compositional preference reasoning for personalized responses. Weaver operates on a Dual-Layer Retrieval and Reasoning Graph that couples an upper Intent Dependency Graph with a lower Memory-Conditioned Retrieval Trajectory Graph. Dependency Information Gap Tracking represents the information needed to answer the current request and its prerequisite dependencies in the upper graph. Memory-Conditioned Incremental Retrieval uses established premises and clues from retrieved conversations to locate missing evidence, recording the resulting retrieval trajectories in the lower graph. Scope-Aware Compositional Reasoning jointly interprets the accumulated evidence to determine which preferences apply to the request. It identifies complementary and alternative support and distinguishes conflicting claims within the same temporal and situational context. These conclusions iteratively update task premises and remaining information gaps, guiding subsequent retrieval to establish a coherent contextual basis for the final response. Experiments on personalized RAG benchmarks, particularly PersonaMem, demonstrate that Weaver outperforms leading baselines in both evidence completeness and answer quality.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.05690</id>
-    <title>Turbocharging PiPNN for Proximity and $k$-NN Graph Building</title>
-    <link href="https://arxiv.org/abs/2611.05690" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.05690" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-03T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Tobias Rubel</name>
-    </author>
-    <author>
-      <name>Richard Wen</name>
-    </author>
-    <author>
-      <name>Guy Blelloch</name>
-    </author>
-    <author>
-      <name>Laxman Dhulipala</name>
-    </author>
-    <author>
-      <name>Lars Gottesbüren</name>
-    </author>
-    <author>
-      <name>Jakub Łącki</name>
-    </author>
-    <author>
-      <name>Vahab Mirrokni</name>
-    </author>
-    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
-    <summary type="text">Graph-based Approximate Nearest Neighbor Search (ANNS) indexes such as HNSW and Vamana deliver state-of-the-art query performance at the cost of large indexing times. The recently introduced PiPNN method drastically accelerated index construction by way of a partitioning-based algorithm leveraging dense matrix multiplication and top-$K$ aggregation kernels. In this paper, we unlock the full potential of PiPNN's hardware-friendly algorithm design. We introduce PiPNN II, which optimizes multiple steps of the PiPNN recipe, giving up to $8\times$ speedups for graph-based ANNS index construction. In addition, we present GPiPNN, a GPU implementation which builds comparable ANNS indices up to $43.7\times$ faster than Jasper and up to $50\times$ faster than CAGRA. We also extend PiPNN II and GPiPNN to compute high-quality $k$-NN graphs directly, which unlocks massive speedups over methods used in many existing systems for clustering, anomaly detection, and more. For 10-NN graph building at $90\%$ recall, we obtain up to a $13\times$ speedup on CPUs and $6.6\times$ on GPUs as compared to the prior best methods. PiPNN II can build a billion-scale 10-NN graph in under 16 minutes. Common to both PiPNN II and GPiPNN is the use of quantization to reduce memory traffic and leverage fast low-precision matrix operations. Top-$K$ emerges as a new bottleneck, which we optimize with specialized code for specific $K$, and by fusing with the matrix kernel to avoid materializing the distance matrix to memory. On CPUs, we demonstrate further performance improvements by leveraging our matrix kernels in the RobustPrune procedure proposed in Vamana and used in PiPNN. On GPUs, we flatten recursive partitioning into segmented batches, use one fused top-$K$ abstraction for partitioning and leaf scoring, and prune with already-witnessed direct edges rather than new candidate-to-candidate scoring passes.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.05559</id>
-    <title>How Finely Can Vision-Language Models See Biology? Bio-VQA: A Benchmark for Taxonomic, Morphological, Spatial and Individual Reasoning</title>
-    <link href="https://arxiv.org/abs/2611.05559" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.05559" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-03T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>S M Rayeed</name>
-    </author>
-    <author>
-      <name>Qian Ma</name>
-    </author>
-    <author>
-      <name>Charles V. Stewart</name>
-    </author>
-    <author>
-      <name>Yao Ma</name>
-    </author>
-    <category term="re-identification" label="Person &amp; Object Re-Identification" />
-    <summary type="text">In biodiversity monitoring, a single image raises several questions: which taxon, how many, which trait, and whether the individual has been seen before. Vision-language models (VLMs) could answer all of these from the image, but their ability is largely untested in biology, as existing benchmarks focus mostly on species identification within a few taxonomic groups. We present Bio-VQA, the largest biological visual question answering (VQA) benchmark and the only one to span four aspects of biological visual understanding: hierarchical taxonomic reasoning, fine-grained attribute grounding, quantitative spatial reasoning, and individual re-identification. Bio-VQA contains 1.86M questions over 217K images from 11 public datasets, and extends right-or-wrong scoring to graded scoring, so a near-miss counts for more than a distant one. Evaluating 18 open-weight models from 3.75B to 38.4B parameters, we find that general visual capabilities do not transfer to biological organisms: the best model counts animals exactly on 41.7% of images with 2 to 10 individuals, less than half its accuracy on everyday objects at the same counts. Taxonomic accuracy falls to one sixth, from 0.72 at phylum to 0.12 at scientific name, and scaling helps mostly at coarse ranks. The gap to a domain specialist widens accordingly, from 0.731 against BioCLIP-2's 0.874 at class (1.2x) to 0.269 against 0.544 at scientific name (2x). On trait size measurement, 15 of the 18 models do no better than an image-blind baseline that predicts one fixed number for every specimen, and on re-identification, 17 of the 18 models fall below chance under adversarial conditions. These failures persist across a tenfold range of model size. We hope Bio-VQA becomes a standard test of how well VLM capabilities transfer to the biological domain.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.05286</id>
-    <title>Anchored Rank-Adversarial Fine-Tuning of Pretrained Visual Place Recognition Models</title>
-    <link href="https://arxiv.org/abs/2611.05286" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.05286" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-03T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Mostafa Kira</name>
-    </author>
-    <author>
-      <name>Bader Rasheed</name>
-    </author>
-    <author>
-      <name>Manuel Mazzara</name>
-    </author>
-    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
-    <summary type="text">Visual place recognition (VPR) localises a camera by retrieving similar geo-tagged images, and current foundation-model VPR models are accurate across cities, seasons and illumination, but not robust to adversarial perturbations: under a white-box attack on the ranking at an imperceptible budget of 1/255, SuperVLAD and BoQ keep at most 0.2% top-1 recall (R@1) on four benchmarks. We propose anchored rank-adversarial fine-tuning (ARAFT), which fine-tunes a released model with a listwise rank loss on each adversarial query's hardest positive and an anchor to the clean descriptor of the frozen pretrained model. Checkpoints are selected under a clean-accuracy budget fixed in advance, and the full trade-off is reported. Within five validation R@1 points of clean cost, plain adversarial training has no admissible checkpoint, whereas ARAFT raises robust R@1 from zero to 47.3 on SuperVLAD and 55.3 on BoQ; plain adversarial training exceeds this only at about three times the clean cost. Against unbudgeted plain adversarial training on the test sets, ARAFT matches its robust R@1 at 2/255 with about ten more clean R@1 points. At 4/255, plain adversarial training is 6-9 robust R@1 points ahead, while ARAFT still keeps its ten-point clean advantage. Developed on SuperVLAD, ARAFT transfers to BoQ without re-tuning, and its robustness holds against stronger optimisers, with no sign of gradient masking.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.05193</id>
-    <title>Factorized MLLM Embeddings for Composed Image Retrieval</title>
-    <link href="https://arxiv.org/abs/2611.05193" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.05193" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/cvlab-kaist/FactEmbed" rel="related" title="Code" />
-    <published>2026-11-03T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>WonJun Moon</name>
-    </author>
-    <author>
-      <name>Seongchan Kim</name>
-    </author>
-    <author>
-      <name>Dahun Kim</name>
-    </author>
-    <author>
-      <name>Seungryong Kim</name>
-    </author>
-    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
-    <category term="composed-image-retrieval" label="Composed &amp; Interactive Image Retrieval" />
-    <summary type="text">Composed Image Retrieval (CIR) aims to retrieve a target image given a reference image and a modification text. Although recent approaches leveraging Multimodal Large Language Models (MLLMs) have shown significant progress, we argue that the MLLM's compositional understanding remains underutilized. This stems from directly mapping composed queries into a retrieval embedding via contrastive supervision alone, without explicitly resolving the intended visual modifications. In this work, we introduce Factorized MLLM Embeddings (FactEmbed), which decouples compositional query comprehension from building discriminative embeddings. Rather than directly projecting the composed query into a single embedding without internal reasoning, FactEmbed employs a set of factorized latents that simulate the intended visual modifications via an intermediate target imagination objective. This process encourages the latents to ground into target semantics before forming discriminative representations for retrieval. Subsequently, to propagate these factorized representations throughout the model for retrieval, we optimize a factor-level contrastive loss while distilling the decomposed representations into a deeper attention layer of the MLLM. Finally, for efficient inference, we retain the [EOS] token to establish a global-level embedding on top of these factorized latents, while we exploit the mean-pooled factorized latents to rerank a short candidate list at negligible cost, as both are produced by the same forward pass. Extensive evaluations demonstrate that FactEmbed outperforms prior works across CIR benchmarks.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.05084</id>
-    <title>Sparse Anchors for Visual Multi-Session Registration in Changing Environments</title>
-    <link href="https://arxiv.org/abs/2611.05084" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.05084" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-03T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Yunus Talha Erzurumlu</name>
-    </author>
-    <author>
-      <name>Niklas Trekel</name>
-    </author>
-    <author>
-      <name>Saurabh Gupta</name>
-    </author>
-    <author>
-      <name>Nico Koltermann</name>
-    </author>
-    <author>
-      <name>Olga Vysotska</name>
-    </author>
-    <author>
-      <name>Jens Behley</name>
-    </author>
-    <author>
-      <name>Louis Wiesmann</name>
-    </author>
-    <author>
-      <name>Cyrill Stachniss</name>
-    </author>
-    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
-    <summary type="text">Repeated robotic monitoring requires localization across visits to the same environment, even if the environment changes. Such changes can substantially reduce persistent visual content, and repetitive structures can lead to incorrect cross-session correspondences. In this paper, we address visual multi-session registration of a new data recording (the query session) to a previously reconstructed reference map. Under substantial visual and structural changes, cross-session localization may be possible only for parts of the trajectory. In our approach, we therefore rely on a sparse set of reliable absolute pose constraints and combine them with within-session relative-pose information to register the complete trajectory to the reference map. We first estimate absolute alignment hypotheses through visual place recognition, local feature matching, and geometric verification. We then use sequence consensus to reject hypotheses that are inconsistent with a common query-to-reference alignment and retain the remaining poses as absolute anchors. These anchors are refined through featuremetric alignment against a Gaussian feature field and combined with within-session relative-pose constraints in a robust pose-graph optimization. We evaluate our approach on 15 cross-session experiments from the challenging HILTI26 construction-site dataset, covering substantial scene changes and difficult-to-match environments. Our method achieves 94.4% recall within 1m and 100.0% within 5m, outperforming independent image localization, which peaks at 65.3% and 70.7%, respectively, as well as direct registration of independently reconstructed Structure-from-Motion geometry. Our results show that sparse, reliable absolute anchors can provide accurate and complete trajectory registration even when reliable cross-session correspondences are available only for part of the query session.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.04980</id>
-    <title>ProAlign: Progressive Positional and Prototype-Guided Alignment for Aerial-Ground Person Re-Identification</title>
-    <link href="https://arxiv.org/abs/2611.04980" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.04980" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-03T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Qiao Li</name>
-    </author>
-    <author>
-      <name>Jing Chen</name>
-    </author>
-    <author>
-      <name>Cong Wu</name>
-    </author>
-    <author>
-      <name>Kun He</name>
-    </author>
-    <author>
-      <name>Ruiying Du</name>
-    </author>
-    <author>
-      <name>Lei Tan</name>
-    </author>
-    <category term="re-identification" label="Person &amp; Object Re-Identification" />
-    <summary type="text">Aerial-Ground Person Re-Identification (AG-ReID) aims to match pedestrian images captured by unmanned aerial vehicles (UAVs) and ground-based surveillance cameras. The task remains highly challenging due to severe viewpoint discrepancies, frequent occlusions, and substantial domain gaps between aerial and ground imagery. Beyond these observable factors, existing methods often overlook two fundamental structural issues: cumulative positional drift during hierarchical feature extraction and semantic inconsistency across cross-view feature distributions. To address these challenges, we propose ProAlign, a Progressive Positional and Prototype-Guided Alignment Network for AG-ReID. ProAlign comprises two key components: a Layer-wise Progressive Positional Embedding (LPPE) module and a View-Aware Prototype Contrastive Learning (PCL) module. LPPE performs adaptive positional calibration throughout transformer layers by employing conditional positional encoding in shallow layers to mitigate local spatial distortions, while introducing learnable static positional embeddings in deeper layers to reinforce global semantic priors. Meanwhile, PCL maintains view-specific aerial and ground prototypes for each identity and enforces cross-view semantic consistency via a dual-prototype contrastive objective. Extensive experiments on CARGO and two real-world AG-ReID benchmarks demonstrate the effectiveness of ProAlign, achieving state-of-the-art overall retrieval performance on CARGO with improvements of 1.60% in Rank-1 accuracy and 5.01% in mAP over the strongest competing methods.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.04903</id>
-    <title>Heads That Write, Not Just Point: Image Retrieval Heads in Vision-Language Models</title>
-    <link href="https://arxiv.org/abs/2611.04903" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.04903" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/parkquasar/Image-Retrieval-Heads" rel="related" title="Code" />
-    <published>2026-11-03T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Junsung Park</name>
-    </author>
-    <author>
-      <name>Sangwon Yu</name>
-    </author>
-    <author>
-      <name>Donghun Kang</name>
-    </author>
-    <author>
-      <name>Yeongtak Oh</name>
-    </author>
-    <author>
-      <name>Jaewon Jeong</name>
-    </author>
-    <author>
-      <name>Gyeongtae Yoo</name>
-    </author>
-    <author>
-      <name>Han Cheol Moon</name>
-    </author>
-    <author>
-      <name>Jungbeom Lee</name>
-    </author>
-    <author>
-      <name>Sungroh Yoon</name>
-    </author>
-    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
-    <category term="cross-modal-retrieval" label="Image-Text &amp; Cross-Modal Retrieval" />
-    <summary type="text">Large vision-language models (LVLMs) can process interleaved text and multiple images in a single context, but how they internally identify the image relevant to a question remains poorly understood. We study this grounding step as in-context image retrieval and introduce ICIR-MCQ, a controlled probe for head-level analysis of image retrieval. Using each head's attention mass over image-token spans, we first identify sparse pointer heads that reliably point to the target image. These heads transfer beyond the probe: a single pointer head is competitive with external vision-language retrievers on a naturalistic multi-image retrieval benchmark, showing that LVLMs contain a strong internal image retrieval signal. Attention alone, however, shows where a head reads from, not what its output passes on to later layers, so we introduce a complementary output-side analysis. For each head, we train a lightweight image retriever on its value-weighted output and use it to identify writer heads, whose outputs contain enough information to identify the target image. Surprisingly, the pointer and writer criteria select substantially different head sets, with only 35 to 47 heads overlapping among the top-100 heads under each criterion. Targeted set-partition ablations show that the heads most important for standard multi-image inference are concentrated in this pointer-writer intersection, while heads selected by only one criterion show less consistent separation from random-head controls. The most consistent causal effects arise from heads selected by both the attention-based pointer and output-side writer criteria. Code and data: https://github.com/parkquasar/Image-Retrieval-Heads.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.04524</id>
-    <title>E2I-Flow: EEG-to-Image Reconstruction via Wavelet-Temporal Cross-Attention and Conditional Flow Matching</title>
-    <link href="https://arxiv.org/abs/2611.04524" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.04524" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-03T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Haowei Pan</name>
-    </author>
-    <author>
-      <name>Hwa Hui Tew</name>
-    </author>
-    <author>
-      <name>Junn Yong Loo</name>
-    </author>
-    <author>
-      <name>Fuad Noman</name>
-    </author>
-    <author>
-      <name>Hernando Ombao</name>
-    </author>
-    <author>
-      <name>Chee-Ming Ting</name>
-    </author>
-    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
-    <summary type="text">Electroencephalography (EEG)-based visual decoding and reconstruction aims to recover visual information from non-invasive brain signals. But there are challenges due to the complex temporal-frequency characteristics of EEG signals and the difficulty of discrete denoising framework in mapping neural activity to meaningful visual representations. Here, we propose E2I-Flow, an EEG-to-image decoding and reconstruction framework that combines a novel EEG encoder for time-frequency representation learning from EEG features, and conditional flow matching for visual decoding. A stationary-wavelet frequency branch and a temporal-mixing branch are integrated through bidirectional cross-attention and adaptive fusion, with the resulting EEG representations aligned to ground-truth image embeddings using contrastive and mean-squared-error loss supervisions. The aligned EEG representation is then used as a condition for a Transformer-based flow-matching model to predict the corresponding visual embedding for image synthesis. Experimental results show strong zero-shot EEG-to-image retrieval and improved visual reconstruction performance, outperforming several state-of-the-art baselines.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.03927</id>
-    <title>Modular and Efficient Approximate Nearest Neighbors Search with Vectorium and kANNolo</title>
-    <link href="https://arxiv.org/abs/2611.03927" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.03927" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/TusKANNy/papers_reproducibility" rel="related" title="Code" />
-    <published>2026-11-02T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Silvio Martinico</name>
-    </author>
-    <author>
-      <name>Franco Maria Nardini</name>
-    </author>
-    <author>
-      <name>Cosimo Rulli</name>
-    </author>
-    <author>
-      <name>Rossano Venturini</name>
-    </author>
-    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
-    <summary type="text">Approximate Nearest Neighbors (ANN) search over neural embeddings powers modern retrieval systems such as Retrieval-Augmented Generation. Embeddings come in three representations (dense, sparse and multi-vector), and efficient search combines an index structure, a similarity function and a quantization scheme. Existing libraries fix one combination, hard-code each one separately, or factor only one side of the problem, and none covers all three representations. We present Vectorium and kANNolo, two open-source Rust libraries that split this design space into a data-management layer and an indexing layer. Vectorium abstracts the vector, the distance function, the quantizer and the dataset independently, and provides 11 encoders, from 32-bit floats to sub-bit codes. On top of it, kANNolo implements Hierarchical Navigable Small-World (HNSW) graph and Inverted Vector File (IVF) indexes that are generic over representation, encoder and metric, and a two-stage index that composes any first-stage index with any rescoring dataset. Since every combination is specialized at compile time, this modularity adds no run-time overhead, and the resulting indexes reach state-of-the-art performance: our Product Quantization matches Faiss in accuracy at competitive speed, our RaBitQ and HNSW match or outperform their reference implementations, and our IVF outperforms Faiss. Against six dense and five sparse systems on seven public collections, our indexes give the best memory-throughput trade-off on dense data in 9 of 12 collection-accuracy pairs and perform well on out-of-distribution queries. On sparse data, the systems built on Vectorium lead on all three collections, with Seismic and SeismicWave the fastest and kANNolo's indexes the most compact.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.03415</id>
-    <title>O2N2: Efficient Doubly Oblivious Approximate Nearest Neighbor Search</title>
-    <link href="https://arxiv.org/abs/2611.03415" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.03415" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-02T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Zhechen Li</name>
-    </author>
-    <author>
-      <name>Zimai Guo</name>
-    </author>
-    <author>
-      <name>Mingxun Zhou</name>
-    </author>
-    <author>
-      <name>Chang Shi</name>
-    </author>
-    <author>
-      <name>Cheng Hong</name>
-    </author>
-    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
-    <summary type="text">Privacy-preserving approximate nearest neighbor (ANN) search allows clients to search from an untrusted server without revealing sensitive queries, and is useful in scenarios like medical diagnostics and credit scoring. Among the various privacy-preserving primitives, trusted execution environments (TEEs) have much lower overhead than heavy cryptographic ones, yet they leak memory access patterns, enabling adversaries to infer query contents. Oblivious RAM (ORAM) can be used to hide those access patterns at $\mathrm{O}(\log N)$ asymptotic cost, but existing high-performance ANN search algorithms (e.g., IVF or HNSW) exhibit complex, data-dependent access patterns that are unfriendly for ORAM. Furthermore, standard ORAM constructions typically assume there exists a small amount of trusted storage, which weakens the security guarantees and is not always feasible. Solutions that eliminate such trusted storage (known as {\em double obliviousness}) typically degrade performance further to $\mathrm{O}(\log^2 N)$. We introduce O2N2, a doubly oblivious ANN framework built around single-path search in randomly rotated $k$-d tree forests. A pointer-based Circuit ORAM stores the search structure, with separate storage for compact internal nodes and vector-bearing leaves. Each visited leaf is processed by an oblivious selection network, and fixed-schedule duplicate removal and selection combine the local results into the final top-$k$. We evaluate O2N2 on real-world datasets and further test its scalability on 100 million vectors. For 10-NN and 100-NN search at the specified high-recall targets, it achieves a $9.8$--$125.9\times$ speedup over the fastest doubly oblivious baselines.</summary>
   </entry>
 </feed>
