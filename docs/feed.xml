@@ -5,11 +5,198 @@
   <link href="https://ezharjan.github.io/DailyImageRetrievalArxiv/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ezharjan.github.io/DailyImageRetrievalArxiv/" rel="alternate" type="text/html" />
   <id>https://ezharjan.github.io/DailyImageRetrievalArxiv/</id>
-  <updated>2026-11-25T17:35:50Z</updated>
+  <updated>2026-11-26T17:17:05Z</updated>
   <author>
     <name>Image Retrieval arXiv Daily</name>
   </author>
   <generator uri="https://github.com/Ezharjan/DailyImageRetrievalArxiv" version="2.0.0">daily_arxiv.py</generator>
+  <entry>
+    <id>https://arxiv.org/abs/2611.34877</id>
+    <title>Towards Closing the Performance Gap in Cross-Modal Place Recognition</title>
+    <link href="https://arxiv.org/abs/2611.34877" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.34877" rel="related" type="application/pdf" title="PDF" />
+    <link href="https://github.com/oferidan1/CrossPlace" rel="related" title="Code" />
+    <published>2026-11-25T00:00:00Z</published>
+    <updated>2026-11-26T00:00:00Z</updated>
+    <author>
+      <name>Ofer Idan</name>
+    </author>
+    <author>
+      <name>Dan Badur</name>
+    </author>
+    <author>
+      <name>Yoli Shavit</name>
+    </author>
+    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
+    <category term="cross-modal-retrieval" label="Image-Text &amp; Cross-Modal Retrieval" />
+    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
+    <summary type="text">Cross-modal place recognition (CMPR) matches natural language descriptions against databases of geo-tagged reference images, enabling localization without visual queries. Despite its potential for language-guided navigation, existing vision-language models lag far behind visual place recognition (VPR) baselines, even after task adaptation. Unlike general-purpose text-to-image retrieval, place recognition relies on subtle local cues to distinguish visually similar locations. We therefore hypothesize that a primary bottleneck in CMPR is capturing fine-grained correspondences between image regions and text details, which requires higher visual token granularity, strong text representation capacity, and local cross-modal matching. To address this challenge, we propose CrossPlace, a two-stage CMPR framework. Stage 1 performs global retrieval by pairing a jointly aligned DINOv2-B/14 visual backbone with a progressively fine-tuned BGE-Large text encoder, while Stage 2 refines top candidates using a lightweight token-level cross-attention reranker. Through systematic analysis, we isolate the drivers of retrieval accuracy and show that visual token density provides the largest performance improvement, while text encoder capacity and task fine-tuning offer complementary gains. To evaluate robustness under realistic conditions, we also extend CMPR evaluation to city-scale and severe weather and illumination settings. Across all existing and new benchmarks, CrossPlace achieves double-digit Recall@1 improvements over prior cross-modal methods, closes the gap to unimodal text retrieval, and narrows it to unimodal VPR. Code and benchmarks are available at https://github.com/oferidan1/CrossPlace</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.34366</id>
+    <title>ConTra: A Training Framework for Effective Contextual Retrieval via Prefix Generation</title>
+    <link href="https://arxiv.org/abs/2611.34366" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.34366" rel="related" type="application/pdf" title="PDF" />
+    <link href="https://github.com/SStan1/ConTra" rel="related" title="Code" />
+    <published>2026-11-25T00:00:00Z</published>
+    <updated>2026-11-26T00:00:00Z</updated>
+    <author>
+      <name>Jiajun Hou</name>
+    </author>
+    <author>
+      <name>Jingbang Chen</name>
+    </author>
+    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
+    <summary type="text">Data management systems organize large text collections for tasks such as finding relevant studies and extracting contract clauses. Systems make long documents searchable by splitting them into independently indexed chunks. Chunking can separate text from its identifying details. The indexing challenge is to keep each chunk independently searchable while preserving the context needed to find and rank it. Existing methods either encode that context in chunk vectors or attach it as a text prefix. Context encoded only in vectors is unavailable to text rerankers. Prompted prefixes serve both vector search and reranking, but are costly to generate at indexing time and can underperform contextual encoders. We propose ConTra (Context That Travels), a reinforcement learning framework for training lightweight prefix generators. Its reward combines feedback from frozen embedding and reranking models with factual verification and length control. ConTra generates one prefix per chunk during index construction and stores the augmented text and its embedding for reuse across queries. To evaluate contextual retrieval across workloads and under interference, we introduce RealContextBench, a benchmark with five application collections and three controlled conditions that isolate the effect of distracting text. On ConTEB and RealContextBench, ConTra-2B outperforms the prompted 9B baseline using Anthropic's method and the PPLX-4B contextual encoder, with a margin of up to 3.15 points over their best overall scores, while indexing short documents 7.74 times and 2.15 times as fast as those baselines, respectively. Post-trained only on ConTEB, it leads the standalone methods on RealContextBench after reranking and is less sensitive than the prompted 2B baseline to random and topically similar distractors. Code, datasets, and trained models are available at https://github.com/SStan1/ConTra.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.34344</id>
+    <title>SPARC: Semantic Calibration with Latent Multimodal Knowledge for Robust Image-Text Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.34344" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.34344" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-25T00:00:00Z</published>
+    <updated>2026-11-26T00:00:00Z</updated>
+    <author>
+      <name>Zhongkuan Mao</name>
+    </author>
+    <author>
+      <name>Wenzhuo Zhao</name>
+    </author>
+    <author>
+      <name>Haidong Chen</name>
+    </author>
+    <author>
+      <name>Shangze Li</name>
+    </author>
+    <author>
+      <name>Yidong Wang</name>
+    </author>
+    <author>
+      <name>Jinhe Bi</name>
+    </author>
+    <author>
+      <name>Yunpu Ma</name>
+    </author>
+    <author>
+      <name>Junfeng Fang</name>
+    </author>
+    <author>
+      <name>Fei Shen</name>
+    </author>
+    <author>
+      <name>Tat-Seng Chua</name>
+    </author>
+    <category term="cross-modal-retrieval" label="Image-Text &amp; Cross-Modal Retrieval" />
+    <summary type="text">Robust image-text retrieval aims to maintain accurate cross-modal matching when image or text queries are incomplete, supporting reliable information access in real-world applications. However, existing methods typically focus on adapting to distribution shifts, without adequately addressing candidate discrimination for incomplete queries and ranking instability. To this end, we propose semantic projection and alignment with relational constraints (SPARC), which elicits latent multimodal knowledge from frozen encoders to improve candidate discrimination and ranking stability. Specifically, we first devise a semantic calibration module on a product of spheres that refines incomplete visual and textual features through tangent-space updates, maintaining the unit-sphere structure used for cosine similarity. Second, we introduce a robust semantic guidance module that combines latent multimodal knowledge encoded in complete image-text features with cross-modal semantic anchors to promote semantic alignment of the calibrated features. Finally, we introduce a matching relation constraint module that fuses original query features with their calibrated counterparts and applies a soft ranking constraint to penalize reductions in initially positive matching margins, thereby limiting ranking perturbations. Extensive experiments on Flickr30K and COCO demonstrate that SPARC outperforms competing methods under various image occlusion and word deletion settings, while achieving consistent gains across different pretrained backbones.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.34218</id>
+    <title>GeoCAM: Self-Supervised Sonar-Optical Representation Learning via Geographic Overlap Supervision</title>
+    <link href="https://arxiv.org/abs/2611.34218" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.34218" rel="related" type="application/pdf" title="PDF" />
+    <link href="https://github.com/FadiZidiDz/GeoCAM" rel="related" title="Code" />
+    <published>2026-11-25T00:00:00Z</published>
+    <updated>2026-11-26T00:00:00Z</updated>
+    <author>
+      <name>Fadi Abdeladhim Zidi</name>
+    </author>
+    <author>
+      <name>Andrea De Salve</name>
+    </author>
+    <author>
+      <name>Giuseppe Celeste</name>
+    </author>
+    <author>
+      <name>Abdellah Zakaria Sellam</name>
+    </author>
+    <author>
+      <name>Paolo Spagnolo</name>
+    </author>
+    <author>
+      <name>Cosimo Distante</name>
+    </author>
+    <category term="cross-modal-retrieval" label="Image-Text &amp; Cross-Modal Retrieval" />
+    <summary type="text">Cross-modal self-supervised learning for paired side-scan sonar and underwater optical imagery is a promising direction for benthic habitat understanding, but it remains underexplored because existing methods do not fully exploit the one-to-many correspondences and geographic metadata available in real opti-acoustic surveys. This limits the ability to learn representations that are both semantically meaningful and geometrically consistent from abundant unlabeled marine data. To address this problem, we present GeoCAM, a geography-guided framework that learns a shared embedding space for sonar tiles and their associated optical views without semantic annotations. GeoCAM achieves its goal by combining three components: (i) a Set Attention Aggregator that adaptively summarizes multiple optical observations into a single tile-level representation; (ii) a geometry-weighted InfoNCE objective that converts GPS-derived footprint overlap into soft positive supervision; and (iii) an optional cross-modal masked reconstruction branch that encourages physically grounded cross-modal alignment. Experiments on the BenthiCat SSS-CAM dataset show that GeoCAM can be effectively exploited to learn which sonar and camera samples describe the same seabed patch, improving cross-modal retrieval and alignment over strong contrastive baselines. Code is available at https://github.com/FadiZidiDz/GeoCAM.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.34153</id>
+    <title>HSTTA: Hierarchical Selective Test-Time Adaptation for Label-Free Cross-Subject EEG-to-Image Retrieval</title>
+    <link href="https://arxiv.org/abs/2611.34153" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.34153" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-25T00:00:00Z</published>
+    <updated>2026-11-26T00:00:00Z</updated>
+    <author>
+      <name>Hongzhou Chen</name>
+    </author>
+    <author>
+      <name>Yuhao Wei</name>
+    </author>
+    <author>
+      <name>Lianghua He</name>
+    </author>
+    <author>
+      <name>Yihang Liu</name>
+    </author>
+    <author>
+      <name>Zengqiang Wang</name>
+    </author>
+    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
+    <summary type="text">Cross-subject EEG-to-image retrieval suffers from substantial performance degradation on new subjects due to subject shift. Test-time adaptation (TTA) can mitigate this shift by adapting pretrained models with unlabeled target-subject EEG. However, most existing TTA methods struggle to match supervision granularity to each query's prediction confidence, leaving many queries without reliable pseudo-labels. To address this, we propose a novel framework named Hierarchical Selective Test-Time Adaptation (HSTTA). HSTTA builds a hierarchy over gallery image embeddings, uses hierarchical selective prediction to assign each EEG query a supervision granularity matching its current prediction confidence, and constructs adaptation objectives accordingly. We further propose Cross-Session Consistency Calibration (CSCC), an unsupervised method that calibrates the global confidence threshold to target a predefined accuracy level for hierarchical predictions. Moreover, we introduce Reciprocal Hierarchical Backoff (RHB), which moves queries lacking reverse-matching support to coarser nodes to mitigate error reinforcement. Experiments on two public benchmarks and ablation studies validate the effectiveness of HSTTA and its key components. On THINGS-EEG2, HSTTA outperforms the strongest EEG-specific TTA baseline by 17.9 (13.4) and 8.9 (3.7) percentage points in Top-1/Top-5 accuracy, respectively, under cosine (CSLS) ranking. Further analyses show that HSTTA yields more accurate pseudo-labels during adaptation, supporting more reliable model updates.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.34134</id>
+    <title>A Calibration-Referenced Protocol for Measuring Decision Stability under Reference Bank Compression</title>
+    <link href="https://arxiv.org/abs/2611.34134" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.34134" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-25T00:00:00Z</published>
+    <updated>2026-11-26T00:00:00Z</updated>
+    <author>
+      <name>Yiwen Chen</name>
+    </author>
+    <author>
+      <name>Shengming Yu</name>
+    </author>
+    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
+    <summary type="text">Reference banks used for industrial image inspection can be compressed to fit a deployment budget, but the resulting anomaly decisions depend on both the compressed scores and the operating threshold. We present a four-step protocol that compares compression methods at matched deployment sizes, establishes a reference distribution from 200 recalibrations, evaluates disagreement against two calibration benchmarks, and measures changes by distance from the full-bank threshold. With WideResNet-50, budget-matched product quantization (PQ) at the 10% budget has the lowest decision disagreement among five matched methods, including int8 scalar quantization, on VisA and MVTec AD at both operating levels. Int8 scalar quantization gives lower disagreement than PQ at the other four budgets. On MVTec AD at the lower operating level, PQ meets the calibration median in 34/39 cells and the upper quantile in 39/39 cells. Category-equally weighted image-level AUROC loss at this budget ranges from 0.0003 to 0.0037 across the evaluated configurations. On VisA at the 1% budget and a 1% operating level, disagreement reaches 28.12% (95% CI 23.25--33.58%) among near-threshold anomalies and 1.30% (0.79--2.14%) across the normal holdout. The 10% budget-matched PQ setting retains the lowest disagreement among four compared methods with ResNet-18, with clean reference banks, and when thresholds are estimated from normal-directory probes. The protocol connects deployment size to a calibration-referenced decision measure and identifies the evaluation populations most informative for inspection.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.33649</id>
+    <title>Structure-Aware Multimodal Retrieval Under Data Scarcity, Privacy Constraints and Out-of-Domain Content</title>
+    <link href="https://arxiv.org/abs/2611.33649" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.33649" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-25T00:00:00Z</published>
+    <updated>2026-11-26T00:00:00Z</updated>
+    <author>
+      <name>Argyrios Zafeiriou</name>
+    </author>
+    <author>
+      <name>Dionysios Koulouris</name>
+    </author>
+    <author>
+      <name>Ilias Maglogiannis</name>
+    </author>
+    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
+    <summary type="text">Purpose: Figure retrieval from reference atlases in expert domains like forensic pathology, dentistry and geology must work without labels or training pairs, on content that often cannot leave local hardware, and on images outside the training data of image-text encoders. This work proposes a structure-aware pipeline that satisfies all three, retrieving figures through the page structure recovered by layout geometry and a local open-weight 8B VLM. Methods: A geometry-based pairing method is introduced, in which the model receives a schematic of the detected boxes and selects each picture's caption without access to pixels or text. Caption retrieval is evaluated on three private corpora (29 books, 10,421 figures, 218 queries) with blind human grading, against a lexical baseline, generated descriptions and five image-text encoders. Results: Geometric pairing was correct for 96%, 92% and 77% of pictures in the three domains, against 76%, 45% and 53% for the better of two document parsers. A hosted model given the schematic was equally accurate, while coordinates as text lost 22 points. Caption retrieval obtained an nDCG@5 of 0.85, 0.87 and 0.76, against 0.54, 0.51 and 0.27 for the best cross-modal encoder and 0.41, 0.28 and 0.30 for generated descriptions. Pairing errors carried over to retrieval. Conclusion: The proposed pipeline achieves accurate figure retrieval with small local models and no in-domain training, where general and biomedical image-text encoders fall far behind. Its geometry-only pairing is the most accurate of five methods and exposes no content, even to a hosted model. Code and prompts are released.</summary>
+  </entry>
+  <entry>
+    <id>https://arxiv.org/abs/2611.33594</id>
+    <title>Aligned Machine: A Benchmark for Evaluating Multimodal Embedding Similarity via Human Comparative Judgements</title>
+    <link href="https://arxiv.org/abs/2611.33594" rel="alternate" type="text/html" />
+    <link href="https://arxiv.org/pdf/2611.33594" rel="related" type="application/pdf" title="PDF" />
+    <published>2026-11-25T00:00:00Z</published>
+    <updated>2026-11-26T00:00:00Z</updated>
+    <author>
+      <name>Jiechen Li</name>
+    </author>
+    <author>
+      <name>Hannah Groos</name>
+    </author>
+    <author>
+      <name>Brinnae Bent</name>
+    </author>
+    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
+    <summary type="text">Embedding models increasingly inform how people search, recommend, and retrieve information, yet we lack credible ways to test whether these similarity judgments reflect how humans understand meaning. Existing benchmarks typically rely on static, expert-labeled pairs with coarse Likert-style annotations, limiting scalability and making it difficult to obtain consistent, high-confidence annotations. We introduce Aligned Machine, an interactive, public-facing platform that transforms broad participation into a continuously growing Human-Aligned Similarity Benchmark (HASB) for evaluating semantic alignment in embedding-based systems. Participants complete a cognitively-natural, forced-choice task, comparing two pairs of items (text or images) and selecting which pair is more similar. This comparative design is accessible to non-experts, yields clean preference data, and supports robust aggregation. We report results from an initial deployment with 115 participants contributing 2,875 total labeled pairs and 872 unique pairs. Using HASB, we evaluated 12 widely used embedding models and found only partial alignment between embedding similarity and human judgments. Text-only models consistently achieve higher overall agreement than multimodal models, while multimodal performance varies systematically by task type: alignment is strongest for image-image comparisons, weaker for image-text comparisons, and lowest for text-text comparisons. Aligned Machine is designed to evolve over time as participation grows, supporting longitudinal analysis, domain-specific studies, bias detection, and measurement of concept drift across model versions. By combining accessible public participation with rigorous comparative evaluation, HASB provides a scalable and accountable framework for auditing semantic alignment in embedding models.</summary>
+  </entry>
   <entry>
     <id>https://arxiv.org/abs/2611.33151</id>
     <title>BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles</title>
@@ -2427,253 +2614,5 @@
     </author>
     <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
     <summary type="text">Image geolocalization predicts the location at which a photo was taken. Accurate geolocalization requires discriminating between both physically and semantically adjacent areas on Earth. However, prior diffusion-based approaches predict locations by generating coordinates, which are semantically unstable over space. We avoid this limitation by learning geolocalization behavior in the pretrained representation spaces of location encoders, which provide both positional and semantic understanding. To make this space usable for coordinate prediction, we introduce a Location Autoencoder (LAE), which pairs a frozen location encoder with a learned decoder mapping embeddings back to coordinates with kilometer-level accuracy worldwide. In the LAE space, we train DIG, a latent diffusion model that transports noise to location embeddings conditioned on image features. DIG consistently outperforms coordinate-based generative models and sets a new state of the art for parametric geolocalization on three benchmarks: OSV-5M, Im2GPS3k, and YFCC4k. Notably, DIG is the first generative model to outperform retrieval-based methods, and further improves retrieve-and-rerank systems when used as a prior. Code and models will be released.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.12798</id>
-    <title>Complementarity-Driven Dual-Teacher Hierarchical Alignment for Zero-Shot EEG-to-Image Retrieval</title>
-    <link href="https://arxiv.org/abs/2611.12798" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.12798" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-09T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Lukun Wu</name>
-    </author>
-    <author>
-      <name>Jie Li</name>
-    </author>
-    <author>
-      <name>Ziqi Ren</name>
-    </author>
-    <author>
-      <name>Ruiyang Xia</name>
-    </author>
-    <author>
-      <name>Yan Gao</name>
-    </author>
-    <author>
-      <name>Xinbo Gao</name>
-    </author>
-    <category term="image-retrieval" label="Image Retrieval &amp; Visual Search" />
-    <summary type="text">Decoding visual information from EEG is central to brain--computer interfaces and brain-inspired intelligence, and contrastive alignment with pretrained vision foundation models (VFMs) has become the dominant paradigm. However, existing methods align EEG solely with CLIP-family VFMs, leaving hierarchical visual information in neural responses under-exploited. To address this gap, we formulate a mechanism-paradigm correspondence view linking hierarchical visual processing (from appearance to semantics) to the complementary biases of cross-paradigm VFMs, with image-only models (e.g., DINO) and image--text models (e.g., CLIP) capturing distinct facets of this hierarchy. Guided by this view, we propose the Dual-Teacher Hierarchical Alignment (DTHA) framework. Concretely, a shared EEG encoder is supervised by frozen multi-blur CLIP and shallow DINOv2 teachers via dual-branch contrastive alignment, so each branch fully supervises the visual cues it emphasizes. A fused-retrieval objective learns adaptive weights to combine their complementary visual representations for zero-shot EEG-to-image retrieval. For the shared EEG encoder, we introduce the Attentive Modulated Scalp-Pattern Bank Encoder (AMSPBE), combining temporo-spatial attention with a learnable scalp-pattern bank for accurate, interpretable visual feature extraction, while modeling regional temporal dynamics and filter-bank topographies. On THINGS-EEG zero-shot retrieval, DTHA achieves 92.4% Top-1 accuracy, exceeding prior state of the art by 12.4 percentage points. Spatial, spectral, and representational-similarity analyses, together with THINGS-MEG evaluation, validate DTHA's effectiveness, biological plausibility, and cross-modality generalization. This complementarity-driven perspective shows that supervision from cross-paradigm VFMs enables more complete extraction of hierarchical visual information from brain activity.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.12539</id>
-    <title>Dynamic Graph Indexing for Label-Filtered Approximate Nearest Neighbor Search</title>
-    <link href="https://arxiv.org/abs/2611.12539" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.12539" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-09T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Mengxu Jiang</name>
-    </author>
-    <author>
-      <name>Zhi Yang</name>
-    </author>
-    <author>
-      <name>Fangyuan Zhang</name>
-    </author>
-    <author>
-      <name>Yin Yang</name>
-    </author>
-    <author>
-      <name>Sibo Wang</name>
-    </author>
-    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
-    <summary type="text">Approximate nearest neighbor search (ANNS) over high-dimensional vectors is a core primitive in modern retrieval systems. In practice, objects are often also associated with labels (e.g., attributes or keywords), and retrieval must combine vector similarity with explicit label-based filtering, giving rise to label-filtered ANNS. This task is challenging because label filtering and ANNS favor very different index structures, selective filters fragment the admissible search space, and updates complicate index maintenance. To address these challenges, we propose DYLAN, a dynamic composite index for label-filtered ANNS supporting containment, overlap, and their conjunctions and disjunctions. DYLAN organizes label sets by shared prefixes in a frequency-ordered trie and selectively shares HNSW-style graph indices across trie-induced subsets, so that each trie region has a constant-factor covering index while each object participates in only logarithmically many indices. To mitigate fragmentation, DYLAN performs a cross-region multi-graph search that exploits ancestor-level indices as bridges between otherwise isolated trie regions. To support insertions, it adopts a threshold-based maintenance scheme that rebuilds shared indices only when necessary, yielding low amortized update cost. Extensive experiments with real data show that DYLAN consistently improves query throughput at comparable recall, by up to two orders of magnitude on challenging label-rich datasets, while retaining competitive memory, construction, and update costs.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.12426</id>
-    <title>dNaViT: Discrete Codes are General-Purpose Visual Representations</title>
-    <link href="https://arxiv.org/abs/2611.12426" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.12426" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/meituan-longcat/LongCat-Next" rel="related" title="Code" />
-    <published>2026-11-09T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Xiaotong Li</name>
-    </author>
-    <author>
-      <name>Zhengrong Yue</name>
-    </author>
-    <author>
-      <name>Xu Huang</name>
-    </author>
-    <author>
-      <name>Jialv Zou</name>
-    </author>
-    <author>
-      <name>Minhao Jing</name>
-    </author>
-    <author>
-      <name>Wenhao Yan</name>
-    </author>
-    <author>
-      <name>Haodong Li</name>
-    </author>
-    <author>
-      <name>Hai Huang</name>
-    </author>
-    <author>
-      <name>Bo Zhao</name>
-    </author>
-    <author>
-      <name>Yan Feng</name>
-    </author>
-    <author>
-      <name>Peng Pei</name>
-    </author>
-    <author>
-      <name>Xunliang Cai</name>
-    </author>
-    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
-    <summary type="text">Discrete autoregressive modeling, notably through next-token prediction, has become a cornerstone of modern language models. Extending this paradigm to vision allows visual and language models to converge on a unified framework, thereby fostering shared methodology and infrastructure. This work investigates a central question: how far can a finite discrete vocabulary go in representing the richness of the visual world? We present dNaViT, a Discrete Native-resolution Vision Transformer that produces discrete visual primitives analogous to language tokens. Built upon a frozen pretrained encoder, dNaViT applies lightweight residual modulation with a dual-branch objective to inject reconstruction-aware cues into semantic features. By leveraging grouped product quantization, it scales discrete capacity without inflating spatial sequence lengths, while a balanced training recipe maintains both semantic and pixel-level information. Consequently, dNaViT functions as a versatile discrete visual tokenizer, enabling unified encoding across downstream tasks alongside high-fidelity image decoding. Extensive evaluations show that dNaViT matches or exceeds task-specific baselines across 12 visual understanding benchmarks, 4 generation benchmarks, and an image editing benchmark. These findings demonstrate that a compact discrete vocabulary can serve as a universal visual currency and unlock the full potential of fully unified, native multimodal methodology.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.12364</id>
-    <title>TRIAD: Multimodal Retrieval across Abstraction, Constraints, and State</title>
-    <link href="https://arxiv.org/abs/2611.12364" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.12364" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-09T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Xiangyang Wu</name>
-    </author>
-    <author>
-      <name>Chen Ju</name>
-    </author>
-    <author>
-      <name>Xu Chen</name>
-    </author>
-    <author>
-      <name>Likang Peng</name>
-    </author>
-    <author>
-      <name>Jinsong Lan</name>
-    </author>
-    <author>
-      <name>Haihong Tang</name>
-    </author>
-    <author>
-      <name>Yang Hu</name>
-    </author>
-    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
-    <summary type="text">Multimodal retrieval increasingly supports agentic systems, where user requests can involve cross-level relations, combine multiple constraints, and evolve across dialogue turns. In these settings, a highly similar result may still violate the user's requirements, while retrieved content may directly inform downstream actions without human screening. We introduce TRIAD, a multimodal retrieval benchmark for evaluating how well retrieval systems satisfy these complex, evolving requests. TRIAD comprises three tracks: abstraction, testing bidirectional retrieval between visual instances and concepts at different hierarchical levels; constraints, testing the joint satisfaction of positive and negative conditions; and state, testing the integration of requirements across dialogue turns and the updating of earlier conditions when users revise their requests. The benchmark contains six subsets, each with 1,000 queries and a fixed pool of 1,000 candidates per query, evaluated using a common multi-positive mean average precision (mAP) protocol. Simpler reference tasks and hard negatives grouped by the requirements they violate help characterize specific retrieval difficulties. We evaluate 20 configurations of 17 systems and find that no system leads across all six subsets. Performance declines with hierarchical distance, and negative-only queries generally underperform positive-only queries with the same number of constraints. Across paired tasks expressing the same final intent, multi-turn retrieval yields lower mAP in 39 of 40 configuration-domain comparisons. The benefits of explicit reasoning also vary across models and tasks. These findings highlight the gap between retrieving similar content and satisfying a complete request.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.12051</id>
-    <title>Attention-Guided Sequence Feature Fusion and Mixed-Space Metric Learning for Cross-View Image Sequence Geo-Localization</title>
-    <link href="https://arxiv.org/abs/2611.12051" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.12051" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-09T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Nan Wu</name>
-    </author>
-    <author>
-      <name>Chunfang Yang</name>
-    </author>
-    <author>
-      <name>Jiangshan Li</name>
-    </author>
-    <author>
-      <name>Xiangyang Luo</name>
-    </author>
-    <category term="fine-grained-metric-learning" label="Fine-Grained Retrieval &amp; Metric Learning" />
-    <category term="place-recognition-geo-localization" label="Visual Place Recognition &amp; Geo-Localization" />
-    <summary type="text">Cross-view image sequence geo-localization aims to determine the geographic location of a sequence of ground images by matching it against geo-tagged satellite imagery. Although sequential observations provide complementary scene information, substantial overlap between adjacent images introduces feature redundancy, while conventional fusion strategies may weaken spatial relationships essential for cross-view matching. Therefore, we propose a cross-view image sequence geo-localization method via Attention-guided Sequence fusion and Metric Learning (ASML). Specifically, a Sequential Content Fusion (SCF) module models cross-image feature correlations to suppress redundant content and adaptively preserve geographically informative non-overlapping regions. Next, a Spatial Feature Aggregation (SFA) module is used to capture and aggregate the spatial and semantic information of local features, so as to maintain the spatial layout of the image sequence. Finally, a Geo-InfoNCE loss function is proposed, which comprehensively considers the feature distance and geographic distance for mixed-space metric learning, thus improving the ability of the model to distinguish hard negative samples. A new cross-view image sequence dataset CrossRoad-66K is established to provide more complex scenarios. Extensive experiments and visualizations on the SeqGeo and CrossRoad-66K datasets demonstrate that compared to state-of-the-art (SOTA) methods, the proposed method ASML achieves an improvement of 3.37% and 2.10% at R@1, respectively.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.11836</id>
-    <title>MDA framework: multi-architecture domain adaptation for unsupervised person re-identification</title>
-    <link href="https://arxiv.org/abs/2611.11836" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.11836" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-09T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Wei Zhang</name>
-    </author>
-    <author>
-      <name>Peijun Ye</name>
-    </author>
-    <author>
-      <name>Dihu Chen</name>
-    </author>
-    <author>
-      <name>Tao Su</name>
-    </author>
-    <category term="re-identification" label="Person &amp; Object Re-Identification" />
-    <summary type="text">Unsupervised person re-identification not only faces the challenge of domain gaps, but existing methods also rarely support multiple network architectures. To tackle both issues, this paper proposes a multi-architecture auto-adaptive domain adaptation method: Mamba augmented multi-architecture domain adaptation framework. Specifically, this paper constructs the multi-architecture domain adaptation capability at two levels. At the first level, we propose a composite operator(MDA operator) that encapsulates Mamba as a component for enhancing domain adaptation. At the second level, based on this operator, we propose a Mamba-enhanced multi-architecture Domain Adaptation framework(MDA framework). Comprehensive experiments on person re-identification benchmarks validate the consistency and flexibility of the proposed framework. The MDA framework supports versatile deployment strategies without being confined to a single integration point. Under a single deployment configuration, it surpasses several SOTA methods. Moreover, it demonstrates substantial performance improvements across both CNN and Transformer architectures. When embedded into a CNN backbone, the framework achieves a 10.2% mAP improvement on the adaptation task from CUHK03 to Market-1501. Integrated with a Transformer backbone, it yields a 19.8% mAP improvement on the same task.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.13004</id>
-    <title>G-STAR: Group-Scaled Token Capacity for Deeply Compressed Autoregressive Generation</title>
-    <link href="https://arxiv.org/abs/2611.13004" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.13004" rel="related" type="application/pdf" title="PDF" />
-    <link href="https://github.com/DAGroup-PKU/G-STAR" rel="related" title="Code" />
-    <published>2026-11-08T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Xu Huang</name>
-    </author>
-    <author>
-      <name>Ye Huang</name>
-    </author>
-    <author>
-      <name>Xiaotong Li</name>
-    </author>
-    <author>
-      <name>Zhengrong Yue</name>
-    </author>
-    <author>
-      <name>Jialv Zou</name>
-    </author>
-    <author>
-      <name>Minhao Jing</name>
-    </author>
-    <author>
-      <name>Haodong Li</name>
-    </author>
-    <author>
-      <name>Wenhao Yan</name>
-    </author>
-    <author>
-      <name>Yaxin Luo</name>
-    </author>
-    <author>
-      <name>Duomin Wang</name>
-    </author>
-    <author>
-      <name>Daquan Zhou</name>
-    </author>
-    <category term="hashing-efficient-retrieval" label="Hashing &amp; Efficient Retrieval" />
-    <summary type="text">Discrete autoregressive models offer a scalable framework for image generation. However, they face a fundamental trade-off: long token sequences preserve representation quality but slow generation, while aggressive spatial compression reduces representation capacity. Based on product quantization, we show that, under a fixed nominal information budget, group size should scale quadratically with the per-axis spatial compression factor. Building on this principle, we propose GSTAR, a spatial--group co-scaling framework that enables \(32\times\) and even effective \(64\times\) compression while preserving strong reconstruction, understanding, and generation performance. Since larger groups introduce intra-group dependencies that must be modeled efficiently, we analyze their impact on inference latency and generation quality and introduce a semi-autoregressive decoder that combines parallel feature computation with lightweight causal modeling. With these designs, our highly compressed models perform competitively with leading models across five representative text-to-image benchmarks (GenEval, DPG-Bench, PRISM, LongText-Bench, and Qwen-Image-Bench). At \(1024\times1024\) resolution, our model delivers a \(20\times\) speedup over prior discrete autoregressive models, generating each image in 2.5 seconds on a single NVIDIA H200. Together, these results show that highly compressed discrete representations can enable high-quality autoregressive generation at low latency.</summary>
-  </entry>
-  <entry>
-    <id>https://arxiv.org/abs/2611.12976</id>
-    <title>Partition, Refine, and Detect: Preserving Novel Category Capacity in Open-Vocabulary Object Detection</title>
-    <link href="https://arxiv.org/abs/2611.12976" rel="alternate" type="text/html" />
-    <link href="https://arxiv.org/pdf/2611.12976" rel="related" type="application/pdf" title="PDF" />
-    <published>2026-11-08T00:00:00Z</published>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <author>
-      <name>Wei Zhang</name>
-    </author>
-    <author>
-      <name>Zhu Teng</name>
-    </author>
-    <author>
-      <name>Zhixiang Chi</name>
-    </author>
-    <author>
-      <name>Junnan Zou</name>
-    </author>
-    <author>
-      <name>Yi Liu</name>
-    </author>
-    <author>
-      <name>Jianping Fan</name>
-    </author>
-    <category term="multimodal-embeddings" label="Multimodal Embeddings &amp; Universal Retrieval" />
-    <summary type="text">Open-vocabulary object detection (OVD) expects the model trained on base classes to recognize both base and novel classes at inference. Typical methods rely on CLIP-style vision-language embeddings, yet the learned space is often biased toward base categories, with limited effective capacity preserved for novel concepts. Such a base-dominated representation can compress novel semantics, leading to semantic collapse and mis-calibrated confidence at inference. To address this issue, we present PR-OVD, a partition-and-refine framework that explicitly reserves capacity for novel categories and strengthens category separation, while being seamlessly integrated into different detector architectures. Specifically, PR-OVD first performs coarse partitioning to build global divisions for base, novel, and an explicit background partition in both visual and textual modalities, preventing object-irrelevant embeddings from leaking into category-specific representations. It then applies category-level refinement within each partition to sharpen decision boundaries and alleviate the lack of fine-grained region-level pretraining in CLIP. To further provide reliable visual anchors for novel categories, we design a cognitively inspired Structure Prompt (SP) that encodes both egocentric attributes and allocentric context, facilitating stable partition-and-refine learning. Extensive experiments on two OVD benchmarks show that PR-OVD delivers an average 6.5\% proportional improvement on novel categories over the state-of-the-art methods. Notably, PR-OVD also benefits other open-vocabulary tasks, including segmentation and classification, further confirming its effectiveness and generality.</summary>
   </entry>
 </feed>
